@@ -1,7 +1,7 @@
 # Site
 name: "REMAKE.AI"
-title: "Make 3D-printable pet robots"
-description: "REMAKE.AI - DIY 3D-printable pet robots for makers and STEM!"
+title: "Let' make awesome 3D-printable pet robots"
+description: "DIY 3D-printable pet robots for makers and STEM!"
 logo: 'assets/images/kaia_avatar.png'
 favicon: 'assets/images/kaia_favicon.png'
 baseurl: /

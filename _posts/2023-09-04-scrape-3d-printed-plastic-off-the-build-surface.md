@@ -4,7 +4,7 @@ title:  "How to scrape 3D-printed plastic off the build surface properly"
 author: marketing
 categories: [ 3D-printing, tutorial ]
 # tags: [red, yellow]
-image: assets/images/PXL_20230905_005016755-scaled.webp
+image: assets/images/webp/PXL_20230905_005016755-scaled.webp
 description: "Use a plastic scraper and control build surface temperature to remove stuck plastic, printed parts"
 # featured: false
 # hidden: false
@@ -44,7 +44,7 @@ You can find it on Amazon by searching for "Plastic Razor Blade Scrapers with 10
 
 I did manage to damage the PEI surface when scraping off 3D printed plastic - before I know better - but only because the filament got stuck to the PEI surface really badly. In a case like that, try re-warming the build surface until the filament gets soft - and try scraping it off again.
 
-![Plastic scraper]({{ site.baseurl }}/assets/images/PXL_20230905_005022942-scaled.webp)
+![Plastic scraper]({{ site.baseurl }}/assets/images/webp/PXL_20230905_005022942-scaled.webp)
 
 ## Prolong your building surface's life
 

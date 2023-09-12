@@ -1,7 +1,7 @@
 # Site
 name: "REMAKE.AI"
 title: "Let's make awesome 3D-printable pet robots"
-description: "DIY 3D-printable pet robots for makers and STEM!"
+description: "DIY 3D-printable pet robots - for makers and STEM!"
 logo: 'assets/images/logo.png'
 favicon: 'favicon.ico'
 baseurl: ''
@@ -10,26 +10,35 @@ disqus: 'remake-ai'
 mailchimp-list: 'https://remake.us4.list-manage.com/subscribe?u=ce7793379be11c5c705d99df0&id=62f859271b'
 include: ["_pages"]
 permalink: /:title/
+github_url: https://github.com/remakeai
+youtube_url: https://youtube.com/@remakeai/
+twitter_url: https://twitter.com/@remakeai/
+instagram_url: https://www.instagram.com/remake_ai
+facebook_url: https://www.facebook.com/profile.php?id=61550685552870
+facebook_group_url: https://www.facebook.com/groups/243730868651472/
+# by: REMAKE.AI
+# by_url: https://remake.ai
 
 # Authors
 authors:
   marketing:
-    name: REMAKE.AI Marketing
+    name: REMAKE.AI
     display_name: marketing
+    avatar: 'assets/images/kaia_avatar.png'
 #    gravatar: e56154546cf4be74e393c62d1ae9f9d4
-    email: marketing@remake.ai
+    email: marketing@makerspet.com
     web: https://remake.ai
     twitter: https://twitter.com/remakeai/
-    description: "REMAKE.AI marketing"
-#  john:
-#    name: John
-#    display_name: John    
-#    avatar: 'assets/images/avatar.png'
-#    gravatar: b1cc14991db7a456fcd761680bbc8f81
-#    email: wowthemesnet@gmail.com
-#    web: https://www.wowthemes.net
-#    twitter: https://twitter.com/wowthemesnet
-#    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+    description: "REMAKE.AI"
+  iliao:
+    name: Ilia O.
+    display_name: Ilia    
+    avatar: 'assets/images/ilia_avatar.webp'
+    # gravatar: b1cc14991db7a456fcd761680bbc8f81
+    email: iliao@remake.ai
+    # web: https://www.wowthemes.net
+    twitter: https://twitter.com/remakeai/
+    description: "Hardware, software and startups 24/7"
 
 # Plugins
 plugins:
@@ -38,6 +47,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-webp
     
 # Archives
 jekyll-archives:
@@ -71,9 +81,6 @@ lazyimages: "disabled"
 
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
 
-############################################################
-# Site configuration for the WebP Generator Plugin
-# The values here represent the defaults if nothing is set
 webp:
   enabled: true
   
@@ -94,7 +101,7 @@ webp:
   gifs: [".gif"]
 
   # Set to true to always regenerate existing webp files
-  regenerate: true
+  regenerate: false
 
   # Local path to the WebP utilities to use (relative or absolute)
   # Omit or leave as nil to use the utilities shipped with the gem, override only to use your local install
@@ -108,4 +115,3 @@ webp:
   # append '.webp' to filename after original extension rather than replacing it.
   # Default transforms `image.png` to `image.webp`, while changing to true transforms `image.png` to `image.png.webp`
   append_ext: false
-############################################################

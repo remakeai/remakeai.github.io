@@ -1,13 +1,11 @@
 ---
 layout: post
 title:  "How to scrape 3D-printed plastic off the build surface properly"
-author: marketing
-categories: [ 3D-printing, tutorial ]
+author: iliao
+categories: [ 3D-printing, Tutorial ]
 # tags: [red, yellow]
-image: assets/images/webp/PXL_20230905_005016755-scaled.webp
+image: assets/images/webp/PXL_20230905_005016755-cropped.webp
 description: "Use a plastic scraper and control build surface temperature to remove stuck plastic, printed parts"
-# featured: false
-# hidden: false
 comments: false
 # rating: 4.5
 ---
@@ -34,6 +32,8 @@ However, if your build surface adhesion is too high for these filament types, a 
 
 Usually is the key word - sometimes the part sticks to the build surface so hard as if glued. In this case, try scraping the part off the build surface using the scraper below - with the build surface hot, warm or cold. Again, be careful when choosing the build surface temperature! A part printed with a filament that's prone to warping can warp your build surface and damage it as your build surface cools down - for example by ripping the PEI layer off your build surface, if your build surface has PEI.
 
+<blockquote>{% include signup-form.html %}</blockquote>
+
 N.B. I've seen removable build surfaces for Voron 2.4 - you may want to consider using those if you own a Voron 2.4.
 
 ## Best scraper ever - for me
@@ -44,7 +44,7 @@ You can find it on Amazon by searching for "Plastic Razor Blade Scrapers with 10
 
 I did manage to damage the PEI surface when scraping off 3D printed plastic - before I know better - but only because the filament got stuck to the PEI surface really badly. In a case like that, try re-warming the build surface until the filament gets soft - and try scraping it off again.
 
-![Plastic scraper]({{ site.baseurl }}/assets/images/webp/PXL_20230905_005022942-scaled.webp)
+![Plastic scraper]({{ site.baseurl }}/assets/images/webp/PXL_20230905_005022942-scaled.webp 'Plastic scraper'){:class="zoom-image"}
 
 ## Prolong your building surface's life
 

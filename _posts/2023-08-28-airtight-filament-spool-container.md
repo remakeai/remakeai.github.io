@@ -9,6 +9,7 @@ hidden: true
 comments: false
 redirect_from:
   - /2023/08/28/airtight-filament-spool-container/
+redirect_to: https://makerspet.com/blog/airtight-filament-spool-container/
 ---
 If you print only PLA filament, I don't think you need any of this "nonsense". Otherwise, if you print just about everything else including PETG, ABS, ASA, Nylon, TPU, polycarbonate and so on - read on!
 

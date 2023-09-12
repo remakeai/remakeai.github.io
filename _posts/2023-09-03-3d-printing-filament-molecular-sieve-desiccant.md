@@ -10,6 +10,7 @@ comments: false
 # rating: 3
 redirect_from:
   - /2023/09/03/3d-printing-filament-molecular-sieve-desiccant/
+redirect_to: https://makerspet.com/blog/3d-printing-filament-molecular-sieve-desiccant/
 ---
 Once you have made your airtight filament spool container - as described in this post - let's take care of two more things:
 

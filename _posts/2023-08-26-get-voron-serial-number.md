@@ -9,6 +9,7 @@ image: assets/images/webp/v2-5212-two-logos.webp
 comments: false
 redirect_from:
   - /2023/08/26/get-voron-serial-number/
+redirect_to: https://makerspet.com/blog/get-voron-serial-number/
 ---
 Now that you have assembled your Voron printer, did you know that you can get a serial number from Voron Design for your 3D printer? I've gotten mine: V2.5212.
 

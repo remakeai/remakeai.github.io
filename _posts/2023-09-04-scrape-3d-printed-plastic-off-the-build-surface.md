@@ -10,6 +10,7 @@ comments: false
 # rating: 4.5
 redirect_from:
   - /2023/09/04/scrape-3d-printed-plastic-off-the-build-surface/
+redirect_to: https://makerspet.com/blog/scrape-3d-printed-plastic-off-the-build-surface/
 ---
 
 If you are reading this post, chances are you have some trouble scraping plastic - of even removing entire 3D-printed parts - off the build surface.

@@ -7,6 +7,7 @@ image: assets/images/webp/PXL_20230828_023941587_cropped-795x1024.webp
 comments: false
 redirect_from:
   - /2023/08/30/dry-3d-printing-filament-properly/
+redirect_to: https://makerspet.com/blog/dry-3d-printing-filament-properly/
 ---
 If you 3D-print PLA only, I don't think you need a dryer. But if you print just about anything else - PETG, ABS, ASA, Nylon, TPU, polycarbonate and so on - keep reading!
 

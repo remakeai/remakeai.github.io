@@ -5,6 +5,7 @@ author: iliao
 categories: [ 3D-printing, Tutorial, Voron24, Mods ]
 image: assets/images/webcam_photo2.jpg
 comments: false
+redirect-from: /2023/08/26/voron-2-webcam-mount
 ---
 I use this mount for my Voron 2.4. This mount fits many common webcams - specifically, those webcams that have a horizontal tube-like hole in the back.
 

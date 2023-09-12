@@ -9,7 +9,7 @@ google_analytics: 'G-LJLTHN5B4J'
 disqus: 'remake-ai'
 mailchimp-list: 'https://remake.us4.list-manage.com/subscribe?u=ce7793379be11c5c705d99df0&id=62f859271b'
 include: ["_pages"]
-permalink: /:title/
+permalink: /blog/:title/
 github_url: https://github.com/remakeai
 youtube_url: https://youtube.com/@remakeai/
 twitter_url: https://twitter.com/@remakeai/
@@ -18,6 +18,11 @@ facebook_url: https://www.facebook.com/profile.php?id=61550685552870
 facebook_group_url: https://www.facebook.com/groups/243730868651472/
 # by: REMAKE.AI
 # by_url: https://remake.ai
+
+safe: true
+
+whitelist:
+  - jekyll-redirect-from
 
 # Authors
 authors:
@@ -48,6 +53,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-webp
+  - jekyll-redirect-from
     
 # Archives
 jekyll-archives:

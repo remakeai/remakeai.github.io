@@ -7,6 +7,8 @@ categories: [ Startup-story ]
 image: assets/images/webp/kaia_avatar_500x397.webp
 # description: ""
 comments: false
+redirect_from:
+  - /2023/08/28/kaia-ai-product-platform-logo/
 ---
 A logo for a consumer robotics software platform...
 I personally feel those ubiquitous robot assistant faces adorned with antennae look a bit cliché.

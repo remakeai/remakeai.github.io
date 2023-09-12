@@ -8,6 +8,8 @@ image: assets/images/webp/PXL_20230825_075201542-771x1024.webp
 featured: true
 hidden: true
 comments: false
+redirect_from:
+  - /2023/08/25/voron-2-top-hat-mod/
 ---
 Voron 2.4 print volume height comes up short of the advertised 350mm (or 300mm, 250mm) - quite a bit - especially when using the StealthBurner extruder and/or PTFE filament tubing. Here is a "top hat" volume height extension that you can 3D-print and mount on top of your Voron 2.4 (or Voron 2.4r2). The max Z in my setup increases from 310mm to the full 350mm - without replacing vertical rails!
 

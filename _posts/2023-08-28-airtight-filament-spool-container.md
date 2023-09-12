@@ -7,6 +7,8 @@ image: assets/images/webp/PXL_20230828_025257957-1024x771.webp
 featured: true
 hidden: true
 comments: false
+redirect_from:
+  - /2023/08/28/airtight-filament-spool-container/
 ---
 If you print only PLA filament, I don't think you need any of this "nonsense". Otherwise, if you print just about everything else including PETG, ABS, ASA, Nylon, TPU, polycarbonate and so on - read on!
 

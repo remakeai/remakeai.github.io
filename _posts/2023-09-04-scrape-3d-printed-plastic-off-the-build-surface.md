@@ -8,6 +8,8 @@ image: assets/images/webp/PXL_20230905_005016755-cropped.webp
 description: "Use a plastic scraper and control build surface temperature to remove stuck plastic, printed parts"
 comments: false
 # rating: 4.5
+redirect_from:
+  - /2023/09/04/scrape-3d-printed-plastic-off-the-build-surface/
 ---
 
 If you are reading this post, chances are you have some trouble scraping plastic - of even removing entire 3D-printed parts - off the build surface.

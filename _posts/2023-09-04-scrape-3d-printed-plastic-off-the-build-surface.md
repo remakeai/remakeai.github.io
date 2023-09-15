@@ -7,7 +7,7 @@ categories: [ 3D-printing, Tutorial ]
 image: assets/images/webp/PXL_20230905_005016755-cropped.webp
 description: "Use a plastic scraper and control build surface temperature to remove stuck plastic, printed parts"
 # featured: true
-hidden: true
+# hidden: true
 comments: false
 # rating: 4.5
 redirect_from:

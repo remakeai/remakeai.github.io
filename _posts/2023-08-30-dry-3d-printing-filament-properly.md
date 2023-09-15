@@ -5,7 +5,7 @@ author: iliao
 categories: [ 3D-printing, Tutorial ]
 image: assets/images/webp/PXL_20230828_023941587_cropped-795x1024.webp
 # featured: true
-hidden: true
+# hidden: true
 comments: false
 redirect_from:
   - /2023/08/30/dry-3d-printing-filament-properly/

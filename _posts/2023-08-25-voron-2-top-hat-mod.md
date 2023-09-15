@@ -6,7 +6,7 @@ categories: [ 3D-printing, Tutorial, Voron24, Mods ]
 image: assets/images/webp/PXL_20230825_075201542-771x1024.webp
 # rating: .5
 # featured: true
-hidden: true
+# hidden: true
 comments: false
 redirect_from:
   - /2023/08/25/voron-2-top-hat-mod/

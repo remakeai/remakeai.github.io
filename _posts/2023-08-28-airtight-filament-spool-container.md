@@ -5,7 +5,7 @@ author: iliao
 categories: [ 3D-printing, Tutorial, Mods ]
 image: assets/images/webp/PXL_20230828_025257957-1024x771.webp
 # featured: true
-hidden: true
+# hidden: true
 comments: false
 redirect_from:
   - /2023/08/28/airtight-filament-spool-container/

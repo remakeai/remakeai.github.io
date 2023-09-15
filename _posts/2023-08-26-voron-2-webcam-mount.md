@@ -5,7 +5,7 @@ author: iliao
 categories: [ 3D-printing, Tutorial, Voron24, Mods ]
 image: assets/images/webcam_photo2.jpg
 # featured: true
-hidden: true
+# hidden: true
 comments: false
 redirect_from:
   - /2023/08/26/voron-2-webcam-mount/

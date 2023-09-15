@@ -5,6 +5,8 @@ author: iliao
 categories: [ 3D-printing, Tutorial, Voron24, Mods ]
 image: assets/images/webp/nozzle-brush-next-to-bed.webp
 # rating: 3
+# featured: true
+hidden: true
 comments: false
 redirect_from:
   - /2023/08/26/voron-2-nozzle-brush/

@@ -6,7 +6,7 @@ categories: [ Startup-story, Marketing ]
 # tags: [red, yellow]
 image: assets/images/webp/ChatGPT-1.webp
 # description: ""
-comments: false
+# comments: false
 # rating: 4.5
 redirect_from:
   - /2023/08/12/chatgpt-marketing/

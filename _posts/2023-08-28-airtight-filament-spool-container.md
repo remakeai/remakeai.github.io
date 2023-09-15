@@ -4,7 +4,7 @@ title:  "Keep 3D printing filament dry properly – make an airtight spool conta
 author: iliao
 categories: [ 3D-printing, Tutorial, Mods ]
 image: assets/images/webp/PXL_20230828_025257957-1024x771.webp
-featured: true
+# featured: true
 hidden: true
 comments: false
 redirect_from:

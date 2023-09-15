@@ -20,6 +20,6 @@ Or should we get something else, perhaps with robotic pets? What do you think?
 
 <blockquote>{% include signup-form.html %}</blockquote>
 
-Anyway, please visit our [Maker's Pet](https://makerspet.ai) website for updates on
+Anyway, please visit our [Maker's Pet](https://makerspet.com) website for updates on
 3D-printable DIY home robot models and hardware tutorials including 3D printing,
 3D CAD design and electronics!

@@ -11,4 +11,4 @@ redirect_from:
   - /2023/08/28/airtight-filament-spool-container/
 redirect_to: https://makerspet.com/blog/airtight-filament-spool-container/
 ---
-This post has moved [here](https://makerspet.com/blog/airtight-filament-spool-container/)
+This post has moved to the awesome [makerspet.com](https://makerspet.com/blog/airtight-filament-spool-container/)!

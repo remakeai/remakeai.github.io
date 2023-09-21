@@ -14,4 +14,4 @@ redirect_from:
   - /2023/09/03/3d-printing-filament-molecular-sieve-desiccant/
 redirect_to: https://makerspet.com/blog/3d-printing-filament-molecular-sieve-desiccant/
 ---
-This post has moved [here](https://makerspet.com/blog/3d-printing-filament-molecular-sieve-desiccant/)
+This post has moved to the awesome [makerspet.com](https://makerspet.com/blog/3d-printing-filament-molecular-sieve-desiccant/)!

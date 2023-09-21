@@ -14,4 +14,4 @@ redirect_from:
   - /2023/09/04/scrape-3d-printed-plastic-off-the-build-surface/
 redirect_to: https://makerspet.com/blog/scrape-3d-printed-plastic-off-the-build-surface/
 ---
-This post has moved [here](https://makerspet.com/blog/scrape-3d-printed-plastic-off-the-build-surface/)
+This post has moved to the awesome [makerspet.com](https://makerspet.com/blog/scrape-3d-printed-plastic-off-the-build-surface/)!

@@ -12,4 +12,4 @@ redirect_from:
   - /2023/08/26/voron-2-nozzle-brush/
 redirect_to: https://makerspet.com/blog/voron-2-nozzle-brush/
 ---
-This post has moved [here](https://makerspet.com/blog/voron-2-nozzle-brush/)
+This post has moved to the awesome [makerspet.com](https://makerspet.com/blog/voron-2-nozzle-brush/)!

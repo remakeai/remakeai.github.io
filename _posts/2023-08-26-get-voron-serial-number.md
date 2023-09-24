@@ -13,4 +13,4 @@ redirect_from:
   - /2023/08/26/get-voron-serial-number/
 redirect_to: https://makerspet.com/blog/get-voron-serial-number/
 ---
-This post has moved [here](https://makerspet.com/blog/get-voron-serial-number/)
+This post has moved to the awesome [makerspet.com](https://makerspet.com/blog/get-voron-serial-number/)!

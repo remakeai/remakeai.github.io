@@ -8,7 +8,7 @@ comments: false
 <div class="col-md-8 pt-4">
     <p>Do you like pets? How about robotic pets? How about pet robots that are playful, big on character, intelligent, caring and useful?</p>
 
-    <p>We are an early-stage high-tech startup developing a platform for home pet and companion robots for consumers. Whether you are a software developer, a DIY enthusiast or a prospective customer, join us on this exciting journey!</p>
+    <p>We are an early-stage high-tech startup developing a platform for home pet and companion robots for consumers as our warm-up product. Whether you are a software developer, a DIY enthusiast or a prospective customer, join us on this exciting journey!</p>
 </div>
 
 <div class="col-md-4 pt-4">

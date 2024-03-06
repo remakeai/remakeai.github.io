@@ -92,14 +92,17 @@ comments: false
 
 <div class="col-md-4 pt-4">
     <div class="text-center">
-    <img src="{{site.baseurl}}/assets/images/webp/Gartner_tech_cycle.webp" alt="Gartner Technology Cycle" class="img-fluid" style="max-height: 200px;"/>
+    <img src="{{site.baseurl}}/assets/images/webp/Gartner_tech_cycle.webp" alt="Gartner Technology Cycle" class="img-fluid" style="max-height: 250px;"/>
     </div>
 </div>
 </div>
 
 <div class="row justify-content-between">
 <div class="col-md-6 pt-4">
+{% include signup-form.html %}
+</div>
 
+<div class="col-md-6 pt-4">
 <h5 class="h5" id="contact">Contact</h5>
 
 <p>We are located in Los Angeles, CA. Get in touch with us via <a href="{{ site.facebook_url }}">Facebook Messenger</a> or using this <a href="https://us4.list-manage.com/contact-form?u=ce7793379be11c5c705d99df0&form_id=1bc48ab0e8e259a853cd481de8a4f1b2">contact form</a>.</p>
@@ -107,9 +110,5 @@ comments: false
 <p>We usually reply within 24 hours.</p>
 
 <p><em>Wubba Lubba dub-dub!</em></p>
-</div>
-
-<div class="col-md-6 pt-4">
-{% include signup-form.html %}
 </div>
 </div>

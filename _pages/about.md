@@ -74,8 +74,26 @@ comments: false
     <li>Other people may not have time or desire or sufficient mobility to care for live pets - including being away from home. Examples of people in this target audience may include seniors, people who live alone - including young people, busy people, people with medical problems.</li>
     <li>Another target audience is early adopters of high-technology products. These people may be of younger age and tech-savvy.</li>
     <li>Yet another target audience is people who would like to impress their friends by owning a novelty product. I think we can help out a bit in this department.</li>
+    <li>The DIY robot kit version enables tens of millions of STEM students, makers (Arduino, ESP32, 3D printing) and robotics enthusiasts (ROS/ROS2) to build their own pet robot that is exceptionally affordable, yet remarkably high-tech.</li>
     <li>Last but not least by far are senior citizens in need of companionship and care. "Silver wave" is on its way. Naturally, a pet or companion robot may not replace a human senior living assistant, yet a human assistant can offer more attention and care with the help of robotic aids.</li>
 </ul>
+</div>
+</div>
+
+<div class="row justify-content-between">
+<div class="col-md-8 pt-4">
+    <h5 class="h5">Business Bets on Robot Pets</h5>
+
+<p>Do you believe in the future where robots are everywhere, bringing about the enormous civilization benefits? That future is yet to happen. Ahem, jokes aside, consumer robotics is a hard, long-standing problem. That said, whoever solves this hard problem stands to benefit - and grow - greatly. We are in this business because we believe REMAKE AI will someday join the Magnificent Seven. We believe we have the business insight, the growth recipe and the skill to execute.</p>
+
+<p>Are you a robot hardware manufacture, a software developer, a consumer robotics reseller? Partner with us, work with us to join the explosive growth once the consumer robotics revolution takes off.
+</p>
+</div>
+
+<div class="col-md-4 pt-4">
+    <div class="text-center">
+    <img src="{{site.baseurl}}/assets/images/webp/Gartner_tech_cycle.webp" alt="Gartner Technology Cycle" class="img-fluid" style="max-height: 200px;"/>
+    </div>
 </div>
 </div>
 

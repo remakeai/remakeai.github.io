@@ -24,6 +24,8 @@ Mini and its Kaia.ai software have been crafted to radically ease its learning c
 
 Mini will come with a wealth of step-by-step video and written tutorials. As a bonus, 3D printing enthusiasts will be able to modify Mini's 3D-printed enclosure ("skin") to personalize their pet robot.
 
+![Maker's Pet Mini PCB](/assets/images/webp/PXL_20240617_034928617_edited.webp 'Maker''s Pet Mini PCB'){:class="zoom-image"}
+
 Price-wise, we expect to price Mini in the $100-$200 range - comparable with beginner STEM robot kits (e.g. the miniature line following and sonar-based Arduino and Micro:bit robots).
 
 We plan to launch Mini sometime in second half of 2024 and mainly target US customers at first. Once we figure out international shipping, customs duties and related issues, we plan to set up a distributor network and pursue international customers, including India.

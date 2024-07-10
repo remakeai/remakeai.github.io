@@ -4,7 +4,7 @@ title:  "Kickstarter Product Launch Schedule"
 author: iliao
 categories: [ Startup-story ]
 # tags: [red, yellow]
-image: assets/images/webp/assets\images\webp\PXL_20240704_031632664_edited.webp.webp
+image: assets/images/webp/assets/PXL_20240704_031632664_edited.webp
 # featured: true
 # hidden: true
 description: "We will be launching one or more products under our Maker's Pet brand."

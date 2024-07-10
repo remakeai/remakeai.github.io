@@ -7,13 +7,11 @@ categories: [ Startup-story ]
 image: assets/images/webp/PXL_20240704_031632664_edited.webp
 # featured: true
 # hidden: true
-description: "We will be launching one or more products under our Maker's Pet brand."
+# description: "We will be launching one or more products under our Maker's Pet brand."
 # comments: false
 # redirect_from:
 #   - /2023/08/24/update-08-2023/
 ---
-Please follow us if tech startups are your thing!
-
 We will be launching one or more products under our Maker's Pet brand.
 
 The first product to launch will be the [Maker's Pet Mini](https://makerspet.com/blog/kickstarter-launch-mini/) educational pet robot. Designed for STEM high-school and coledge students, educators - as well as STEM makers, Arduino-based Mini comes with a 360-degree LiDAR, ROS2-based room mapping and autonomous navigation (SLAM).

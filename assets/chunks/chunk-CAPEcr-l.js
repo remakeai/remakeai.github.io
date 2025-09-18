@@ -174,16 +174,16 @@ For more information, see https://radix-ui.com/primitives/docs/components/${a.do
 		c1.562,1.562,3.609,2.343,5.657,2.343S304.843,244.619,306.405,243.057z"></path>
 </g>
 </svg>`,className:"w-html-embed c1i6u13o cxcwti0 cioh6hc c1rg3gx8 cdv1xmn c14czazn c6qgrpk"})}),d.jsxs(X,{className:"w-box c15wov26 c9vbpot c1b8w41a co0w7fv",children:[d.jsx(Zt,{tag:"h3",className:"w-heading c1r5l10g c1amecmh c1e9izlp cc1w4m0 c8ix2lk",children:"Consumer"}),d.jsx(cr,{className:"w-paragraph cpsz6d2",children:"Make your robot more helpful, playful, and personal."})]})]}),d.jsxs(X,{className:"w-box c15wov26 c45gf4w c1n863ed c8yq6mq cciowao c1uaty07 c1tnm35q cfbeh5 c1d8oa30 czzqiz c137geqd cg9n8ir c19h3frt c1o9lghm cjzsysl c8ix2lk cysgvkc coy39fy c1hye0dd",children:[d.jsx(X,{className:"w-box c15wov26 ccanaxu cciowao c1b8w41a co0w7fv c77hrx0 c1fn0f7c c1b9qo6t c1mw3v54 cp0mz96 c1ga9fg5 c19y01aj c170r29c c1aj6my6 c1cuqe6l",children:d.jsx(He,{code:`<svg fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 256 203" xml:space="preserve">
-<path d="M84.2,2.3c18.7,0,33.8,15.1,33.8,33.8s-15.1,33.8-33.8,33.8S50.4,54.7,50.4,36.1S65.5,2.3,84.2,2.3z M188.8,151.4
+<path  fill="none" stroke="white" stroke-width="12" d="M84.2,2.3c18.7,0,33.8,15.1,33.8,33.8s-15.1,33.8-33.8,33.8S50.4,54.7,50.4,36.1S65.5,2.3,84.2,2.3z M188.8,151.4
 	c4.3,0,7.8,2.2,7.8,5s-3.5,5-7.8,5c-4.3,0-7.8-2.2-7.8-5S184.5,151.4,188.8,151.4z M149.3,112.1l-3.9,11.1c-4-8.3-8-16.3-11.1-21.8
 	c-3.4-7.2-8.7-13.3-15.3-17.6c-6.6-4.3-14.5-6.8-22.9-6.8H44.2C20.9,76.9,2,96,2,119.1V183c0,9.8,7.9,17.7,17.7,17.7h202.7
 	l31.6-88.6H149.3z M215.5,190.9H88.6v-5.7c0-8.8-7.2-16-16-16H33.5v-43.3c0-2.2,1.8-3.9,3.9-3.9s3.9,1.8,3.9,3.9v35.4h31.2
 	c12.4,0,22.6,9.5,23.8,21.7h38.1l21.7-61H240L215.5,190.9z"></path>
 </svg>`,className:"w-html-embed c1i6u13o cxcwti0 cioh6hc c1rg3gx8 cdv1xmn c14czazn c6qgrpk"})}),d.jsxs(X,{className:"w-box c15wov26 c9vbpot c1b8w41a co0w7fv",children:[d.jsx(Zt,{tag:"h3",className:"w-heading c1r5l10g c1amecmh c1e9izlp cc1w4m0 c8ix2lk",children:"Developer"}),d.jsx(cr,{className:"w-paragraph cpsz6d2",children:"Sell apps, subscriptions, premium features. Learn and earn!"})]})]}),d.jsxs(X,{className:"w-box c15wov26 c45gf4w c1n863ed c8yq6mq cciowao c1uaty07 c1tnm35q cfbeh5 c1d8oa30 czzqiz c137geqd cg9n8ir c19h3frt c1o9lghm cjzsysl c8ix2lk cysgvkc coy39fy c1hye0dd",children:[d.jsx(X,{className:"w-box c15wov26 ccanaxu cciowao c1b8w41a co0w7fv c77hrx0 c1fn0f7c c1b9qo6t c1mw3v54 cp0mz96 c1ga9fg5 c19y01aj c170r29c c1aj6my6 c1cuqe6l",children:d.jsx(He,{code:`<svg fill="#ffffff" height="100%" width="100%" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve">
 <g>
-	<path d="M5.891,97.03h74.772c3.253,0,5.891-2.637,5.891-5.89V68.562c0-3.253-2.638-5.891-5.891-5.891H5.891
+	<path  fill="none" stroke="white" stroke-width="20" d="M5.891,97.03h74.772c3.253,0,5.891-2.637,5.891-5.89V68.562c0-3.253-2.638-5.891-5.891-5.891H5.891
 		C2.638,62.671,0,65.309,0,68.562v22.579C0,94.394,2.638,97.03,5.891,97.03z"></path>
-	<path d="M486.663,157.581c-2.081-1.36-4.708-1.578-6.986-0.578L358.099,210.39v-46.645c0-2.486-1.255-4.805-3.337-6.164
+	<path  fill="none" stroke="white" stroke-width="20" d="M486.663,157.581c-2.081-1.36-4.708-1.578-6.986-0.578L358.099,210.39v-46.645c0-2.486-1.255-4.805-3.337-6.164
 		c-2.082-1.36-4.709-1.578-6.986-0.578l-121.577,53.388v-46.646c0-2.486-1.256-4.805-3.337-6.164
 		c-2.083-1.361-4.709-1.577-6.986-0.578L86.554,213.79v-90.01c0-3.252-2.638-5.89-5.891-5.89H5.891c-3.253,0-5.891,2.638-5.891,5.89
 		v289.583c0,7.714,6.253,13.966,13.965,13.966h468.673c4.066,0,7.362-3.296,7.362-7.362V163.745

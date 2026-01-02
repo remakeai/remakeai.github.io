@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>You're In! | Remake.ai</title>
+    <meta name="description" content="Thanks for reserving. You're officially on the list for early access and $20 off when we launch." />
+    <meta property="og:title" content="You're In! | Remake.ai" />
+    <meta property="og:description" content="Thanks for reserving. You're officially on the list for early access and $20 off when we launch." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Remake.ai" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png" />
+    <link rel="preload" href="/assets/SpaceGrotesk-VariableFont_wght_92Z2i9spNtfwrzeGeXHcE.ttf" as="font" crossorigin="anonymous" />
+
+    <!-- Meta Pixel Code -->
+    <!-- SETUP: Replace META_PIXEL_ID_PLACEHOLDER with your actual Pixel ID -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'META_PIXEL_ID_PLACEHOLDER');
+    fbq('track', 'PageView');
+    // Track Purchase conversion
+    fbq('track', 'Purchase', {value: 1.00, currency: 'USD'});
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=META_PIXEL_ID_PLACEHOLDER&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJLTHN5B4J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LJLTHN5B4J');
+      // Track conversion event
+      gtag('event', 'purchase', {
+        value: 1.00,
+        currency: 'USD',
+        transaction_id: Date.now().toString()
+      });
+    </script>
+
+    <style>
+      @font-face {
+        font-family: 'Space Grotesk';
+        src: url('/assets/SpaceGrotesk-VariableFont_wght_92Z2i9spNtfwrzeGeXHcE.ttf') format('truetype');
+        font-weight: 300 700;
+        font-display: swap;
+      }
+
+      :root {
+        --color-bg: rgba(13, 15, 18, 1);
+        --color-bg-section: rgba(20, 23, 28, 1);
+        --color-text: rgba(255, 255, 255, 1);
+        --color-text-muted: rgba(156, 163, 175, 1);
+        --color-accent: rgba(45, 102, 196, 1);
+        --color-accent-hover: rgba(56, 127, 245, 1);
+        --color-border: rgba(55, 65, 81, 1);
+        --color-success: rgba(34, 197, 94, 1);
+        --font-family: 'Space Grotesk', Arial, sans-serif;
+        --max-width: 800px;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 4rem;
+        --border-radius: 0.5rem;
+        --border-radius-full: 8rem;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--spacing-lg);
+      }
+
+      /* Navigation */
+      .nav {
+        padding: var(--spacing-md) 0;
+        background: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .nav .container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .nav-logo img {
+        height: 48px;
+        width: auto;
+      }
+
+      /* Confirmation Section */
+      .confirmation {
+        padding: var(--spacing-xl) 0;
+        text-align: center;
+      }
+
+      .success-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--color-success);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        margin: 0 auto var(--spacing-lg);
+      }
+
+      .confirmation h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .confirmation-text {
+        font-size: 1.1rem;
+        color: var(--color-text-muted);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      /* Next Steps */
+      .next-steps {
+        background: var(--color-bg-section);
+        padding: var(--spacing-lg);
+        border-radius: var(--border-radius);
+        text-align: left;
+        margin-bottom: var(--spacing-xl);
+        border: 1px solid var(--color-border);
+      }
+
+      .next-steps h2 {
+        font-size: 1.25rem;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .next-steps ol {
+        list-style: none;
+        counter-reset: step;
+      }
+
+      .next-steps li {
+        counter-increment: step;
+        padding: var(--spacing-sm) 0;
+        padding-left: 2.5rem;
+        position: relative;
+        color: var(--color-text-muted);
+      }
+
+      .next-steps li::before {
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: var(--color-accent);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+
+      /* Referral Section */
+      .referral {
+        background: var(--color-bg-section);
+        padding: var(--spacing-lg);
+        border-radius: var(--border-radius);
+        margin-bottom: var(--spacing-xl);
+        border: 1px solid var(--color-border);
+      }
+
+      .referral h2 {
+        font-size: 1.25rem;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .referral-subtitle {
+        color: var(--color-text-muted);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .email-input-group {
+        margin-bottom: var(--spacing-md);
+      }
+
+      .email-input-group label {
+        display: block;
+        margin-bottom: var(--spacing-sm);
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+      }
+
+      .email-input {
+        width: 100%;
+        padding: var(--spacing-md);
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius);
+        color: var(--color-text);
+        font-family: var(--font-family);
+        font-size: 1rem;
+      }
+
+      .email-input:focus {
+        outline: none;
+        border-color: var(--color-accent);
+      }
+
+      .referral-link-container {
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius);
+        padding: var(--spacing-md);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .referral-link {
+        flex: 1;
+        font-family: monospace;
+        font-size: 0.9rem;
+        color: var(--color-text);
+        word-break: break-all;
+      }
+
+      .copy-button {
+        background: var(--color-accent);
+        color: white;
+        border: none;
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: var(--border-radius);
+        font-family: var(--font-family);
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background 0.2s;
+      }
+
+      .copy-button:hover {
+        background: var(--color-accent-hover);
+      }
+
+      .copy-button.copied {
+        background: var(--color-success);
+      }
+
+      .referral-note {
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+      }
+
+      /* Social Share */
+      .social-share {
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .share-button {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        transition: opacity 0.2s;
+      }
+
+      .share-button:hover {
+        opacity: 0.8;
+      }
+
+      .share-button.facebook {
+        background: #1877f2;
+        color: white;
+      }
+
+      .share-button.twitter {
+        background: #1da1f2;
+        color: white;
+      }
+
+      .share-button.copy {
+        background: var(--color-bg-section);
+        color: var(--color-text);
+        border: 1px solid var(--color-border);
+        cursor: pointer;
+      }
+
+      /* Footer */
+      .footer {
+        padding: var(--spacing-lg) 0;
+        border-top: 1px solid var(--color-border);
+        text-align: center;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-lg);
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        color: var(--color-text-muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-text);
+      }
+
+      .footer-copy {
+        margin-top: var(--spacing-md);
+        color: var(--color-text-muted);
+        font-size: 0.8rem;
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 var(--spacing-md);
+        }
+
+        .referral-link-container {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .copy-button {
+          width: 100%;
+        }
+
+        .social-share {
+          flex-direction: column;
+        }
+
+        .share-button {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png" alt="Remake.ai" />
+        </a>
+      </div>
+    </nav>
+
+    <!-- Confirmation Section -->
+    <section class="confirmation">
+      <div class="container">
+        <div class="success-icon">&#10003;</div>
+        <h1>You're In!</h1>
+        <p class="confirmation-text">Thanks for reserving. You're officially on the list for early access and $20 off when we launch.</p>
+
+        <!-- Next Steps -->
+        <div class="next-steps">
+          <h2>Here's what happens next:</h2>
+          <ol>
+            <li>We'll email you with updates (about once a month)</li>
+            <li>You'll get first access when we launch on Kickstarter</li>
+            <li>Your $1 becomes a $21 discount ($1 + $20 bonus)</li>
+          </ol>
+        </div>
+
+        <!-- Referral Section -->
+        <div class="referral">
+          <h2>Want $10 more off? Share with friends.</h2>
+          <p class="referral-subtitle">For each friend who reserves, you both get $10 more off.</p>
+
+          <div id="email-section" class="email-input-group">
+            <label for="email-input">Enter your email to generate your referral link:</label>
+            <input type="email" id="email-input" class="email-input" placeholder="your@email.com" />
+          </div>
+
+          <div id="referral-link-section" style="display: none;">
+            <p style="margin-bottom: var(--spacing-sm); font-size: 0.9rem; color: var(--color-text-muted);">Your referral link:</p>
+            <div class="referral-link-container">
+              <span class="referral-link" id="referral-link"></span>
+              <button class="copy-button" id="copy-link-btn">Copy Link</button>
+            </div>
+          </div>
+
+          <p class="referral-note">Share this link with friends. When they reserve, you both get $10 off.</p>
+        </div>
+
+        <!-- Social Share Buttons -->
+        <div class="social-share">
+          <a href="#" class="share-button facebook" id="share-facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Share on Facebook
+          </a>
+          <a href="#" class="share-button twitter" id="share-twitter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+            Share on Twitter
+          </a>
+          <button class="share-button copy" id="copy-share-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Copy Link
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="mailto:hello@remake.ai">Contact</a>
+        </div>
+        <p class="footer-copy">&copy; 2025 REMAKE AI</p>
+      </div>
+    </footer>
+
+    <script>
+      (function() {
+        const BASE_URL = 'https://remake.ai/reserve/playmate';
+
+        // Get URL parameters
+        function getUrlParams() {
+          const params = {};
+          const searchParams = new URLSearchParams(window.location.search);
+          for (const [key, value] of searchParams) {
+            params[key] = value;
+          }
+          return params;
+        }
+
+        // Base64 encode email for referral link
+        function encodeEmail(email) {
+          return btoa(email).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+        }
+
+        // Generate referral link
+        function generateReferralLink(email) {
+          const encodedEmail = encodeEmail(email);
+          return `${BASE_URL}?ref=${encodedEmail}`;
+        }
+
+        // Copy text to clipboard
+        function copyToClipboard(text, button) {
+          navigator.clipboard.writeText(text).then(() => {
+            const originalText = button.textContent;
+            button.textContent = 'Copied!';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.textContent = originalText;
+              button.classList.remove('copied');
+            }, 2000);
+          });
+        }
+
+        // Initialize
+        const params = getUrlParams();
+        const emailInput = document.getElementById('email-input');
+        const emailSection = document.getElementById('email-section');
+        const referralLinkSection = document.getElementById('referral-link-section');
+        const referralLinkSpan = document.getElementById('referral-link');
+        const copyLinkBtn = document.getElementById('copy-link-btn');
+        const copyShareBtn = document.getElementById('copy-share-btn');
+        const shareFacebookBtn = document.getElementById('share-facebook');
+        const shareTwitterBtn = document.getElementById('share-twitter');
+
+        let currentReferralLink = BASE_URL;
+
+        // If email is in URL params (from Square redirect), use it
+        if (params.email) {
+          const email = decodeURIComponent(params.email);
+          currentReferralLink = generateReferralLink(email);
+          referralLinkSpan.textContent = currentReferralLink;
+          emailSection.style.display = 'none';
+          referralLinkSection.style.display = 'block';
+        }
+
+        // Handle email input
+        emailInput.addEventListener('input', function() {
+          const email = this.value.trim();
+          if (email && email.includes('@')) {
+            currentReferralLink = generateReferralLink(email);
+            referralLinkSpan.textContent = currentReferralLink;
+            referralLinkSection.style.display = 'block';
+          } else {
+            referralLinkSection.style.display = 'none';
+          }
+        });
+
+        // Copy referral link
+        copyLinkBtn.addEventListener('click', function() {
+          copyToClipboard(currentReferralLink, this);
+        });
+
+        // Copy share link
+        copyShareBtn.addEventListener('click', function() {
+          copyToClipboard(currentReferralLink, this);
+        });
+
+        // Social share - Facebook
+        shareFacebookBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentReferralLink)}`;
+          window.open(shareUrl, 'facebook-share', 'width=580,height=400');
+        });
+
+        // Social share - Twitter
+        shareTwitterBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const text = "I just reserved my spot for a robot vacuum that plays games with kids! Reserve yours for $1:";
+          const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(currentReferralLink)}`;
+          window.open(shareUrl, 'twitter-share', 'width=580,height=400');
+        });
+
+        // Store conversion data for tracking
+        const storedUtm = localStorage.getItem('remake_utm');
+        const referrer = localStorage.getItem('remake_referrer');
+        const variant = params.variant || localStorage.getItem('remake_variant') || 'unknown';
+
+        // Log conversion data (for manual tracking)
+        console.log('Conversion data:', {
+          utm: storedUtm ? JSON.parse(storedUtm) : null,
+          referrer: referrer,
+          variant: variant,
+          timestamp: new Date().toISOString()
+        });
+      })();
+    </script>
+  </body>
+</html>

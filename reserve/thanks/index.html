@@ -14,7 +14,6 @@
     <link rel="preload" href="/assets/SpaceGrotesk-VariableFont_wght_92Z2i9spNtfwrzeGeXHcE.ttf" as="font" crossorigin="anonymous" />
 
     <!-- Meta Pixel Code -->
-    <!-- SETUP: Replace META_PIXEL_ID_PLACEHOLDER with your actual Pixel ID -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -24,12 +23,12 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'META_PIXEL_ID_PLACEHOLDER');
+    fbq('init', '346568425169694');
     fbq('track', 'PageView');
     // Track Purchase conversion
     fbq('track', 'Purchase', {value: 1.00, currency: 'USD'});
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=META_PIXEL_ID_PLACEHOLDER&ev=PageView&noscript=1"/></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=346568425169694&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel Code -->
 
     <!-- Google Analytics -->
@@ -74,52 +73,16 @@
         --border-radius-full: 8rem;
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: var(--font-family); background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; font-size: 16px; }
+      .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-lg); }
 
-      html {
-        scroll-behavior: smooth;
-      }
+      .nav { padding: var(--spacing-md) 0; background: var(--color-bg); border-bottom: 1px solid var(--color-border); }
+      .nav .container { display: flex; justify-content: center; }
+      .nav-logo img { height: 48px; width: auto; }
 
-      body {
-        font-family: var(--font-family);
-        background-color: var(--color-bg);
-        color: var(--color-text);
-        line-height: 1.6;
-        font-size: 16px;
-      }
-
-      .container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 0 var(--spacing-lg);
-      }
-
-      /* Navigation */
-      .nav {
-        padding: var(--spacing-md) 0;
-        background: var(--color-bg);
-        border-bottom: 1px solid var(--color-border);
-      }
-
-      .nav .container {
-        display: flex;
-        justify-content: center;
-      }
-
-      .nav-logo img {
-        height: 48px;
-        width: auto;
-      }
-
-      /* Confirmation Section */
-      .confirmation {
-        padding: var(--spacing-xl) 0;
-        text-align: center;
-      }
+      .confirmation { padding: var(--spacing-xl) 0; text-align: center; }
 
       .success-icon {
         width: 80px;
@@ -134,19 +97,9 @@
         margin: 0 auto var(--spacing-lg);
       }
 
-      .confirmation h1 {
-        font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 700;
-        margin-bottom: var(--spacing-md);
-      }
+      .confirmation h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: var(--spacing-md); }
+      .confirmation-text { font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: var(--spacing-xl); }
 
-      .confirmation-text {
-        font-size: 1.1rem;
-        color: var(--color-text-muted);
-        margin-bottom: var(--spacing-xl);
-      }
-
-      /* Next Steps */
       .next-steps {
         background: var(--color-bg-section);
         padding: var(--spacing-lg);
@@ -156,15 +109,8 @@
         border: 1px solid var(--color-border);
       }
 
-      .next-steps h2 {
-        font-size: 1.25rem;
-        margin-bottom: var(--spacing-md);
-      }
-
-      .next-steps ol {
-        list-style: none;
-        counter-reset: step;
-      }
+      .next-steps h2 { font-size: 1.25rem; margin-bottom: var(--spacing-md); }
+      .next-steps ol { list-style: none; counter-reset: step; }
 
       .next-steps li {
         counter-increment: step;
@@ -190,6 +136,78 @@
         font-weight: 600;
       }
 
+      /* Survey Section */
+      .survey-section {
+        background: var(--color-bg-section);
+        padding: var(--spacing-lg);
+        border-radius: var(--border-radius);
+        margin-bottom: var(--spacing-xl);
+        border: 1px solid var(--color-border);
+        text-align: left;
+      }
+
+      .survey-section h2 { font-size: 1.25rem; margin-bottom: var(--spacing-sm); }
+      .survey-subtitle { color: var(--color-text-muted); margin-bottom: var(--spacing-md); font-size: 0.9rem; }
+
+      .survey-question { margin-bottom: var(--spacing-lg); }
+      .survey-question label { display: block; margin-bottom: var(--spacing-sm); font-weight: 600; }
+
+      .survey-options { display: flex; flex-wrap: wrap; gap: var(--spacing-sm); }
+
+      .survey-option {
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 0.9rem;
+      }
+
+      .survey-option:hover { border-color: var(--color-accent); }
+      .survey-option.selected { background: var(--color-accent); border-color: var(--color-accent); color: white; }
+      .survey-option.multi-selected { background: var(--color-accent); border-color: var(--color-accent); color: white; }
+
+      .survey-textarea {
+        width: 100%;
+        min-height: 80px;
+        padding: var(--spacing-md);
+        background: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius);
+        color: var(--color-text);
+        font-family: var(--font-family);
+        font-size: 0.9rem;
+        resize: vertical;
+      }
+      .survey-textarea:focus { outline: none; border-color: var(--color-accent); }
+      .survey-textarea::placeholder { color: var(--color-text-muted); }
+
+      .multi-select-note { font-size: 0.8rem; color: var(--color-text-muted); margin-top: var(--spacing-sm); }
+
+      .survey-submit {
+        background: var(--color-accent);
+        color: white;
+        border: none;
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-radius: var(--border-radius);
+        font-family: var(--font-family);
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        width: 100%;
+      }
+
+      .survey-submit:hover { background: var(--color-accent-hover); }
+      .survey-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+      .survey-thanks {
+        text-align: center;
+        padding: var(--spacing-lg);
+        color: var(--color-success);
+        display: none;
+      }
+
       /* Referral Section */
       .referral {
         background: var(--color-bg-section);
@@ -199,26 +217,11 @@
         border: 1px solid var(--color-border);
       }
 
-      .referral h2 {
-        font-size: 1.25rem;
-        margin-bottom: var(--spacing-sm);
-      }
+      .referral h2 { font-size: 1.25rem; margin-bottom: var(--spacing-sm); }
+      .referral-subtitle { color: var(--color-text-muted); margin-bottom: var(--spacing-md); }
 
-      .referral-subtitle {
-        color: var(--color-text-muted);
-        margin-bottom: var(--spacing-md);
-      }
-
-      .email-input-group {
-        margin-bottom: var(--spacing-md);
-      }
-
-      .email-input-group label {
-        display: block;
-        margin-bottom: var(--spacing-sm);
-        font-size: 0.9rem;
-        color: var(--color-text-muted);
-      }
+      .email-input-group { margin-bottom: var(--spacing-md); }
+      .email-input-group label { display: block; margin-bottom: var(--spacing-sm); font-size: 0.9rem; color: var(--color-text-muted); }
 
       .email-input {
         width: 100%;
@@ -231,10 +234,7 @@
         font-size: 1rem;
       }
 
-      .email-input:focus {
-        outline: none;
-        border-color: var(--color-accent);
-      }
+      .email-input:focus { outline: none; border-color: var(--color-accent); }
 
       .referral-link-container {
         background: var(--color-bg);
@@ -247,13 +247,7 @@
         margin-bottom: var(--spacing-md);
       }
 
-      .referral-link {
-        flex: 1;
-        font-family: monospace;
-        font-size: 0.9rem;
-        color: var(--color-text);
-        word-break: break-all;
-      }
+      .referral-link { flex: 1; font-family: monospace; font-size: 0.9rem; color: var(--color-text); word-break: break-all; }
 
       .copy-button {
         background: var(--color-accent);
@@ -268,18 +262,10 @@
         transition: background 0.2s;
       }
 
-      .copy-button:hover {
-        background: var(--color-accent-hover);
-      }
+      .copy-button:hover { background: var(--color-accent-hover); }
+      .copy-button.copied { background: var(--color-success); }
 
-      .copy-button.copied {
-        background: var(--color-success);
-      }
-
-      .referral-note {
-        font-size: 0.875rem;
-        color: var(--color-text-muted);
-      }
+      .referral-note { font-size: 0.875rem; color: var(--color-text-muted); }
 
       /* Social Share */
       .social-share {
@@ -301,84 +287,27 @@
         transition: opacity 0.2s;
       }
 
-      .share-button:hover {
-        opacity: 0.8;
-      }
+      .share-button:hover { opacity: 0.8; }
+      .share-button.facebook { background: #1877f2; color: white; }
+      .share-button.twitter { background: #1da1f2; color: white; }
+      .share-button.copy { background: var(--color-bg-section); color: var(--color-text); border: 1px solid var(--color-border); cursor: pointer; }
 
-      .share-button.facebook {
-        background: #1877f2;
-        color: white;
-      }
+      .footer { padding: var(--spacing-lg) 0; border-top: 1px solid var(--color-border); text-align: center; }
+      .footer-links { display: flex; justify-content: center; gap: var(--spacing-lg); flex-wrap: wrap; }
+      .footer-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem; }
+      .footer-links a:hover { color: var(--color-text); }
+      .footer-copy { margin-top: var(--spacing-md); color: var(--color-text-muted); font-size: 0.8rem; }
 
-      .share-button.twitter {
-        background: #1da1f2;
-        color: white;
-      }
-
-      .share-button.copy {
-        background: var(--color-bg-section);
-        color: var(--color-text);
-        border: 1px solid var(--color-border);
-        cursor: pointer;
-      }
-
-      /* Footer */
-      .footer {
-        padding: var(--spacing-lg) 0;
-        border-top: 1px solid var(--color-border);
-        text-align: center;
-      }
-
-      .footer-links {
-        display: flex;
-        justify-content: center;
-        gap: var(--spacing-lg);
-        flex-wrap: wrap;
-      }
-
-      .footer-links a {
-        color: var(--color-text-muted);
-        text-decoration: none;
-        font-size: 0.9rem;
-      }
-
-      .footer-links a:hover {
-        color: var(--color-text);
-      }
-
-      .footer-copy {
-        margin-top: var(--spacing-md);
-        color: var(--color-text-muted);
-        font-size: 0.8rem;
-      }
-
-      /* Mobile adjustments */
       @media (max-width: 768px) {
-        .container {
-          padding: 0 var(--spacing-md);
-        }
-
-        .referral-link-container {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .copy-button {
-          width: 100%;
-        }
-
-        .social-share {
-          flex-direction: column;
-        }
-
-        .share-button {
-          justify-content: center;
-        }
+        .container { padding: 0 var(--spacing-md); }
+        .referral-link-container { flex-direction: column; align-items: stretch; }
+        .copy-button { width: 100%; }
+        .social-share { flex-direction: column; }
+        .share-button { justify-content: center; }
       }
     </style>
   </head>
   <body>
-    <!-- Navigation -->
     <nav class="nav">
       <div class="container">
         <a href="/" class="nav-logo">
@@ -387,21 +316,82 @@
       </div>
     </nav>
 
-    <!-- Confirmation Section -->
     <section class="confirmation">
       <div class="container">
         <div class="success-icon">&#10003;</div>
         <h1>You're In!</h1>
         <p class="confirmation-text">Thanks for reserving. You're officially on the list for early access and $20 off when we launch.</p>
 
-        <!-- Next Steps -->
         <div class="next-steps">
           <h2>Here's what happens next:</h2>
           <ol>
             <li>We'll email you with updates (about once a month)</li>
-            <li>You'll get first access when we launch on Kickstarter</li>
+            <li>You'll get first access when we launch our campaign</li>
             <li>Your $1 becomes a $21 discount ($1 + $20 bonus)</li>
+            <li>Choose your model (Essential, Standard, or Pro) at launch</li>
           </ol>
+        </div>
+
+        <!-- Quick Survey Section -->
+        <div class="survey-section" id="survey-form">
+          <h2>Help us build the perfect robot! (1 minute)</h2>
+          <p class="survey-subtitle">Your feedback helps us prioritize features.</p>
+
+          <div class="survey-question">
+            <label>1. Which model interests you most?</label>
+            <div class="survey-options" data-question="model" data-type="single">
+              <div class="survey-option" data-value="essential">Essential ($179 early bird)</div>
+              <div class="survey-option" data-value="standard">Standard ($329 early bird)</div>
+              <div class="survey-option" data-value="pro">Pro ($479 early bird)</div>
+              <div class="survey-option" data-value="undecided">Not sure yet</div>
+            </div>
+          </div>
+
+          <div class="survey-question">
+            <label>2. What matters most to you? (Pick up to 2)</label>
+            <div class="survey-options" data-question="priorities" data-type="multi" data-max="2">
+              <div class="survey-option" data-value="suction">Strong suction / cleaning power</div>
+              <div class="survey-option" data-value="dock">Self-emptying dock</div>
+              <div class="survey-option" data-value="mop">Mopping capability</div>
+              <div class="survey-option" data-value="games">Games for kids</div>
+              <div class="survey-option" data-value="privacy">Privacy / local control</div>
+              <div class="survey-option" data-value="price">Price</div>
+              <div class="survey-option" data-value="smarthome">Smart home integration</div>
+            </div>
+            <p class="multi-select-note">Selected: <span id="priorities-count">0</span>/2</p>
+          </div>
+
+          <div class="survey-question">
+            <label>3. Do you currently own a robot vacuum?</label>
+            <div class="survey-options" data-question="owns_vacuum" data-type="single">
+              <div class="survey-option" data-value="yes_love">Yes, love it</div>
+              <div class="survey-option" data-value="yes_okay">Yes, it's okay</div>
+              <div class="survey-option" data-value="yes_disappointed">Yes, disappointed with it</div>
+              <div class="survey-option" data-value="no_considering">No, considering my first</div>
+              <div class="survey-option" data-value="no_apps">No, more interested in apps than cleaning</div>
+            </div>
+          </div>
+
+          <div class="survey-question">
+            <label>4. How many kids in your household?</label>
+            <div class="survey-options" data-question="kids" data-type="single">
+              <div class="survey-option" data-value="none">None</div>
+              <div class="survey-option" data-value="1">1</div>
+              <div class="survey-option" data-value="2">2</div>
+              <div class="survey-option" data-value="3+">3+</div>
+            </div>
+          </div>
+
+          <div class="survey-question">
+            <label>5. Anything else you want us to know? (Optional)</label>
+            <textarea class="survey-textarea" id="survey-feedback" placeholder="Tell us about your ideal robot vacuum experience..."></textarea>
+          </div>
+
+          <button class="survey-submit" id="survey-submit" disabled>Submit</button>
+        </div>
+
+        <div class="survey-thanks" id="survey-thanks">
+          Thanks for your feedback! This helps us build the right product for you.
         </div>
 
         <!-- Referral Section -->
@@ -428,29 +418,21 @@
         <!-- Social Share Buttons -->
         <div class="social-share">
           <a href="#" class="share-button facebook" id="share-facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             Share on Facebook
           </a>
           <a href="#" class="share-button twitter" id="share-twitter">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
             Share on Twitter
           </a>
           <button class="share-button copy" id="copy-share-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
             Copy Link
           </button>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="footer-links">
@@ -458,7 +440,7 @@
           <a href="/privacy-policy">Privacy Policy</a>
           <a href="mailto:hello@remake.ai">Contact</a>
         </div>
-        <p class="footer-copy">&copy; 2025 REMAKE AI</p>
+        <p class="footer-copy">&copy; 2025 remake</p>
       </div>
     </footer>
 
@@ -466,28 +448,22 @@
       (function() {
         const BASE_URL = 'https://remake.ai/reserve/playmate';
 
-        // Get URL parameters
         function getUrlParams() {
           const params = {};
           const searchParams = new URLSearchParams(window.location.search);
-          for (const [key, value] of searchParams) {
-            params[key] = value;
-          }
+          for (const [key, value] of searchParams) { params[key] = value; }
           return params;
         }
 
-        // Base64 encode email for referral link
         function encodeEmail(email) {
           return btoa(email).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
         }
 
-        // Generate referral link
         function generateReferralLink(email) {
           const encodedEmail = encodeEmail(email);
           return `${BASE_URL}?ref=${encodedEmail}`;
         }
 
-        // Copy text to clipboard
         function copyToClipboard(text, button) {
           navigator.clipboard.writeText(text).then(() => {
             const originalText = button.textContent;
@@ -500,7 +476,75 @@
           });
         }
 
-        // Initialize
+        // Survey functionality
+        const surveyData = {};
+        const requiredQuestions = ['model', 'priorities', 'owns_vacuum', 'kids'];
+
+        function checkSurveyComplete() {
+          const answered = requiredQuestions.filter(q => {
+            if (q === 'priorities') {
+              return surveyData[q] && surveyData[q].length > 0;
+            }
+            return surveyData[q];
+          });
+          document.getElementById('survey-submit').disabled = answered.length < requiredQuestions.length;
+        }
+
+        document.querySelectorAll('.survey-options').forEach(optionsContainer => {
+          const type = optionsContainer.dataset.type;
+          const question = optionsContainer.dataset.question;
+          const maxSelect = parseInt(optionsContainer.dataset.max) || 1;
+
+          optionsContainer.querySelectorAll('.survey-option').forEach(option => {
+            option.addEventListener('click', function() {
+              const value = this.dataset.value;
+
+              if (type === 'multi') {
+                // Multi-select logic
+                if (!surveyData[question]) surveyData[question] = [];
+
+                if (this.classList.contains('multi-selected')) {
+                  // Deselect
+                  this.classList.remove('multi-selected');
+                  surveyData[question] = surveyData[question].filter(v => v !== value);
+                } else if (surveyData[question].length < maxSelect) {
+                  // Select if under max
+                  this.classList.add('multi-selected');
+                  surveyData[question].push(value);
+                }
+
+                // Update counter
+                const counter = document.getElementById('priorities-count');
+                if (counter) counter.textContent = surveyData[question].length;
+              } else {
+                // Single-select logic
+                optionsContainer.querySelectorAll('.survey-option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                surveyData[question] = value;
+              }
+
+              checkSurveyComplete();
+            });
+          });
+        });
+
+        document.getElementById('survey-submit').addEventListener('click', function() {
+          // Include optional feedback
+          const feedback = document.getElementById('survey-feedback').value.trim();
+          if (feedback) surveyData.feedback = feedback;
+
+          // Log survey data (in production, send to backend)
+          console.log('Survey data:', surveyData);
+
+          // Hide form, show thanks
+          document.getElementById('survey-form').style.display = 'none';
+          document.getElementById('survey-thanks').style.display = 'block';
+
+          // Store in localStorage
+          localStorage.setItem('remake_survey', JSON.stringify(surveyData));
+        });
+
+        // Referral functionality
         const params = getUrlParams();
         const emailInput = document.getElementById('email-input');
         const emailSection = document.getElementById('email-section');
@@ -513,7 +557,6 @@
 
         let currentReferralLink = BASE_URL;
 
-        // If email is in URL params (from Square redirect), use it
         if (params.email) {
           const email = decodeURIComponent(params.email);
           currentReferralLink = generateReferralLink(email);
@@ -522,7 +565,6 @@
           referralLinkSection.style.display = 'block';
         }
 
-        // Handle email input
         emailInput.addEventListener('input', function() {
           const email = this.value.trim();
           if (email && email.includes('@')) {
@@ -534,37 +576,27 @@
           }
         });
 
-        // Copy referral link
-        copyLinkBtn.addEventListener('click', function() {
-          copyToClipboard(currentReferralLink, this);
-        });
+        copyLinkBtn.addEventListener('click', function() { copyToClipboard(currentReferralLink, this); });
+        copyShareBtn.addEventListener('click', function() { copyToClipboard(currentReferralLink, this); });
 
-        // Copy share link
-        copyShareBtn.addEventListener('click', function() {
-          copyToClipboard(currentReferralLink, this);
-        });
-
-        // Social share - Facebook
         shareFacebookBtn.addEventListener('click', function(e) {
           e.preventDefault();
           const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentReferralLink)}`;
           window.open(shareUrl, 'facebook-share', 'width=580,height=400');
         });
 
-        // Social share - Twitter
         shareTwitterBtn.addEventListener('click', function(e) {
           e.preventDefault();
-          const text = "I just reserved my spot for a robot vacuum that plays games with kids! Reserve yours for $1:";
+          const text = "I just reserved a robot vacuum that plays games with kids! Check it out:";
           const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(currentReferralLink)}`;
           window.open(shareUrl, 'twitter-share', 'width=580,height=400');
         });
 
-        // Store conversion data for tracking
+        // Store conversion data
         const storedUtm = localStorage.getItem('remake_utm');
         const referrer = localStorage.getItem('remake_referrer');
         const variant = params.variant || localStorage.getItem('remake_variant') || 'unknown';
 
-        // Log conversion data (for manual tracking)
         console.log('Conversion data:', {
           utm: storedUtm ? JSON.parse(storedUtm) : null,
           referrer: referrer,

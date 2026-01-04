@@ -14,7 +14,6 @@
     <link rel="preload" href="/assets/SpaceGrotesk-VariableFont_wght_92Z2i9spNtfwrzeGeXHcE.ttf" as="font" crossorigin="anonymous" />
 
     <!-- Meta Pixel Code -->
-    <!-- SETUP: Replace META_PIXEL_ID_PLACEHOLDER with your actual Pixel ID -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -24,10 +23,10 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'META_PIXEL_ID_PLACEHOLDER');
+    fbq('init', '346568425169694');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=META_PIXEL_ID_PLACEHOLDER&ev=PageView&noscript=1"/></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=346568425169694&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel Code -->
 
     <!-- Google Analytics -->
@@ -54,7 +53,9 @@
         --color-text-muted: rgba(156, 163, 175, 1);
         --color-accent: rgba(45, 102, 196, 1);
         --color-accent-hover: rgba(56, 127, 245, 1);
+        --color-accent-secondary: rgba(249, 115, 22, 1);
         --color-border: rgba(55, 65, 81, 1);
+        --color-success: rgba(34, 197, 94, 1);
         --font-family: 'Space Grotesk', Arial, sans-serif;
         --max-width: 1200px;
         --spacing-sm: 0.5rem;
@@ -65,335 +66,101 @@
         --border-radius-full: 8rem;
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family: var(--font-family);
-        background-color: var(--color-bg);
-        color: var(--color-text);
-        line-height: 1.6;
-        font-size: 16px;
-      }
-
-      .container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 0 var(--spacing-lg);
-      }
-
-      /* Navigation */
-      .nav {
-        padding: var(--spacing-md) 0;
-        position: sticky;
-        top: 0;
-        background: var(--color-bg);
-        z-index: 100;
-        border-bottom: 1px solid var(--color-border);
-      }
-
-      .nav .container {
-        display: flex;
-        justify-content: center;
-      }
-
-      .nav-logo img {
-        height: 48px;
-        width: auto;
-      }
-
-      /* Hero Section */
-      .hero {
-        padding: var(--spacing-xl) 0;
-        text-align: center;
-        min-height: 70vh;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero-content {
-        width: 100%;
-      }
-
-      .hero h1 {
-        font-size: clamp(2rem, 6vw, 3.5rem);
-        font-weight: 700;
-        margin-bottom: var(--spacing-md);
-        line-height: 1.2;
-      }
-
-      .hero-subtitle {
-        font-size: clamp(1.1rem, 3vw, 1.5rem);
-        color: var(--color-text-muted);
-        margin-bottom: var(--spacing-lg);
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .cta-button {
-        display: inline-block;
-        background: var(--color-accent);
-        color: white;
-        padding: var(--spacing-md) var(--spacing-lg);
-        border-radius: var(--border-radius-full);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1.1rem;
-        transition: background 0.2s, transform 0.2s;
-      }
-
-      .cta-button:hover {
-        background: var(--color-accent-hover);
-        transform: translateY(-2px);
-      }
-
-      .fine-print {
-        margin-top: var(--spacing-md);
-        font-size: 0.875rem;
-        color: var(--color-text-muted);
-      }
-
-      /* Video Section */
-      .video-section {
-        padding: var(--spacing-xl) 0;
-        background: var(--color-bg-section);
-      }
-
-      .video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        border-radius: var(--border-radius);
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-
-      .video-caption {
-        text-align: center;
-        margin-top: var(--spacing-md);
-        color: var(--color-text-muted);
-        font-size: 0.9rem;
-      }
-
-      /* Benefits Section */
-      .benefits {
-        padding: var(--spacing-xl) 0;
-      }
-
-      .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: var(--spacing-lg);
-      }
-
-      .benefit-card {
-        background: var(--color-bg-section);
-        padding: var(--spacing-lg);
-        border-radius: var(--border-radius);
-        border: 1px solid var(--color-border);
-      }
-
-      .benefit-card h3 {
-        font-size: 1.25rem;
-        margin-bottom: var(--spacing-sm);
-        color: var(--color-text);
-      }
-
-      .benefit-card p {
-        color: var(--color-text-muted);
-        font-size: 1rem;
-      }
-
-      /* How It Works Section */
-      .how-it-works {
-        padding: var(--spacing-xl) 0;
-        background: var(--color-bg-section);
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: clamp(1.5rem, 4vw, 2.5rem);
-        margin-bottom: var(--spacing-xl);
-      }
-
-      .steps {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: var(--spacing-lg);
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .step {
-        text-align: center;
-        padding: var(--spacing-md);
-      }
-
-      .step-number {
-        width: 48px;
-        height: 48px;
-        background: var(--color-accent);
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1.25rem;
-        margin: 0 auto var(--spacing-md);
-      }
-
-      .step h3 {
-        font-size: 1.1rem;
-        margin-bottom: var(--spacing-sm);
-      }
-
-      .step p {
-        color: var(--color-text-muted);
-        font-size: 0.9rem;
-      }
-
-      /* FAQ Section */
-      .faq {
-        padding: var(--spacing-xl) 0;
-      }
-
-      .faq-list {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .faq-item {
-        border-bottom: 1px solid var(--color-border);
-      }
-
-      .faq-question {
-        width: 100%;
-        background: none;
-        border: none;
-        color: var(--color-text);
-        padding: var(--spacing-md) 0;
-        font-size: 1rem;
-        font-weight: 600;
-        text-align: left;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: var(--font-family);
-      }
-
-      .faq-question:hover {
-        color: var(--color-accent-hover);
-      }
-
-      .faq-icon {
-        font-size: 1.5rem;
-        transition: transform 0.2s;
-      }
-
-      .faq-item.open .faq-icon {
-        transform: rotate(45deg);
-      }
-
-      .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-      }
-
-      .faq-item.open .faq-answer {
-        max-height: 500px;
-      }
-
-      .faq-answer p {
-        padding-bottom: var(--spacing-md);
-        color: var(--color-text-muted);
-      }
-
-      /* Final CTA */
-      .final-cta {
-        padding: var(--spacing-xl) 0;
-        text-align: center;
-        background: var(--color-bg-section);
-      }
-
-      .final-cta h2 {
-        font-size: clamp(1.5rem, 4vw, 2.5rem);
-        margin-bottom: var(--spacing-lg);
-      }
-
-      /* Footer */
-      .footer {
-        padding: var(--spacing-lg) 0;
-        border-top: 1px solid var(--color-border);
-        text-align: center;
-      }
-
-      .footer-links {
-        display: flex;
-        justify-content: center;
-        gap: var(--spacing-lg);
-        flex-wrap: wrap;
-      }
-
-      .footer-links a {
-        color: var(--color-text-muted);
-        text-decoration: none;
-        font-size: 0.9rem;
-      }
-
-      .footer-links a:hover {
-        color: var(--color-text);
-      }
-
-      .footer-copy {
-        margin-top: var(--spacing-md);
-        color: var(--color-text-muted);
-        font-size: 0.8rem;
-      }
-
-      /* Mobile adjustments */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: var(--font-family); background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; font-size: 16px; }
+      .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-lg); }
+      .nav { padding: var(--spacing-md) 0; position: sticky; top: 0; background: var(--color-bg); z-index: 100; border-bottom: 1px solid var(--color-border); }
+      .nav .container { display: flex; justify-content: center; }
+      .nav-logo img { height: 48px; width: auto; }
+      .hero { padding: var(--spacing-xl) 0; text-align: center; min-height: 70vh; display: flex; align-items: center; }
+      .hero-content { width: 100%; }
+      .hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 700; margin-bottom: var(--spacing-md); line-height: 1.2; }
+      .hero-subtitle { font-size: clamp(1.1rem, 3vw, 1.5rem); color: var(--color-text-muted); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
+      .cta-button { display: inline-block; background: var(--color-accent); color: white; padding: var(--spacing-md) var(--spacing-lg); border-radius: var(--border-radius-full); text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: background 0.2s, transform 0.2s; border: none; cursor: pointer; }
+      .cta-button:hover { background: var(--color-accent-hover); transform: translateY(-2px); }
+      .fine-print { margin-top: var(--spacing-md); font-size: 0.875rem; color: var(--color-text-muted); }
+      .video-section { padding: var(--spacing-xl) 0; background: var(--color-bg-section); }
+      .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--border-radius); max-width: 800px; margin: 0 auto; }
+      .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+      .video-caption { text-align: center; margin-top: var(--spacing-md); color: var(--color-text-muted); font-size: 0.9rem; }
+      .product-tiers { padding: var(--spacing-xl) 0; }
+      .section-title { text-align: center; font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: var(--spacing-xl); }
+      .tiers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
+      .tier-card { background: var(--color-bg-section); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 1px solid var(--color-border); position: relative; display: flex; flex-direction: column; }
+      .tier-card.popular { border-color: var(--color-accent); box-shadow: 0 0 20px rgba(45, 102, 196, 0.2); }
+      .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--color-accent); color: white; padding: 4px 16px; border-radius: var(--border-radius-full); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+      .tier-name { font-size: 1.5rem; font-weight: 700; margin-bottom: var(--spacing-sm); }
+      .tier-price { font-size: 2.5rem; font-weight: 700; color: var(--color-accent); }
+      .tier-price .original { font-size: 1.25rem; color: var(--color-text-muted); text-decoration: line-through; margin-left: var(--spacing-sm); }
+      .tier-early-bird { font-size: 0.875rem; color: var(--color-success); margin-bottom: var(--spacing-md); }
+      .tier-specs { list-style: none; margin-bottom: var(--spacing-lg); flex-grow: 1; }
+      .tier-specs li { padding: var(--spacing-sm) 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; color: var(--color-text-muted); display: flex; justify-content: space-between; }
+      .tier-specs li:last-child { border-bottom: none; }
+      .tier-specs .spec-label { color: var(--color-text); }
+      .tier-best-for { font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md); font-style: italic; }
+      .tier-cta { width: 100%; text-align: center; }
+      .tier-disclaimer { text-align: center; font-size: 0.8rem; color: var(--color-text-muted); max-width: 800px; margin: 0 auto; }
+      .all-models { background: var(--color-bg-section); padding: var(--spacing-lg); border-radius: var(--border-radius); margin-top: var(--spacing-lg); max-width: 800px; margin-left: auto; margin-right: auto; }
+      .all-models h3 { font-size: 1.1rem; margin-bottom: var(--spacing-md); text-align: center; }
+      .all-models-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-sm); }
+      .all-models-grid span { font-size: 0.875rem; color: var(--color-text-muted); }
+      .all-models-grid span::before { content: "✓ "; color: var(--color-success); }
+      .apps-section { padding: var(--spacing-xl) 0; background: var(--color-bg-section); }
+      .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--spacing-md); max-width: 800px; margin: 0 auto var(--spacing-lg); }
+      .app-card { background: var(--color-bg); padding: var(--spacing-md); border-radius: var(--border-radius); text-align: center; border: 1px solid var(--color-border); }
+      .app-icon { font-size: 2rem; margin-bottom: var(--spacing-sm); }
+      .app-name { font-size: 0.9rem; font-weight: 600; }
+      .apps-note { text-align: center; color: var(--color-text-muted); font-size: 0.9rem; }
+      .benefits { padding: var(--spacing-xl) 0; }
+      .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg); }
+      .benefit-card { background: var(--color-bg-section); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 1px solid var(--color-border); }
+      .benefit-card h3 { font-size: 1.25rem; margin-bottom: var(--spacing-sm); color: var(--color-text); }
+      .benefit-card p { color: var(--color-text-muted); font-size: 1rem; }
+      .privacy-section { padding: var(--spacing-xl) 0; background: var(--color-bg-section); }
+      .privacy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg); max-width: 800px; margin: 0 auto var(--spacing-lg); }
+      .privacy-mode { background: var(--color-bg); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 1px solid var(--color-border); }
+      .privacy-mode h3 { font-size: 1.1rem; margin-bottom: var(--spacing-sm); color: var(--color-accent); }
+      .privacy-mode .mode-subtitle { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md); }
+      .privacy-mode ul { list-style: none; }
+      .privacy-mode li { padding: var(--spacing-sm) 0; font-size: 0.9rem; color: var(--color-text-muted); }
+      .privacy-mode li::before { content: "✓ "; color: var(--color-success); }
+      .privacy-badges { display: flex; justify-content: center; gap: var(--spacing-lg); flex-wrap: wrap; }
+      .privacy-badge { display: flex; align-items: center; gap: var(--spacing-sm); font-size: 0.9rem; color: var(--color-text-muted); }
+      .privacy-badge .badge-icon { font-size: 1.5rem; }
+      .how-it-works { padding: var(--spacing-xl) 0; }
+      .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-lg); max-width: 900px; margin: 0 auto; }
+      .step { text-align: center; padding: var(--spacing-md); }
+      .step-number { width: 48px; height: 48px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem; margin: 0 auto var(--spacing-md); }
+      .step h3 { font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+      .step p { color: var(--color-text-muted); font-size: 0.9rem; }
+      .faq { padding: var(--spacing-xl) 0; background: var(--color-bg-section); }
+      .faq-list { max-width: 800px; margin: 0 auto; }
+      .faq-item { border-bottom: 1px solid var(--color-border); }
+      .faq-question { width: 100%; background: none; border: none; color: var(--color-text); padding: var(--spacing-md) 0; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-family); }
+      .faq-question:hover { color: var(--color-accent-hover); }
+      .faq-icon { font-size: 1.5rem; transition: transform 0.2s; }
+      .faq-item.open .faq-icon { transform: rotate(45deg); }
+      .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+      .faq-item.open .faq-answer { max-height: 500px; }
+      .faq-answer p { padding-bottom: var(--spacing-md); color: var(--color-text-muted); }
+      .final-cta { padding: var(--spacing-xl) 0; text-align: center; }
+      .final-cta h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: var(--spacing-lg); }
+      .footer { padding: var(--spacing-lg) 0; border-top: 1px solid var(--color-border); text-align: center; }
+      .footer-links { display: flex; justify-content: center; gap: var(--spacing-lg); flex-wrap: wrap; }
+      .footer-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem; }
+      .footer-links a:hover { color: var(--color-text); }
+      .footer-copy { margin-top: var(--spacing-md); color: var(--color-text-muted); font-size: 0.8rem; }
       @media (max-width: 768px) {
-        .container {
-          padding: 0 var(--spacing-md);
-        }
-
-        .hero {
-          min-height: auto;
-          padding: var(--spacing-lg) 0;
-        }
-
-        .benefits-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .steps {
-          grid-template-columns: 1fr;
-        }
+        .container { padding: 0 var(--spacing-md); }
+        .hero { min-height: auto; padding: var(--spacing-lg) 0; }
+        .benefits-grid, .tiers-grid { grid-template-columns: 1fr; }
+        .steps { grid-template-columns: 1fr; }
+        .privacy-badges { flex-direction: column; align-items: center; }
       }
     </style>
   </head>
   <body>
-    <!-- Navigation -->
     <nav class="nav">
       <div class="container">
         <a href="/" class="nav-logo">
@@ -402,36 +169,106 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
       <div class="container">
         <div class="hero-content">
           <h1>New Games for Your Robot, Every Week</h1>
           <p class="hero-subtitle">Your robot vacuum is about to get a lot more interesting. An app store for robots means endless possibilities.</p>
-          <!-- SETUP: Replace SQUARE_PAYMENT_LINK_PLACEHOLDER with your Square Payment Link URL -->
-          <a href="SQUARE_PAYMENT_LINK_PLACEHOLDER" class="cta-button" id="hero-cta">Reserve for $1 &rarr; Get $20 Off</a>
-          <p class="fine-print">Fully refundable &bull; Ships Q4 2026</p>
+          <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button" id="hero-cta">Reserve for $1 &rarr; Get $20 Off</a>
+          <p class="fine-print">Fully refundable &bull; US Company &bull; Q4 2026</p>
         </div>
       </div>
     </section>
 
-    <!-- Video Section -->
     <section class="video-section">
       <div class="container">
         <div class="video-wrapper">
-          <!-- SETUP: Replace YOUTUBE_VIDEO_ID_PLACEHOLDER with your YouTube video ID -->
-          <iframe
-            src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_PLACEHOLDER"
-            title="See remake in action"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="See remake in action" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p class="video-caption">See the robot app store in action</p>
       </div>
     </section>
 
-    <!-- Benefits Section -->
+    <section class="product-tiers">
+      <div class="container">
+        <h2 class="section-title">Choose Your remake</h2>
+        <div class="tiers-grid">
+          <div class="tier-card">
+            <h3 class="tier-name">remake Essential</h3>
+            <div class="tier-price">$179 <span class="original">$199</span></div>
+            <p class="tier-early-bird">Early bird price with $20 reservation discount</p>
+            <ul class="tier-specs">
+              <li><span class="spec-label">Suction</span> 7,000 Pa</li>
+              <li><span class="spec-label">Navigation</span> 2D LiDAR + Smart Mapping</li>
+              <li><span class="spec-label">Mop</span> Dual spinning pads, auto-lift</li>
+              <li><span class="spec-label">Runtime</span> 150 minutes</li>
+              <li><span class="spec-label">Dock</span> Standard charging</li>
+              <li><span class="spec-label">Threshold</span> 20mm climb</li>
+            </ul>
+            <p class="tier-best-for">Best for: Apartments, small homes, hard floors</p>
+            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
+          </div>
+          <div class="tier-card popular">
+            <span class="popular-badge">Popular</span>
+            <h3 class="tier-name">remake Standard</h3>
+            <div class="tier-price">$329 <span class="original">$349</span></div>
+            <p class="tier-early-bird">Early bird price with $20 reservation discount</p>
+            <ul class="tier-specs">
+              <li><span class="spec-label">Suction</span> 10,000 Pa</li>
+              <li><span class="spec-label">Navigation</span> 2D LiDAR + Smart Mapping</li>
+              <li><span class="spec-label">Mop</span> Dual spinning pads, auto-lift</li>
+              <li><span class="spec-label">Runtime</span> 180 minutes</li>
+              <li><span class="spec-label">Dock</span> Auto-empty + Mop wash & dry</li>
+              <li><span class="spec-label">Threshold</span> 20mm climb</li>
+            </ul>
+            <p class="tier-best-for">Best for: Medium homes, families, pets</p>
+            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
+          </div>
+          <div class="tier-card">
+            <h3 class="tier-name">remake Pro</h3>
+            <div class="tier-price">$479 <span class="original">$499</span></div>
+            <p class="tier-early-bird">Early bird price with $20 reservation discount</p>
+            <ul class="tier-specs">
+              <li><span class="spec-label">Suction</span> 13,000 Pa</li>
+              <li><span class="spec-label">Navigation</span> 2D LiDAR + AI obstacle avoidance</li>
+              <li><span class="spec-label">Mop</span> Dual spinning, edge extension</li>
+              <li><span class="spec-label">Runtime</span> 200 minutes</li>
+              <li><span class="spec-label">Dock</span> Auto-empty + Hot water & air dry</li>
+              <li><span class="spec-label">Threshold</span> 25mm climb</li>
+            </ul>
+            <p class="tier-best-for">Best for: Large homes, multiple floors, power users</p>
+            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
+          </div>
+        </div>
+        <p class="tier-disclaimer">* Specifications are tentative and subject to change before launch. Final pricing confirmed at campaign launch. Choose your specific model when we launch — your $1 reserves access to all tiers. Shipping Q4 2026.</p>
+        <div class="all-models">
+          <h3>All Models Include</h3>
+          <div class="all-models-grid">
+            <span>Full app store access</span>
+            <span>Hide-and-seek, chase, patrol</span>
+            <span>New apps added regularly</span>
+            <span>Cloud OR fully local mode</span>
+            <span>Home Assistant integration</span>
+            <span>US-based cloud and app</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="apps-section">
+      <div class="container">
+        <h2 class="section-title">More Than a Vacuum</h2>
+        <div class="apps-grid">
+          <div class="app-card"><div class="app-icon">🙈</div><div class="app-name">Hide-and-Seek</div></div>
+          <div class="app-card"><div class="app-icon">🏃</div><div class="app-name">Chase</div></div>
+          <div class="app-card"><div class="app-icon">🔦</div><div class="app-name">Patrol</div></div>
+          <div class="app-card"><div class="app-icon">👣</div><div class="app-name">Follow-the-Leader</div></div>
+          <div class="app-card"><div class="app-icon">📅</div><div class="app-name">Routines</div></div>
+        </div>
+        <p class="apps-note">New apps added regularly via our app store</p>
+      </div>
+    </section>
+
     <section class="benefits">
       <div class="container">
         <div class="benefits-grid">
@@ -451,20 +288,54 @@
       </div>
     </section>
 
-    <!-- How It Works Section -->
+    <section class="privacy-section">
+      <div class="container">
+        <h2 class="section-title">Your Robot, Your Rules</h2>
+        <div class="privacy-grid">
+          <div class="privacy-mode">
+            <h3>Cloud Mode</h3>
+            <p class="mode-subtitle">(Default)</p>
+            <ul>
+              <li>All features enabled</li>
+              <li>Remote access anywhere</li>
+              <li>Voice assistant support</li>
+              <li>Automatic updates</li>
+              <li>Map backup and sync</li>
+            </ul>
+          </div>
+          <div class="privacy-mode">
+            <h3>Local Mode</h3>
+            <p class="mode-subtitle">(Privacy-first)</p>
+            <ul>
+              <li>Core cleaning works</li>
+              <li>Apps run locally</li>
+              <li>No data leaves home</li>
+              <li>Home Assistant native</li>
+              <li>Full privacy control</li>
+            </ul>
+          </div>
+        </div>
+        <div class="privacy-badges">
+          <div class="privacy-badge"><span class="badge-icon">🇺🇸</span><span>US-based company — Cloud and app developed in the USA</span></div>
+          <div class="privacy-badge"><span class="badge-icon">🔒</span><span>No data selling — We never sell your home maps or usage data</span></div>
+          <div class="privacy-badge"><span class="badge-icon">🏠</span><span>Home Assistant — Run robot apps on your own local server</span></div>
+        </div>
+      </div>
+    </section>
+
     <section class="how-it-works">
       <div class="container">
         <h2 class="section-title">How It Works</h2>
         <div class="steps">
           <div class="step">
             <div class="step-number">1</div>
-            <h3>Reserve for $1 today</h3>
-            <p>Secure your spot with a fully refundable $1 deposit.</p>
+            <h3>Reserve for $1</h3>
+            <p>Secure your spot with a fully refundable deposit.</p>
           </div>
           <div class="step">
             <div class="step-number">2</div>
-            <h3>We'll notify you at launch</h3>
-            <p>Get early access when we launch on Kickstarter in Spring 2026.</p>
+            <h3>Choose your model when we launch</h3>
+            <p>Pick Essential, Standard, or Pro when our campaign goes live.</p>
           </div>
           <div class="step">
             <div class="step-number">3</div>
@@ -475,71 +346,33 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
     <section class="faq">
       <div class="container">
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question">
-              Is my $1 fully refundable?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, 100%. If you change your mind, email us anytime before launch and we'll refund your dollar immediately. No questions asked.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              When does it ship?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>We're targeting Q4 2026 (October-December). We're launching on Kickstarter in Spring 2026, and your $1 reservation guarantees early access and $20 off the campaign price.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              What robot vacuums are compatible?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>At launch, we're starting with our own robot vacuum designed for apps. Future versions may support popular models like Roomba and Roborock. Join the waitlist to vote on which robots we should support next.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              What apps/games are included?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Launch apps include: Hide-and-Seek, Chase, Patrol, and Follow-the-Leader. Our app store will add new games regularly — think of it like apps for your phone, but for your robot.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              Who is this for?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Families with kids ages 6-12 who want to turn their robot vacuum into a playmate. Also great for anyone who wants their home robot to do more than just clean.</p>
-            </div>
-          </div>
+          <div class="faq-item"><button class="faq-question">Is my $1 fully refundable?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes, 100%. Email us anytime before launch for a full refund, no questions asked.</p></div></div>
+          <div class="faq-item"><button class="faq-question">What am I reserving?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Early access to our crowdfunding campaign and a $20 discount on any remake robot vacuum. You'll choose your specific model (Essential, Standard, or Pro) when we launch.</p></div></div>
+          <div class="faq-item"><button class="faq-question">How much will the robots cost?<span class="faq-icon">+</span></button><div class="faq-answer"><p>$199 for Essential, $349 for Standard, $499 for Pro. With your $20 early bird discount: $179, $329, or $479. Final pricing confirmed at launch.</p></div></div>
+          <div class="faq-item"><button class="faq-question">When does it ship?<span class="faq-icon">+</span></button><div class="faq-answer"><p>We're launching in Spring 2026, targeting delivery Q4 2026 (October-December) for the holiday season.</p></div></div>
+          <div class="faq-item"><button class="faq-question">Is this just a vacuum or does it actually play games?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Both! It's a fully functional robot vacuum AND mop. The apps (games, routines, patrol modes) are what make it special — your kids can play hide-and-seek with it, then it cleans the floors.</p></div></div>
+          <div class="faq-item"><button class="faq-question">What apps/games are included?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Launch apps: Hide-and-Seek, Chase, Patrol, Follow-the-Leader, and scheduled routines. Our app store adds new games and features regularly.</p></div></div>
+          <div class="faq-item"><button class="faq-question">Does it require internet?<span class="faq-icon">+</span></button><div class="faq-answer"><p>No. remake works with OR without cloud. Cloud mode gives you remote access, voice control, and automatic updates. Local mode keeps everything on your home network — perfect for privacy-focused families.</p></div></div>
+          <div class="faq-item"><button class="faq-question">Who makes this?<span class="faq-icon">+</span></button><div class="faq-answer"><p>remake is a US-based company. Our cloud services and mobile app are developed and operated in the USA. Hardware is manufactured in China (like virtually all robot vacuums).</p></div></div>
+          <div class="faq-item"><button class="faq-question">Will it work with my smart home?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. Supports Alexa, Google Home, Siri Shortcuts, and native Home Assistant integration.</p></div></div>
+          <div class="faq-item"><button class="faq-question">How does this compare to Roomba or Roborock?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Similar cleaning technology (LiDAR navigation, mopping). What's different: we're the first with an app store for robots. Your vacuum cleans AND plays games. It evolves over time with new apps.</p></div></div>
+          <div class="faq-item"><button class="faq-question">Is this Kickstarter?<span class="faq-icon">+</span></button><div class="faq-answer"><p>We haven't finalized our launch platform yet. Your $1 reservation guarantees early access and discount regardless of where we launch.</p></div></div>
         </div>
       </div>
     </section>
 
-    <!-- Final CTA Section -->
     <section class="final-cta">
       <div class="container">
         <h2>Ready to play?</h2>
-        <!-- SETUP: Replace SQUARE_PAYMENT_LINK_PLACEHOLDER with your Square Payment Link URL -->
-        <a href="SQUARE_PAYMENT_LINK_PLACEHOLDER" class="cta-button" id="final-cta">Reserve for $1 &rarr; Get $20 Off</a>
-        <p class="fine-print">Fully refundable &bull; Ships Q4 2026</p>
+        <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button" id="final-cta">Reserve for $1 &rarr; Get $20 Off</a>
+        <p class="fine-print">Fully refundable &bull; US Company &bull; Q4 2026</p>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="footer-links">
@@ -547,101 +380,39 @@
           <a href="/privacy-policy">Privacy Policy</a>
           <a href="mailto:hello@remake.ai">Contact</a>
         </div>
-        <p class="footer-copy">&copy; 2025 REMAKE AI</p>
+        <p class="footer-copy">&copy; 2025 remake</p>
       </div>
     </footer>
 
-    <!-- UTM Parameter Handling & Referral Tracking -->
     <script>
       (function() {
-        // Parse URL parameters
         function getUrlParams() {
           const params = {};
           const searchParams = new URLSearchParams(window.location.search);
-          for (const [key, value] of searchParams) {
-            params[key] = value;
-          }
+          for (const [key, value] of searchParams) { params[key] = value; }
           return params;
         }
-
-        // Store UTM parameters in localStorage
         function storeUtmParams() {
           const params = getUrlParams();
           const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
           const utmData = {};
-
-          utmKeys.forEach(key => {
-            if (params[key]) {
-              utmData[key] = params[key];
-            }
-          });
-
-          if (Object.keys(utmData).length > 0) {
-            localStorage.setItem('remake_utm', JSON.stringify(utmData));
-          }
+          utmKeys.forEach(key => { if (params[key]) { utmData[key] = params[key]; } });
+          if (Object.keys(utmData).length > 0) { localStorage.setItem('remake_utm', JSON.stringify(utmData)); }
         }
-
-        // Store referral info if present
         function storeReferralInfo() {
           const params = getUrlParams();
-          if (params.ref) {
-            localStorage.setItem('remake_referrer', params.ref);
-          }
+          if (params.ref) { localStorage.setItem('remake_referrer', params.ref); }
         }
-
-        // Append UTM params to payment links
-        function updatePaymentLinks() {
-          const storedUtm = localStorage.getItem('remake_utm');
-          const referrer = localStorage.getItem('remake_referrer');
-          const links = document.querySelectorAll('a[href*="SQUARE_PAYMENT_LINK_PLACEHOLDER"]');
-
-          links.forEach(link => {
-            let href = link.getAttribute('href');
-
-            // Only modify if the placeholder has been replaced with actual URL
-            if (href && !href.includes('SQUARE_PAYMENT_LINK_PLACEHOLDER')) {
-              const url = new URL(href);
-
-              if (storedUtm) {
-                const utmData = JSON.parse(storedUtm);
-                Object.keys(utmData).forEach(key => {
-                  url.searchParams.set(key, utmData[key]);
-                });
-              }
-
-              if (referrer) {
-                url.searchParams.set('ref', referrer);
-              }
-
-              // Add variant identifier
-              url.searchParams.set('variant', 'games');
-
-              link.setAttribute('href', url.toString());
-            }
-          });
-        }
-
-        // Initialize
+        localStorage.setItem('remake_variant', 'games');
         storeUtmParams();
         storeReferralInfo();
-        updatePaymentLinks();
       })();
-
-      // FAQ Accordion
       document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
           const faqItem = button.parentElement;
           const isOpen = faqItem.classList.contains('open');
-
-          // Close all other FAQs
-          document.querySelectorAll('.faq-item').forEach(item => {
-            item.classList.remove('open');
-          });
-
-          // Toggle current FAQ
-          if (!isOpen) {
-            faqItem.classList.add('open');
-          }
+          document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('open'); });
+          if (!isOpen) { faqItem.classList.add('open'); }
         });
       });
     </script>

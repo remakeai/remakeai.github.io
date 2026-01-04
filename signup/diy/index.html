@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Apps for Your Robot — Free & Open | Remake.ai</title>
+    <meta name="description" content="Turn your Dreame or Roborock into a playmate. Or build your own robot apps. Free software, open source, privacy-first." />
+    <meta property="og:title" content="Apps for Your Robot — Free & Open | Remake.ai" />
+    <meta property="og:description" content="Turn your Dreame or Roborock into a playmate. Or build your own robot apps. Free software, open source, privacy-first." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Remake.ai" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png" />
+    <link rel="preload" href="/assets/SpaceGrotesk-VariableFont_wght_92Z2i9spNtfwrzeGeXHcE.ttf" as="font" crossorigin="anonymous" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '346568425169694');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=346568425169694&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJLTHN5B4J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LJLTHN5B4J');
+    </script>
+
+    <style>
+      @font-face {
+        font-family: 'Space Grotesk';
+        src: url('/assets/SpaceGrotesk-VariableFont_wght_92Z2i9spNtfwrzeGeXHcE.ttf') format('truetype');
+        font-weight: 300 700;
+        font-display: swap;
+      }
+
+      :root {
+        --color-bg: rgba(13, 15, 18, 1);
+        --color-bg-section: rgba(20, 23, 28, 1);
+        --color-bg-card: rgba(30, 35, 42, 1);
+        --color-text: rgba(255, 255, 255, 1);
+        --color-text-muted: rgba(156, 163, 175, 1);
+        --color-accent: rgba(45, 102, 196, 1);
+        --color-accent-hover: rgba(56, 127, 245, 1);
+        --color-developer: rgba(139, 92, 246, 1);
+        --color-developer-hover: rgba(167, 139, 250, 1);
+        --color-border: rgba(55, 65, 81, 1);
+        --color-success: rgba(34, 197, 94, 1);
+        --color-warning: rgba(249, 115, 22, 1);
+        --font-family: 'Space Grotesk', Arial, sans-serif;
+        --max-width: 1200px;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 4rem;
+        --border-radius: 0.5rem;
+        --border-radius-full: 8rem;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: var(--font-family); background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; font-size: 16px; }
+      .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-lg); }
+
+      /* Navigation */
+      .nav { padding: var(--spacing-md) 0; position: sticky; top: 0; background: var(--color-bg); z-index: 100; border-bottom: 1px solid var(--color-border); }
+      .nav .container { display: flex; justify-content: center; }
+      .nav-logo img { height: 48px; width: auto; }
+
+      /* Hero Section */
+      .hero { padding: var(--spacing-xl) 0; text-align: center; }
+      .hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 700; margin-bottom: var(--spacing-md); line-height: 1.2; }
+      .hero-subtitle { font-size: clamp(1.1rem, 3vw, 1.5rem); color: var(--color-text-muted); margin-bottom: var(--spacing-lg); max-width: 700px; margin-left: auto; margin-right: auto; }
+      .hero-meta { font-size: 0.9rem; color: var(--color-text-muted); margin-top: var(--spacing-lg); }
+      .hero-meta span { margin: 0 var(--spacing-sm); }
+
+      /* Two Path Cards */
+      .two-paths { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg); margin-top: var(--spacing-xl); max-width: 800px; margin-left: auto; margin-right: auto; }
+      .path-card { background: var(--color-bg-section); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 2px solid var(--color-border); text-align: left; transition: border-color 0.2s; }
+      .path-card:hover { border-color: var(--color-accent); }
+      .path-card.developer:hover { border-color: var(--color-developer); }
+      .path-card h3 { font-size: 1.25rem; margin-bottom: var(--spacing-sm); }
+      .path-card p { color: var(--color-text-muted); margin-bottom: var(--spacing-md); font-size: 0.95rem; }
+      .path-link { display: inline-block; color: var(--color-accent); font-weight: 600; text-decoration: none; }
+      .path-link:hover { text-decoration: underline; }
+      .path-card.developer .path-link { color: var(--color-developer); }
+
+      /* Section Styles */
+      .section { padding: var(--spacing-xl) 0; }
+      .section-alt { background: var(--color-bg-section); }
+      .section-title { font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: var(--spacing-md); }
+      .section-subtitle { color: var(--color-text-muted); margin-bottom: var(--spacing-xl); font-size: 1.1rem; }
+
+      /* Vacuum Owners Section */
+      .vacuum-section { max-width: 900px; margin: 0 auto; }
+      .feature-list { list-style: none; margin-bottom: var(--spacing-lg); }
+      .feature-list li { padding: var(--spacing-sm) 0; font-size: 1rem; }
+      .feature-list li::before { content: "✓ "; color: var(--color-success); font-weight: bold; }
+      .free-badge { display: inline-block; background: var(--color-success); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-left: var(--spacing-sm); }
+
+      /* Collapsible Supported Models */
+      .collapsible { background: var(--color-bg-card); border-radius: var(--border-radius); margin-bottom: var(--spacing-lg); border: 1px solid var(--color-border); }
+      .collapsible-header { width: 100%; background: none; border: none; color: var(--color-text); padding: var(--spacing-md); font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-family); }
+      .collapsible-header:hover { color: var(--color-accent); }
+      .collapsible-icon { font-size: 1.5rem; transition: transform 0.2s; }
+      .collapsible.open .collapsible-icon { transform: rotate(45deg); }
+      .collapsible-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+      .collapsible.open .collapsible-content { max-height: 2000px; }
+      .collapsible-inner { padding: 0 var(--spacing-md) var(--spacing-md); }
+
+      .model-section { margin-bottom: var(--spacing-md); }
+      .model-section h4 { font-size: 0.9rem; color: var(--color-accent); margin-bottom: var(--spacing-sm); }
+      .model-list { color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.8; }
+
+      /* Limitations Box */
+      .limitations-box { background: var(--color-bg-card); padding: var(--spacing-lg); border-radius: var(--border-radius); margin-bottom: var(--spacing-lg); border-left: 4px solid var(--color-warning); }
+      .limitations-box h3 { font-size: 1.1rem; margin-bottom: var(--spacing-md); }
+      .works-list, .limited-list { list-style: none; margin-bottom: var(--spacing-md); }
+      .works-list li::before { content: "✓ "; color: var(--color-success); }
+      .limited-list li::before { content: "⚠ "; color: var(--color-warning); }
+      .works-list li, .limited-list li { padding: var(--spacing-sm) 0; font-size: 0.9rem; color: var(--color-text-muted); }
+      .limitation-note { font-size: 0.85rem; color: var(--color-text-muted); font-style: italic; padding: var(--spacing-md); background: var(--color-bg); border-radius: var(--border-radius); }
+
+      /* Requirements Box */
+      .requirements-box { background: var(--color-bg-card); padding: var(--spacing-lg); border-radius: var(--border-radius); margin-bottom: var(--spacing-lg); }
+      .requirements-box h3 { font-size: 1.1rem; margin-bottom: var(--spacing-md); }
+      .requirements-box h4 { font-size: 0.9rem; color: var(--color-text-muted); margin-top: var(--spacing-md); margin-bottom: var(--spacing-sm); }
+      .requirements-list { list-style: none; }
+      .requirements-list li { padding: var(--spacing-sm) 0; font-size: 0.9rem; color: var(--color-text-muted); }
+      .requirements-list li::before { content: "• "; color: var(--color-accent); }
+      .valetudo-link { color: var(--color-accent); text-decoration: none; font-weight: 600; }
+      .valetudo-link:hover { text-decoration: underline; }
+
+      /* Signup Form */
+      .signup-box { background: var(--color-bg-card); padding: var(--spacing-lg); border-radius: var(--border-radius); margin-bottom: var(--spacing-lg); }
+      .signup-box h3 { font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+      .signup-box .subtitle { color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-md); }
+      .form-group { margin-bottom: var(--spacing-md); }
+      .form-input { width: 100%; padding: var(--spacing-md); background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--border-radius); color: var(--color-text); font-family: var(--font-family); font-size: 1rem; }
+      .form-input:focus { outline: none; border-color: var(--color-accent); }
+      .form-checkbox { display: flex; align-items: flex-start; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm); }
+      .form-checkbox input { margin-top: 4px; }
+      .form-checkbox label { font-size: 0.9rem; color: var(--color-text-muted); }
+      .form-textarea { width: 100%; min-height: 80px; padding: var(--spacing-md); background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--border-radius); color: var(--color-text); font-family: var(--font-family); font-size: 0.9rem; resize: vertical; }
+      .form-textarea:focus { outline: none; border-color: var(--color-accent); }
+      .submit-btn { width: 100%; padding: var(--spacing-md); background: var(--color-accent); color: white; border: none; border-radius: var(--border-radius); font-family: var(--font-family); font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+      .submit-btn:hover { background: var(--color-accent-hover); }
+      .submit-btn.developer { background: var(--color-developer); }
+      .submit-btn.developer:hover { background: var(--color-developer-hover); }
+      .form-note { font-size: 0.8rem; color: var(--color-text-muted); margin-top: var(--spacing-sm); }
+      .signup-success { display: none; text-align: center; padding: var(--spacing-lg); color: var(--color-success); }
+
+      /* Developer Section */
+      .developer-section { max-width: 900px; margin: 0 auto; }
+      .platform-info { background: var(--color-bg-card); padding: var(--spacing-lg); border-radius: var(--border-radius); margin-bottom: var(--spacing-lg); border-left: 4px solid var(--color-developer); }
+      .platform-info h3 { font-size: 1.1rem; margin-bottom: var(--spacing-md); color: var(--color-developer); }
+      .platform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
+      .platform-item { font-size: 0.9rem; color: var(--color-text-muted); }
+      .platform-item::before { content: "• "; color: var(--color-developer); }
+      .early-dev-benefits { background: var(--color-bg); padding: var(--spacing-md); border-radius: var(--border-radius); margin-top: var(--spacing-md); }
+      .early-dev-benefits h4 { font-size: 0.9rem; margin-bottom: var(--spacing-sm); }
+      .early-dev-benefits ul { list-style: none; }
+      .early-dev-benefits li { padding: 4px 0; font-size: 0.85rem; color: var(--color-text-muted); }
+      .early-dev-benefits li::before { content: "★ "; color: var(--color-developer); }
+
+      /* Hardware Options */
+      .hardware-options { display: grid; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
+      .hardware-card { background: var(--color-bg-card); padding: var(--spacing-lg); border-radius: var(--border-radius); border: 1px solid var(--color-border); }
+      .hardware-card h3 { font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
+      .hardware-price { font-size: 1.5rem; font-weight: 700; color: var(--color-developer); margin-bottom: var(--spacing-sm); }
+      .hardware-price.free { color: var(--color-success); }
+      .hardware-meta { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md); }
+      .hardware-includes { list-style: none; margin-bottom: var(--spacing-md); }
+      .hardware-includes li { padding: 4px 0; font-size: 0.9rem; color: var(--color-text-muted); }
+      .hardware-includes li::before { content: "• "; color: var(--color-developer); }
+      .hardware-best-for { font-size: 0.85rem; color: var(--color-text-muted); font-style: italic; margin-bottom: var(--spacing-md); }
+      .hardware-warning { font-size: 0.85rem; color: var(--color-warning); margin-bottom: var(--spacing-md); }
+      .hardware-warning::before { content: "⚠ "; }
+      .store-btn { display: inline-block; padding: var(--spacing-sm) var(--spacing-md); background: var(--color-developer); color: white; text-decoration: none; border-radius: var(--border-radius); font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+      .store-btn:hover { background: var(--color-developer-hover); }
+      .hardware-note { text-align: center; font-size: 0.9rem; color: var(--color-text-muted); margin-top: var(--spacing-md); }
+
+      /* FAQ Section */
+      .faq { padding: var(--spacing-xl) 0; }
+      .faq-list { max-width: 800px; margin: 0 auto; }
+      .faq-item { border-bottom: 1px solid var(--color-border); }
+      .faq-question { width: 100%; background: none; border: none; color: var(--color-text); padding: var(--spacing-md) 0; font-size: 1rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-family); }
+      .faq-question:hover { color: var(--color-accent-hover); }
+      .faq-icon { font-size: 1.5rem; transition: transform 0.2s; }
+      .faq-item.open .faq-icon { transform: rotate(45deg); }
+      .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+      .faq-item.open .faq-answer { max-height: 500px; }
+      .faq-answer p { padding-bottom: var(--spacing-md); color: var(--color-text-muted); }
+
+      /* Footer */
+      .footer { padding: var(--spacing-lg) 0; border-top: 1px solid var(--color-border); text-align: center; }
+      .footer-links { display: flex; justify-content: center; gap: var(--spacing-lg); flex-wrap: wrap; }
+      .footer-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem; }
+      .footer-links a:hover { color: var(--color-text); }
+      .footer-copy { margin-top: var(--spacing-md); color: var(--color-text-muted); font-size: 0.8rem; }
+
+      @media (max-width: 768px) {
+        .container { padding: 0 var(--spacing-md); }
+        .two-paths { grid-template-columns: 1fr; }
+        .hardware-options { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png" alt="Remake.ai" />
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Apps for Your Robot — Free & Open</h1>
+        <p class="hero-subtitle">Turn your Dreame or Roborock into a playmate. Or build your own robot apps. Open source spirit. Privacy-first.</p>
+
+        <div class="two-paths">
+          <div class="path-card">
+            <h3>I Have a Robot Vacuum</h3>
+            <p>Free software for your Dreame or Roborock. No payment required.</p>
+            <a href="#vacuum-owners" class="path-link">Learn More ↓</a>
+          </div>
+          <div class="path-card developer">
+            <h3>I Want to Build Apps</h3>
+            <p>Developer tools, SDKs, and hardware kits. Start building today.</p>
+            <a href="#developers" class="path-link">Learn More ↓</a>
+          </div>
+        </div>
+
+        <p class="hero-meta">
+          <span>Launching Q2 2026</span> •
+          <span>Built on Valetudo</span> •
+          <span>Privacy-first</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- For Vacuum Owners Section -->
+    <section id="vacuum-owners" class="section section-alt">
+      <div class="container">
+        <div class="vacuum-section">
+          <h2 class="section-title">Free Software for Your Vacuum <span class="free-badge">FREE</span></h2>
+          <p class="section-subtitle">Turn your existing robot vacuum into a playmate:</p>
+
+          <ul class="feature-list">
+            <li><strong>Games</strong> — Hide-and-seek, patrol, follow-me</li>
+            <li><strong>Custom routines</strong> — Beyond basic cleaning schedules</li>
+            <li><strong>Privacy</strong> — Runs locally on Home Assistant, no cloud required</li>
+            <li><strong>Regular updates</strong> — New apps and features over time</li>
+            <li><strong>Community</strong> — Join other DIY robot enthusiasts</li>
+          </ul>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-lg);">Free forever for personal use. Built on Valetudo. Respects the open source spirit.</p>
+
+          <!-- Supported Models Collapsible -->
+          <div class="collapsible" id="supported-models">
+            <button class="collapsible-header">
+              Supported Vacuums
+              <span class="collapsible-icon">+</span>
+            </button>
+            <div class="collapsible-content">
+              <div class="collapsible-inner">
+                <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-md);">Your vacuum must be rooted with Valetudo-compatible firmware. Full compatibility list at <a href="https://valetudo.cloud" target="_blank" class="valetudo-link">valetudo.cloud</a></p>
+
+                <div class="model-section">
+                  <h4>Dreame</h4>
+                  <div class="model-list">D9, D9 Pro, F9 • L10 Pro, Z10 Pro • W10, W10 Pro • L10s Ultra, D10s Pro, D10s Plus • L10s Pro Ultra Heat • L40 Ultra, X40 Ultra, X40 Master</div>
+                </div>
+
+                <div class="model-section">
+                  <h4>Roborock</h4>
+                  <div class="model-list">S5, S6, S6 Pure • S4, S4 Max, S5 Max • S7, S7 Pro Ultra • Q7 Max</div>
+                </div>
+
+                <div class="model-section">
+                  <h4>MOVA</h4>
+                  <div class="model-list">Z500, S20 Ultra, P10 Pro Ultra</div>
+                </div>
+
+                <div class="model-section">
+                  <h4>Xiaomi (Dreame/Roborock inside)</h4>
+                  <div class="model-list">V1, 1C, 1T, Vacuum-Mop P • Vacuum-Mop 2 Ultra, X10 Plus</div>
+                </div>
+
+                <p style="margin-top: var(--spacing-md);"><a href="https://valetudo.cloud" target="_blank" class="valetudo-link">Don't see yours? Check valetudo.cloud for the full list →</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Honest Limitations -->
+          <div class="limitations-box">
+            <h3>What to Expect</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-md);">Works great on existing vacuums:</p>
+            <ul class="works-list">
+              <li><strong>Hide-and-seek</strong> — Robot hides, kids seek (or vice versa)</li>
+              <li><strong>Patrol mode</strong> — Security rounds, room checks</li>
+              <li><strong>Follow-me</strong> — Robot follows you around</li>
+              <li><strong>Custom routines</strong> — Advanced scheduling and automation</li>
+              <li><strong>Home Assistant integration</strong> — Trigger any smart home action</li>
+            </ul>
+
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin: var(--spacing-md) 0;">Limited on existing hardware:</p>
+            <ul class="limited-list">
+              <li><strong>Ball games</strong> — Your vacuum isn't fast enough to hit a ball</li>
+              <li><strong>High-speed chase</strong> — Limited by vacuum's max speed (~0.3 m/s)</li>
+              <li><strong>Some games</strong> designed for faster movement</li>
+            </ul>
+
+            <div class="limitation-note">
+              <strong>Why?</strong> Your vacuum was designed to clean, not to play. It prioritizes thorough coverage over speed.<br><br>
+              <strong>Want all games at full speed?</strong> Two options:<br>
+              • Developer hardware kits below ($150) — Full speed, no limits<br>
+              • Consumer hardware at <a href="/reserve/playmate" class="valetudo-link">remake.ai/reserve</a> ($199+) — Ready to use
+            </div>
+          </div>
+
+          <!-- Requirements -->
+          <div class="requirements-box">
+            <h3>What You Need</h3>
+            <h4>Technical requirements:</h4>
+            <ul class="requirements-list">
+              <li>Supported vacuum (see list above)</li>
+              <li>Rooting via Valetudo (30-60 min setup)</li>
+              <li>Home Assistant recommended (not required)</li>
+              <li>Reliable WiFi network</li>
+            </ul>
+
+            <h4>Skill level:</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-sm);">This is a DIY project. You should be comfortable with:</p>
+            <ul class="requirements-list">
+              <li>Following technical documentation</li>
+              <li>Basic command line / SSH</li>
+              <li>Troubleshooting WiFi issues</li>
+              <li>Early-stage software with rough edges</li>
+            </ul>
+
+            <p style="margin-top: var(--spacing-md);"><a href="https://valetudo.cloud" target="_blank" class="valetudo-link">Rooting instructions at valetudo.cloud →</a></p>
+          </div>
+
+          <!-- Vacuum Owner Signup -->
+          <div class="signup-box" id="vacuum-signup-form">
+            <h3>Join the Waitlist</h3>
+            <p class="subtitle">Get notified when the retrofit software launches (Q2 2026).</p>
+
+            <div class="form-group">
+              <input type="email" class="form-input" id="vacuum-email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="vacuum-owns" />
+              <label for="vacuum-owns">I own a supported Dreame, Roborock, or compatible vacuum</label>
+            </div>
+
+            <button class="submit-btn" id="vacuum-submit">Notify Me</button>
+            <p class="form-note">No spam. ~1 email/month with updates.</p>
+          </div>
+
+          <div class="signup-success" id="vacuum-signup-success">
+            You're on the list! We'll email you when the retrofit software launches.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- For Developers Section -->
+    <section id="developers" class="section">
+      <div class="container">
+        <div class="developer-section">
+          <h2 class="section-title" style="color: var(--color-developer);">Build Apps for Robots</h2>
+          <p class="section-subtitle">We're creating an open platform for robot applications. Think: App Store, but for home robots. Write an app once. Run it on any compatible robot. Your apps can reach thousands of homes.</p>
+
+          <!-- Platform Info -->
+          <div class="platform-info">
+            <h3>The Platform</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-md);">What we're building:</p>
+            <div class="platform-grid">
+              <div class="platform-item">SDK for robot app development</div>
+              <div class="platform-item">Local execution on Home Assistant</div>
+              <div class="platform-item">Cloud hosting with free tier</div>
+              <div class="platform-item">Documentation, examples, tutorials</div>
+              <div class="platform-item">App store for distribution</div>
+            </div>
+
+            <div class="early-dev-benefits">
+              <h4>Early developers get:</h4>
+              <ul>
+                <li>Early SDK access (before public launch)</li>
+                <li>Direct support from our team</li>
+                <li>Free cloud hosting tier</li>
+                <li>Featured placement at launch</li>
+                <li>Input on platform direction</li>
+              </ul>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-top: var(--spacing-md);">Coming Q2 2026. Join the waitlist to get early access.</p>
+          </div>
+
+          <!-- Development Hardware Options -->
+          <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-lg);">Development Hardware</h3>
+          <p style="color: var(--color-text-muted); margin-bottom: var(--spacing-lg);">Choose how you want to build:</p>
+
+          <div class="hardware-options">
+            <!-- Option 1: Rooted Vacuum -->
+            <div class="hardware-card">
+              <h3>Option 1: Your Rooted Vacuum</h3>
+              <div class="hardware-price free">Free</div>
+              <div class="hardware-meta">Use what you have</div>
+              <ul class="hardware-includes">
+                <li>Speed: Limited (vacuum speed ~0.3 m/s)</li>
+                <li>Setup: Root your Dreame/Roborock via Valetudo</li>
+              </ul>
+              <p class="hardware-best-for">Best for: Testing basic apps, getting started</p>
+              <p class="hardware-warning">Speed-dependent apps won't work well</p>
+              <a href="#supported-models" class="store-btn" style="background: var(--color-accent);">See Supported Models ↑</a>
+            </div>
+
+            <!-- Option 2: ROS2 Educational Kit -->
+            <div class="hardware-card">
+              <h3>Option 2: ROS2 Educational Kit</h3>
+              <div class="hardware-price">$150</div>
+              <div class="hardware-meta">Full speed (no limitations) • 3D printed, step-by-step assembly</div>
+              <ul class="hardware-includes">
+                <li>2D LiDAR sensor</li>
+                <li>ROS2-compatible controller</li>
+                <li>3D printed chassis</li>
+                <li>Motors and wheels</li>
+                <li>Assembly instructions</li>
+                <li>Bringup documentation</li>
+              </ul>
+              <p class="hardware-best-for">Best for: Learning robotics, full-speed app development, education, makerspaces</p>
+              <!-- SETUP: Replace STORE_URL_ROS2_KIT with your actual store URL -->
+              <a href="STORE_URL_ROS2_KIT" class="store-btn">Buy in Store →</a>
+            </div>
+
+            <!-- Option 3: Vacuum Mockup Kit -->
+            <div class="hardware-card">
+              <h3>Option 3: Vacuum Mockup Kit (Developer Edition)</h3>
+              <div class="hardware-price">$150</div>
+              <div class="hardware-meta">Full speed (no limitations) • 3D printed, step-by-step assembly</div>
+              <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--spacing-md);">Same as ROS2 Kit, but housed in a robot vacuum form factor (no actual vacuum function).</p>
+              <ul class="hardware-includes">
+                <li>Everything in ROS2 Educational Kit</li>
+                <li>Vacuum-shaped 3D printed shell</li>
+                <li>Realistic form factor for app testing</li>
+              </ul>
+              <p class="hardware-best-for">Best for: Testing apps on realistic hardware, demos, videos, content creation</p>
+              <!-- SETUP: Replace STORE_URL_VACUUM_MOCKUP with your actual store URL -->
+              <a href="STORE_URL_VACUUM_MOCKUP" class="store-btn">Buy in Store →</a>
+            </div>
+          </div>
+
+          <p class="hardware-note">All development hardware runs apps at full speed. Same platform, same SDK, same apps — just faster.</p>
+
+          <!-- Developer Signup -->
+          <div class="signup-box" id="developer-signup-form" style="margin-top: var(--spacing-xl);">
+            <h3>Join as a Developer</h3>
+            <p class="subtitle">Get early SDK access and start building robot apps.</p>
+
+            <div class="form-group">
+              <input type="email" class="form-input" id="dev-email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="dev-developer" />
+              <label for="dev-developer">I'm a developer interested in building robot apps</label>
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="dev-educator" />
+              <label for="dev-educator">I'm an educator interested in robotics curriculum</label>
+            </div>
+
+            <div class="form-checkbox">
+              <input type="checkbox" id="dev-has-hardware" />
+              <label for="dev-has-hardware">I already have development hardware (kit or rooted vacuum)</label>
+            </div>
+
+            <div class="form-group" style="margin-top: var(--spacing-md);">
+              <label style="display: block; font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">What do you want to build? (Optional)</label>
+              <textarea class="form-textarea" id="dev-idea" placeholder="Tell us about your robot app idea..."></textarea>
+            </div>
+
+            <button class="submit-btn developer" id="dev-submit">Join Developer Waitlist</button>
+          </div>
+
+          <div class="signup-success" id="developer-signup-success">
+            Welcome to the developer program! We'll be in touch with early SDK access.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section-alt">
+      <div class="container">
+        <h2 class="section-title" style="text-align: center;">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">Is the retrofit software really free?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Yes. Free forever for personal use. We're building a platform — the software grows the ecosystem. Our business model is hardware and the app store, not the retrofit.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Why free?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>We're building on Valetudo and the open source community. Charging wouldn't match that spirit. Plus, retrofit users often become hardware customers later.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What's the difference between the ROS2 Kit and Vacuum Mockup Kit?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Same electronics and capabilities. The Vacuum Mockup Kit has a 3D-printed shell that looks like a robot vacuum, useful for realistic testing, demos, and videos. The ROS2 Kit has a simpler educational chassis.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do the kits require assembly?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Yes. Both kits are 3D printed with step-by-step assembly and bringup instructions. Plan for a few hours of assembly time. This is a maker/developer product, not plug-and-play.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Why are the kits faster than real vacuums?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Real vacuums are optimized for cleaning coverage, not speed. They move slowly (~0.3 m/s) to vacuum thoroughly. Our kits are optimized for robotics, with faster motors and no vacuum components weighing them down.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do I need Home Assistant?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Recommended but not required. Home Assistant lets you run apps locally with full privacy. Without it, you can use our cloud (also free, also privacy-respecting).</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is rooting hard?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Depends on your model and comfort level. Some take 30 minutes, others need more effort. See valetudo.cloud for model-specific instructions.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Will rooting void my warranty?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Possibly. Research your specific situation. We can't provide legal advice.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">When does everything launch?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Retrofit software and developer SDK: Q2 2026. Consumer hardware: Q4 2026.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What if I'm not technical enough for any of this?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+              <p>Check out our consumer hardware at <a href="/reserve/playmate" style="color: var(--color-accent);">remake.ai/reserve</a> — works out of the box, no rooting or assembly required, and all games work at full speed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="mailto:hello@remake.ai">Contact</a>
+        </div>
+        <p class="footer-copy">&copy; 2025 remake</p>
+      </div>
+    </footer>
+
+    <script>
+      (function() {
+        // UTM Parameter Handling
+        function getUrlParams() {
+          const params = {};
+          const searchParams = new URLSearchParams(window.location.search);
+          for (const [key, value] of searchParams) {
+            params[key] = value;
+          }
+          return params;
+        }
+
+        function storeUtmParams() {
+          const params = getUrlParams();
+          const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+          const utmData = {};
+          utmKeys.forEach(key => {
+            if (params[key]) {
+              utmData[key] = params[key];
+            }
+          });
+          if (Object.keys(utmData).length > 0) {
+            localStorage.setItem('remake_utm', JSON.stringify(utmData));
+          }
+        }
+
+        storeUtmParams();
+        localStorage.setItem('remake_variant', 'retrofit');
+
+        // Collapsible functionality
+        document.querySelectorAll('.collapsible-header').forEach(button => {
+          button.addEventListener('click', () => {
+            const collapsible = button.parentElement;
+            collapsible.classList.toggle('open');
+          });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+          button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            const isOpen = faqItem.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(item => {
+              item.classList.remove('open');
+            });
+            if (!isOpen) {
+              faqItem.classList.add('open');
+            }
+          });
+        });
+
+        // Vacuum Owner Signup
+        document.getElementById('vacuum-submit').addEventListener('click', function() {
+          const email = document.getElementById('vacuum-email').value.trim();
+          const ownsVacuum = document.getElementById('vacuum-owns').checked;
+
+          if (!email || !email.includes('@')) {
+            alert('Please enter a valid email address.');
+            return;
+          }
+
+          const signupData = {
+            email: email,
+            owns_vacuum: ownsVacuum,
+            type: 'vacuum_owner',
+            timestamp: new Date().toISOString(),
+            utm: JSON.parse(localStorage.getItem('remake_utm') || '{}')
+          };
+
+          console.log('Vacuum owner signup:', signupData);
+          localStorage.setItem('remake_retrofit_signup', JSON.stringify(signupData));
+
+          // Track Meta Pixel Lead event
+          if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {content_name: 'vacuum_owner'});
+          }
+
+          // Show success
+          document.getElementById('vacuum-signup-form').style.display = 'none';
+          document.getElementById('vacuum-signup-success').style.display = 'block';
+        });
+
+        // Developer Signup
+        document.getElementById('dev-submit').addEventListener('click', function() {
+          const email = document.getElementById('dev-email').value.trim();
+          const isDeveloper = document.getElementById('dev-developer').checked;
+          const isEducator = document.getElementById('dev-educator').checked;
+          const hasHardware = document.getElementById('dev-has-hardware').checked;
+          const idea = document.getElementById('dev-idea').value.trim();
+
+          if (!email || !email.includes('@')) {
+            alert('Please enter a valid email address.');
+            return;
+          }
+
+          const signupData = {
+            email: email,
+            is_developer: isDeveloper,
+            is_educator: isEducator,
+            has_hardware: hasHardware,
+            idea: idea,
+            type: 'developer',
+            timestamp: new Date().toISOString(),
+            utm: JSON.parse(localStorage.getItem('remake_utm') || '{}')
+          };
+
+          console.log('Developer signup:', signupData);
+          localStorage.setItem('remake_developer_signup', JSON.stringify(signupData));
+
+          // Track Meta Pixel Lead event
+          if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {content_name: 'developer'});
+          }
+
+          // Show success
+          document.getElementById('developer-signup-form').style.display = 'none';
+          document.getElementById('developer-signup-success').style.display = 'block';
+        });
+      })();
+    </script>
+  </body>
+</html>

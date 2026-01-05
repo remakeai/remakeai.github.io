@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Operating System for Robots | Remake.ai</title>
+    <meta name="description" content="One platform. Every robot. Infinite apps. remake is building the app platform that connects robot manufacturers, developers, and consumers." />
+    <meta property="og:title" content="The Operating System for Robots | Remake.ai" />
+    <meta property="og:description" content="One platform. Every robot. Infinite apps. The app platform for home robots." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Remake.ai" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png" />
+    <link rel="preload" href="/assets/SpaceGrotesk-VariableFont_wght_92Z2i9spNtfwrzeGeXHcE.ttf" as="font" crossorigin="anonymous" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '346568425169694');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=346568425169694&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJLTHN5B4J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LJLTHN5B4J');
+    </script>
+
+    <style>
+      @font-face {
+        font-family: 'Space Grotesk';
+        src: url('/assets/SpaceGrotesk-VariableFont_wght_92Z2i9spNtfwrzeGeXHcE.ttf') format('truetype');
+        font-weight: 300 700;
+        font-display: swap;
+      }
+
+      :root {
+        /* Professional B2B color scheme - dark with teal accent */
+        --color-bg: #0a0f14;
+        --color-bg-section: #0f1419;
+        --color-bg-card: #151c24;
+        --color-text: #e8eaed;
+        --color-text-muted: #8b949e;
+        --color-accent: #0d9488;
+        --color-accent-hover: #14b8a6;
+        --color-accent-light: rgba(13, 148, 136, 0.15);
+        --color-blue: #2d66c4;
+        --color-border: #2d333b;
+        --color-success: #22c55e;
+        --font-family: 'Space Grotesk', Arial, sans-serif;
+        --max-width: 1100px;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 4rem;
+        --spacing-2xl: 6rem;
+        --border-radius: 0.5rem;
+        --border-radius-lg: 1rem;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        line-height: 1.7;
+        font-size: 17px;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--spacing-lg);
+      }
+
+      /* Navigation */
+      .nav {
+        padding: var(--spacing-md) 0;
+        position: sticky;
+        top: 0;
+        background: rgba(10, 15, 20, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 100;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-logo img {
+        height: 48px;
+        width: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: var(--spacing-lg);
+      }
+
+      .nav-links a {
+        color: var(--color-text-muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--color-text);
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: var(--spacing-2xl) 0;
+        text-align: center;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-section) 100%);
+      }
+
+      .hero-content {
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 700;
+        margin-bottom: var(--spacing-lg);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+      }
+
+      .hero-tagline {
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
+        color: var(--color-accent);
+        margin-bottom: var(--spacing-md);
+        font-weight: 500;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+        color: var(--color-text-muted);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      /* Section Styles */
+      .section {
+        padding: var(--spacing-2xl) 0;
+      }
+
+      .section-alt {
+        background: var(--color-bg-section);
+      }
+
+      .section-title {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        margin-bottom: var(--spacing-xl);
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .section-subtitle {
+        font-size: 1.1rem;
+        color: var(--color-text-muted);
+        margin-bottom: var(--spacing-xl);
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      /* Content blocks */
+      .content-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-xl);
+      }
+
+      .content-block {
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .content-block h3 {
+        font-size: 0.85rem;
+        color: var(--color-accent);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: var(--spacing-md);
+        font-weight: 600;
+      }
+
+      .content-block p {
+        color: var(--color-text-muted);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .content-block p:last-child {
+        margin-bottom: 0;
+      }
+
+      .content-block strong {
+        color: var(--color-text);
+      }
+
+      .content-block ul {
+        list-style: none;
+        color: var(--color-text-muted);
+      }
+
+      .content-block li {
+        padding: var(--spacing-sm) 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .content-block li::before {
+        content: "-";
+        position: absolute;
+        left: 0;
+        color: var(--color-text-muted);
+      }
+
+      /* Ecosystem Diagram */
+      .ecosystem-diagram {
+        background: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius-lg);
+        padding: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .stack-layer {
+        padding: var(--spacing-lg);
+        border-radius: var(--border-radius);
+        margin-bottom: var(--spacing-md);
+        text-align: center;
+      }
+
+      .stack-layer:last-child {
+        margin-bottom: 0;
+      }
+
+      .stack-layer.apps {
+        background: linear-gradient(135deg, #1e3a5f 0%, #0f2940 100%);
+        border: 1px solid #2d5a87;
+      }
+
+      .stack-layer.platform {
+        background: linear-gradient(135deg, var(--color-accent) 0%, #0d7377 100%);
+        border: 2px solid var(--color-accent-hover);
+      }
+
+      .stack-layer.hardware {
+        background: linear-gradient(135deg, #3d3d3d 0%, #1a1a1a 100%);
+        border: 1px solid #4a4a4a;
+      }
+
+      .stack-layer h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: var(--spacing-sm);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .stack-layer p {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .stack-layer .details {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .stack-arrow {
+        text-align: center;
+        font-size: 1.5rem;
+        color: var(--color-text-muted);
+        margin: var(--spacing-sm) 0;
+      }
+
+      .ecosystem-benefits {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .benefit-item h5 {
+        font-size: 0.8rem;
+        color: var(--color-accent);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .benefit-item p {
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+      }
+
+      /* Feature cards */
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+      }
+
+      .feature-card {
+        background: var(--color-bg-card);
+        padding: var(--spacing-lg);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-border);
+      }
+
+      .feature-card .icon {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .feature-card h4 {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-sm);
+        color: var(--color-text);
+      }
+
+      .feature-card p {
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+      }
+
+      /* Robot types */
+      .robot-types {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+      }
+
+      .robot-card {
+        background: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius-lg);
+        padding: var(--spacing-lg);
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: var(--spacing-lg);
+        align-items: start;
+      }
+
+      .robot-card .icon {
+        font-size: 2rem;
+        width: 60px;
+        text-align: center;
+      }
+
+      .robot-card .content h4 {
+        font-size: 1.25rem;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .robot-card .content p {
+        color: var(--color-text-muted);
+        font-size: 0.95rem;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .robot-card .status {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: var(--border-radius);
+        white-space: nowrap;
+      }
+
+      .robot-card .status.now {
+        background: var(--color-accent-light);
+        color: var(--color-accent);
+        border: 1px solid var(--color-accent);
+      }
+
+      .robot-card .status.next {
+        background: rgba(59, 130, 246, 0.15);
+        color: #60a5fa;
+        border: 1px solid #60a5fa;
+      }
+
+      .robot-card .status.future {
+        background: rgba(139, 148, 158, 0.15);
+        color: var(--color-text-muted);
+        border: 1px solid var(--color-border);
+      }
+
+      .robot-card .details {
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+      }
+
+      .robot-card .details strong {
+        color: var(--color-text);
+      }
+
+      /* Requirements list */
+      .requirements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+      }
+
+      .requirement-item {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+      }
+
+      .requirement-item .check {
+        color: var(--color-success);
+      }
+
+      /* Timeline */
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--spacing-md);
+        margin: var(--spacing-xl) 0;
+      }
+
+      .timeline-item {
+        text-align: center;
+        padding: var(--spacing-md);
+        background: var(--color-bg-card);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--color-border);
+      }
+
+      .timeline-item .date {
+        font-weight: 600;
+        color: var(--color-accent);
+        font-size: 1rem;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .timeline-item .event {
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+      }
+
+      /* Status checklist */
+      .status-list {
+        list-style: none;
+        max-width: 600px;
+        margin: 0 auto var(--spacing-xl);
+      }
+
+      .status-list li {
+        padding: var(--spacing-sm) 0;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+      }
+
+      .status-list .icon {
+        font-size: 1.25rem;
+      }
+
+      .status-list .done {
+        color: var(--color-success);
+      }
+
+      .status-list .pending {
+        color: var(--color-text-muted);
+      }
+
+      /* CTA sections */
+      .cta-section {
+        background: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius-lg);
+        padding: var(--spacing-xl);
+        text-align: center;
+        margin-top: var(--spacing-xl);
+      }
+
+      .cta-section h3 {
+        font-size: 1.25rem;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .cta-section p {
+        color: var(--color-text-muted);
+        margin-bottom: var(--spacing-lg);
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: var(--color-accent);
+        color: white;
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: background 0.2s, transform 0.2s;
+        border: none;
+      }
+
+      .cta-button:hover {
+        background: var(--color-accent-hover);
+        transform: translateY(-1px);
+      }
+
+      .cta-button.secondary {
+        background: transparent;
+        border: 1px solid var(--color-border);
+        color: var(--color-text);
+      }
+
+      .cta-button.secondary:hover {
+        border-color: var(--color-text-muted);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      /* Contact Section */
+      .contact-section {
+        text-align: center;
+      }
+
+      .contact-section h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .contact-section p {
+        color: var(--color-text-muted);
+        margin-bottom: var(--spacing-lg);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contact-info {
+        background: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius-lg);
+        padding: var(--spacing-xl);
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .contact-info h4 {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-md);
+        color: var(--color-accent);
+      }
+
+      .contact-info a {
+        color: var(--color-text);
+        font-size: 1.25rem;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .contact-info a:hover {
+        color: var(--color-accent);
+      }
+
+      .contact-info .note {
+        margin-top: var(--spacing-lg);
+        padding-top: var(--spacing-lg);
+        border-top: 1px solid var(--color-border);
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+      }
+
+      .contact-info .note strong {
+        color: var(--color-text);
+        display: block;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      /* Footer */
+      .footer {
+        padding: var(--spacing-xl) 0;
+        border-top: 1px solid var(--color-border);
+        text-align: center;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-lg);
+        flex-wrap: wrap;
+        margin-bottom: var(--spacing-lg);
+      }
+
+      .footer-links a {
+        color: var(--color-text-muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .footer-links a:hover {
+        color: var(--color-text);
+      }
+
+      .footer-copy {
+        color: var(--color-text-muted);
+        font-size: 0.8rem;
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 var(--spacing-md);
+        }
+
+        .hero {
+          min-height: auto;
+          padding: var(--spacing-xl) 0;
+        }
+
+        .robot-card {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .robot-card .icon {
+          width: 100%;
+        }
+
+        .robot-card .status {
+          justify-self: center;
+        }
+
+        .ecosystem-benefits {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .timeline {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container">
+        <a href="/" class="nav-logo">
+          <img src="/assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png" alt="Remake.ai" />
+        </a>
+        <div class="nav-links">
+          <a href="/signup/partners">Partners</a>
+          <a href="/signup/diy">Developers</a>
+          <a href="/reserve/playmate">Reserve</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>The Operating System for Robots</h1>
+          <p class="hero-tagline">One platform. Every robot. Infinite apps.</p>
+          <p class="hero-subtitle">remake is building the app platform that connects robot manufacturers, developers, and consumers — starting with home robots.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Robots Need an App Store</h2>
+
+        <div class="content-grid">
+          <div class="content-block">
+            <h3>The Problem</h3>
+            <p>Every robot ships with its own app. Its own cloud. Its own limited set of features. When the company stops updating, the robot stagnates.</p>
+            <ul>
+              <li>Robot vacuums clean, but can't play games</li>
+              <li>Quadruped robots do tricks, but run out of tricks</li>
+              <li>Companion robots are islands — no ecosystem, no new apps</li>
+              <li>Developers can't build for robots (no SDK, no distribution)</li>
+              <li>Consumers are stuck with whatever the manufacturer ships</li>
+            </ul>
+            <p><strong>Sound familiar? This is mobile phones before the App Store.</strong></p>
+          </div>
+
+          <div class="content-block">
+            <h3>The Opportunity</h3>
+            <p>What if robots had a shared platform?</p>
+            <ul>
+              <li>Manufacturers focus on great hardware</li>
+              <li>Developers build apps that run on ANY robot</li>
+              <li>Consumers get an ecosystem that grows over time</li>
+              <li>New use cases emerge that no single company imagined</li>
+            </ul>
+            <p><strong>This is what we're building.</strong></p>
+          </div>
+        </div>
+
+        <div class="content-block" style="max-width: 700px; margin: var(--spacing-xl) auto 0; text-align: center;">
+          <h3>Why Now</h3>
+          <p>Home robots are reaching critical mass. 50M+ robot vacuums sold annually. Quadrupeds entering consumer market ($1,600 Unitree Go2). Humanoids on the horizon (2025-2030). Consumer comfort with robots is mainstream.</p>
+          <p><strong>The hardware is ready. The platform layer is missing. remake is that platform layer.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecosystem Diagram Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">The Platform Stack</h2>
+
+        <div class="ecosystem-diagram">
+          <div class="stack-layer apps">
+            <h4>Apps</h4>
+            <p>Games - Education - Security - Utility - Social</p>
+            <div class="details">Built by developers - Distributed via app store - Runs on any compatible robot</div>
+          </div>
+
+          <div class="stack-arrow">&#8597;</div>
+
+          <div class="stack-layer platform">
+            <h4>Platform</h4>
+            <p style="font-weight: 600;">remake — this is us</p>
+            <div class="details">SDK for developers - Runtime for robots - App store for distribution - Cloud + local execution - Privacy-first architecture</div>
+          </div>
+
+          <div class="stack-arrow">&#8597;</div>
+
+          <div class="stack-layer hardware">
+            <h4>Hardware</h4>
+            <p>Vacuums - Quadrupeds - Drones - Humanoids</p>
+            <div class="details">Built by manufacturers - Integrated with remake platform - Focused on hardware excellence</div>
+          </div>
+        </div>
+
+        <div class="ecosystem-benefits">
+          <div class="benefit-item">
+            <h5>Manufacturers</h5>
+            <p>Get an app ecosystem without building it</p>
+          </div>
+          <div class="benefit-item">
+            <h5>Developers</h5>
+            <p>Get distribution across all robots</p>
+          </div>
+          <div class="benefit-item">
+            <h5>Consumers</h5>
+            <p>Get robots that keep getting better</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- For Manufacturers Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Why Integrate with remake</h2>
+        <p class="section-subtitle">Your robot. Our platform. Their apps.</p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="icon">&#127918;</div>
+            <h4>Instant App Ecosystem</h4>
+            <p>Hundreds of apps available at launch. Games, education, security, utilities — built by developers worldwide. No development cost to you.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">&#128200;</div>
+            <h4>Differentiation</h4>
+            <p>"Works with remake" becomes a feature. Your robot does more than competitors. App ecosystem as selling point.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">&#128260;</div>
+            <h4>Continuous Improvement</h4>
+            <p>Your robot gets better after purchase. New apps, new features, without firmware updates from your team.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">&#128106;</div>
+            <h4>Customer Retention</h4>
+            <p>Ecosystem lock-in. Customers stay because their apps, progress, and purchases are on your robot.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">&#128176;</div>
+            <h4>New Revenue Streams</h4>
+            <p>Share in app store revenue. Your hardware drives ongoing software sales.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">&#128274;</div>
+            <h4>Privacy Compliance</h4>
+            <p>We handle COPPA, GDPR, and privacy requirements. Local-first execution supported.</p>
+          </div>
+        </div>
+
+        <div class="content-block" style="margin-top: var(--spacing-xl); max-width: 800px; margin-left: auto; margin-right: auto;">
+          <h3>Integration Requirements</h3>
+          <p>Technical baseline for platform compatibility. Most modern navigation-capable robots already meet these requirements.</p>
+          <div class="requirements-grid">
+            <div class="requirement-item"><span class="check">&#10003;</span> 2D or 3D spatial awareness</div>
+            <div class="requirement-item"><span class="check">&#10003;</span> Autonomous navigation</div>
+            <div class="requirement-item"><span class="check">&#10003;</span> Onboard compute (Linux preferred)</div>
+            <div class="requirement-item"><span class="check">&#10003;</span> WiFi connectivity</div>
+            <div class="requirement-item"><span class="check">&#10003;</span> API for movement commands</div>
+            <div class="requirement-item"><span class="check">&#10003;</span> API for sensor data</div>
+          </div>
+          <p style="margin-top: var(--spacing-md); text-align: center;"><strong>Integration typically takes 2-4 weeks of engineering time.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supported Robot Types Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Every Robot That Navigates</h2>
+        <p class="section-subtitle">The platform supports any robot with autonomous navigation. Our roadmap, from immediate to future:</p>
+
+        <div class="robot-types">
+          <div class="robot-card">
+            <div class="icon">&#127968;</div>
+            <div class="content">
+              <h4>Robot Vacuums</h4>
+              <p>remake hardware launching Q4 2026. Dreame and Roborock support via Valetudo integration. Native OEM integrations in discussion.</p>
+              <div class="details">
+                <strong>Why vacuums first:</strong> 50M+ sold annually — massive installed base. Already in homes — no adoption barrier. Navigation-capable — platform-ready. Perfect for family games.
+              </div>
+            </div>
+            <span class="status now">Now</span>
+          </div>
+
+          <div class="robot-card">
+            <div class="icon">&#128021;</div>
+            <div class="content">
+              <h4>Quadrupeds</h4>
+              <p>2027 roadmap. Unitree Go2 ($1,600) — consumer-accessible. Xiaomi CyberDog. Boston Dynamics Spot — commercial/prosumer.</p>
+              <div class="details">
+                <strong>Why quadrupeds next:</strong> Entering consumer price range. High engagement — people love robot dogs. More dynamic movement — new app possibilities. Form factor kids prefer (per our research).
+              </div>
+            </div>
+            <span class="status next">Next</span>
+          </div>
+
+          <div class="robot-card">
+            <div class="icon">&#128681;</div>
+            <div class="content">
+              <h4>Drones</h4>
+              <p>Exploratory. Indoor drones for home use. Autonomous navigation drones.</p>
+              <div class="details">
+                <strong>Considerations:</strong> Regulatory complexity. Safety requirements different from ground robots. Indoor vs outdoor use cases.
+              </div>
+            </div>
+            <span class="status future">Future</span>
+          </div>
+
+          <div class="robot-card">
+            <div class="icon">&#129302;</div>
+            <div class="content">
+              <h4>Humanoids</h4>
+              <p>Watching market develop. Consumer humanoids expected 2027-2030. Figure, Tesla Optimus, Agility — all in development.</p>
+              <div class="details">
+                <strong>Platform ready:</strong> Our abstraction layer supports any robot form factor. Apps specify intents, not hardware-specific commands. "Play hide and seek" works on vacuum, quadruped, or humanoid — platform handles translation.
+              </div>
+            </div>
+            <span class="status future">Future</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- For Developers Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cta-section">
+          <h3>Write Once, Run Everywhere</h3>
+          <p>One codebase. Every compatible robot. Your app works on robot vacuums today, quadrupeds tomorrow, humanoids in the future. The platform abstracts hardware differences.</p>
+          <a href="/signup/partners" class="cta-button">See Developer Program &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- For Consumers Section -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-section">
+          <h3>Robots That Grow With You</h3>
+          <p>One ecosystem across all your robots. Today you buy a robot vacuum with games. Tomorrow you add a robot dog. Your apps, progress, and purchases come with you. No more learning new apps for each robot or waiting for manufacturers to add features.</p>
+          <a href="/reserve/playmate" class="cta-button secondary">Reserve Yours &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Status Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Where We Are</h2>
+
+        <ul class="status-list">
+          <li><span class="icon done">&#10003;</span> Platform architecture designed</li>
+          <li><span class="icon done">&#10003;</span> SDK in development</li>
+          <li><span class="icon done">&#10003;</span> Developer hardware available ($150 kits)</li>
+          <li><span class="icon done">&#10003;</span> Consumer hardware in production</li>
+          <li><span class="icon done">&#10003;</span> Retrofit solution for existing vacuums (via Valetudo)</li>
+          <li><span class="icon pending">&#9711;</span> Consumer launch: Q4 2026</li>
+          <li><span class="icon pending">&#9711;</span> First 2,000 units shipping</li>
+          <li><span class="icon pending">&#9711;</span> App store launch: With hardware</li>
+        </ul>
+
+        <h3 style="text-align: center; font-size: 1rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--spacing-md);">Timeline</h3>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="date">Q1 2026</div>
+            <div class="event">SDK early access for partners</div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">Q2 2026</div>
+            <div class="event">Retrofit software launch</div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">Q4 2026</div>
+            <div class="event">Consumer hardware + app store</div>
+          </div>
+          <div class="timeline-item">
+            <div class="date">2027</div>
+            <div class="event">Quadruped integration</div>
+          </div>
+        </div>
+
+        <div class="content-block" style="text-align: center; max-width: 600px; margin: var(--spacing-xl) auto 0;">
+          <h3>Company</h3>
+          <p>remake is a US-based company building the app platform for home robots. Funded and actively developing. Team with robotics and platform experience. Privacy-first architecture (local execution supported). Open to manufacturer partnerships.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+      <div class="container">
+        <h2>Let's Build the Future Together</h2>
+        <p>Interested in integrating your robots with remake? We're actively seeking partnerships with robot vacuum manufacturers, quadruped/robot dog companies, and robotics companies exploring consumer markets.</p>
+
+        <div class="contact-info">
+          <h4>Partnership Inquiries</h4>
+          <a href="mailto:partners@remake.ai">partners@remake.ai</a>
+          <div class="note">
+            <strong>Include:</strong>
+            Your company and role, robot product(s) you'd like to discuss, and timeline for potential integration.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/signup/partners">Partners</a>
+          <a href="/signup/diy">Developers</a>
+          <a href="/reserve/playmate">Reserve</a>
+          <a href="/privacy-policy">Privacy</a>
+        </div>
+        <p class="footer-copy">&copy; 2025 remake</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // UTM Parameter Handling
+      (function() {
+        function getUrlParams() {
+          const params = {};
+          const searchParams = new URLSearchParams(window.location.search);
+          for (const [key, value] of searchParams) {
+            params[key] = value;
+          }
+          return params;
+        }
+
+        function storeUtmParams() {
+          const params = getUrlParams();
+          const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+          const utmData = {};
+
+          utmKeys.forEach(key => {
+            if (params[key]) {
+              utmData[key] = params[key];
+            }
+          });
+
+          if (Object.keys(utmData).length > 0) {
+            localStorage.setItem('remake_utm', JSON.stringify(utmData));
+          }
+        }
+
+        localStorage.setItem('remake_variant', 'platform');
+        storeUtmParams();
+      })();
+    </script>
+  </body>
+</html>

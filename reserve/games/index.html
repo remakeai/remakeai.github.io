@@ -38,9 +38,6 @@
       gtag('config', 'G-LJLTHN5B4J');
     </script>
 
-    <!-- PayPal SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAIwp7ucsqCAiH79iL1vEVpJ_8oRw5rvGT0J93Flw7OuJ6gOScHCPSxZyYBHUe9lFt5HWLCr9Hcg5X9AE&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
-
     <style>
       @font-face {
         font-family: 'Space Grotesk';
@@ -84,7 +81,6 @@
       .cta-button:hover { background: var(--color-accent-hover); transform: translateY(-2px); }
       .fine-print { margin-top: var(--spacing-md); font-size: 0.875rem; color: var(--color-text-muted); }
       .scarcity-text { margin-top: var(--spacing-md); font-size: 0.8rem; color: var(--color-text-muted); opacity: 0.8; }
-      [id^="paypal-container-"] { display: flex; justify-content: center; margin: 1rem 0; }
       .video-section { padding: var(--spacing-xl) 0; background: var(--color-bg-section); }
       .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--border-radius); max-width: 800px; margin: 0 auto; }
       .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
@@ -179,7 +175,7 @@
         <div class="hero-content">
           <h1>New Games for Your Robot, Every Week</h1>
           <p class="hero-subtitle">Your robot vacuum is about to get a lot more interesting. An app store for robots means endless possibilities.</p>
-          <div id="paypal-container-hero"></div>
+          <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button" id="hero-cta">Reserve for $1 &rarr; Get $20 Off</a>
           <p class="scarcity-text">First production run: 2,000 units<br>Reservations filled in order received</p>
           <p class="fine-print">Fully refundable &bull; First 2,000 units &bull; Holiday 2026</p>
         </div>
@@ -212,7 +208,7 @@
               <li><span class="spec-label">Noise</span> 65 dB</li>
             </ul>
             <p class="tier-best-for">Best for: Apartments, small homes, hard floors</p>
-            <div id="paypal-container-essential"></div>
+            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
           </div>
           <div class="tier-card popular">
             <span class="popular-badge">Popular</span>
@@ -228,7 +224,7 @@
               <li><span class="spec-label">Threshold</span> 20mm climb</li>
             </ul>
             <p class="tier-best-for">Best for: Medium homes, families, pets</p>
-            <div id="paypal-container-standard"></div>
+            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
           </div>
           <div class="tier-card">
             <h3 class="tier-name">remake Pro</h3>
@@ -243,7 +239,7 @@
               <li><span class="spec-label">Threshold</span> 25mm climb</li>
             </ul>
             <p class="tier-best-for">Best for: Large homes, multiple floors, power users</p>
-            <div id="paypal-container-pro"></div>
+            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
           </div>
         </div>
         <p class="tier-disclaimer">* Specifications tentative, subject to change before launch. Final pricing confirmed at campaign launch. Your $1 reserves access to all tiers — choose your model at launch. First 2,000 units. Targeting delivery before Christmas 2026.</p>
@@ -382,7 +378,7 @@
     <section class="final-cta">
       <div class="container">
         <h2>Ready to play?</h2>
-        <div id="paypal-container-final"></div>
+        <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button" id="final-cta">Reserve for $1 &rarr; Get $20 Off</a>
         <p class="scarcity-text">First production run: 2,000 units<br>Reservations filled in order received</p>
         <p class="fine-print">Fully refundable &bull; First 2,000 units &bull; Holiday 2026</p>
       </div>
@@ -430,27 +426,6 @@
           if (!isOpen) { faqItem.classList.add('open'); }
         });
       });
-
-      // PayPal Buttons
-      paypal.HostedButtons({
-        hostedButtonId: "BF55R6NSSX4S8",
-      }).render("#paypal-container-hero");
-
-      paypal.HostedButtons({
-        hostedButtonId: "BF55R6NSSX4S8",
-      }).render("#paypal-container-essential");
-
-      paypal.HostedButtons({
-        hostedButtonId: "BF55R6NSSX4S8",
-      }).render("#paypal-container-standard");
-
-      paypal.HostedButtons({
-        hostedButtonId: "BF55R6NSSX4S8",
-      }).render("#paypal-container-pro");
-
-      paypal.HostedButtons({
-        hostedButtonId: "BF55R6NSSX4S8",
-      }).render("#paypal-container-final");
     </script>
   </body>
 </html>

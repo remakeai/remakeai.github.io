@@ -38,9 +38,6 @@
       gtag('config', 'G-LJLTHN5B4J');
     </script>
 
-    <!-- PayPal SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAIwp7ucsqCAiH79iL1vEVpJ_8oRw5rvGT0J93Flw7OuJ6gOScHCPSxZyYBHUe9lFt5HWLCr9Hcg5X9AE&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
-
     <style>
       @font-face { font-family: 'Space Grotesk'; src: url('/assets/SpaceGrotesk-VariableFont_wght_92Z2i9spNtfwrzeGeXHcE.ttf') format('truetype'); font-weight: 300 700; font-display: swap; }
       :root { --color-bg: rgba(13, 15, 18, 1); --color-bg-section: rgba(20, 23, 28, 1); --color-text: rgba(255, 255, 255, 1); --color-text-muted: rgba(156, 163, 175, 1); --color-accent: rgba(45, 102, 196, 1); --color-accent-hover: rgba(56, 127, 245, 1); --color-border: rgba(55, 65, 81, 1); --color-success: rgba(34, 197, 94, 1); --font-family: 'Space Grotesk', Arial, sans-serif; --max-width: 1200px; --spacing-sm: 0.5rem; --spacing-md: 1rem; --spacing-lg: 2rem; --spacing-xl: 4rem; --border-radius: 0.5rem; --border-radius-full: 8rem; }
@@ -59,7 +56,6 @@
       .cta-button:hover { background: var(--color-accent-hover); transform: translateY(-2px); }
       .fine-print { margin-top: var(--spacing-md); font-size: 0.875rem; color: var(--color-text-muted); }
       .scarcity-text { margin-top: var(--spacing-md); font-size: 0.8rem; color: var(--color-text-muted); opacity: 0.8; }
-      [id^="paypal-container-"] { display: flex; justify-content: center; margin: 1rem 0; }
       .video-section { padding: var(--spacing-xl) 0; background: var(--color-bg-section); }
       .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--border-radius); max-width: 800px; margin: 0 auto; }
       .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
@@ -142,7 +138,14 @@
         <div class="hero-content">
           <h1>The First Robot Vacuum With Apps</h1>
           <p class="hero-subtitle">Your Roomba cleans. Ours cleans and plays hide-and-seek. Welcome to the next generation of home robots.</p>
-          <div id="paypal-container-hero"></div>
+          <div>
+            <style>.pp-XWNMZQABDMB6Q{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+            <form action="https://www.paypal.com/ncp/payment/XWNMZQABDMB6Q" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+              <input class="pp-XWNMZQABDMB6Q" type="submit" value="Reserve Now" />
+              <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+              <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+            </form>
+          </div>
           <p class="scarcity-text">First production run: 2,000 units<br>Reservations filled in order received</p>
           <p class="fine-print">Fully refundable &bull; First 2,000 units &bull; Holiday 2026</p>
         </div>
@@ -173,7 +176,14 @@
               <li><span class="spec-label">Noise</span> 65 dB</li>
             </ul>
             <p class="tier-best-for">Best for: Apartments, small homes, hard floors</p>
-            <div id="paypal-container-essential"></div>
+            <div style="justify-content: center; display: flex;">
+              <style>.pp-XWNMZQABDMB6Q{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+              <form action="https://www.paypal.com/ncp/payment/XWNMZQABDMB6Q" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input class="pp-XWNMZQABDMB6Q" type="submit" value="Reserve Now" />
+                <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+              </form>
+            </div>
           </div>
           <div class="tier-card popular">
             <span class="popular-badge">Popular</span>
@@ -189,7 +199,14 @@
               <li><span class="spec-label">Threshold</span> 20mm climb</li>
             </ul>
             <p class="tier-best-for">Best for: Medium homes, families, pets</p>
-            <div id="paypal-container-standard"></div>
+            <div style="justify-content: center; display: flex;">
+              <style>.pp-XWNMZQABDMB6Q{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+              <form action="https://www.paypal.com/ncp/payment/XWNMZQABDMB6Q" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input class="pp-XWNMZQABDMB6Q" type="submit" value="Reserve Now" />
+                <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+              </form>
+            </div>
           </div>
           <div class="tier-card">
             <h3 class="tier-name">remake Pro</h3>
@@ -204,7 +221,14 @@
               <li><span class="spec-label">Threshold</span> 25mm climb</li>
             </ul>
             <p class="tier-best-for">Best for: Large homes, multiple floors, power users</p>
-            <div id="paypal-container-pro"></div>
+            <div style="justify-content: center; display: flex;">
+              <style>.pp-XWNMZQABDMB6Q{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+              <form action="https://www.paypal.com/ncp/payment/XWNMZQABDMB6Q" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                <input class="pp-XWNMZQABDMB6Q" type="submit" value="Reserve Now" />
+                <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+              </form>
+            </div>
           </div>
         </div>
         <p class="tier-disclaimer">* Specifications tentative, subject to change before launch. Final pricing confirmed at campaign launch. Your $1 reserves access to all tiers — choose your model at launch. First 2,000 units. Targeting delivery before Christmas 2026.</p>
@@ -293,7 +317,14 @@
     <section class="final-cta">
       <div class="container">
         <h2>Ready to play?</h2>
-        <div id="paypal-container-final"></div>
+        <div>
+          <style>.pp-XWNMZQABDMB6Q{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+          <form action="https://www.paypal.com/ncp/payment/XWNMZQABDMB6Q" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+            <input class="pp-XWNMZQABDMB6Q" type="submit" value="Reserve Now" />
+            <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+            <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+          </form>
+        </div>
         <p class="scarcity-text">First production run: 2,000 units<br>Reservations filled in order received</p>
         <p class="fine-print">Fully refundable &bull; First 2,000 units &bull; Holiday 2026</p>
       </div>
@@ -310,13 +341,6 @@
         storeUtmParams(); storeReferralInfo();
       })();
       document.querySelectorAll('.faq-question').forEach(button => { button.addEventListener('click', () => { const faqItem = button.parentElement; const isOpen = faqItem.classList.contains('open'); document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('open'); }); if (!isOpen) { faqItem.classList.add('open'); } }); });
-
-      // PayPal Buttons
-      paypal.HostedButtons({ hostedButtonId: "XWNMZQABDMB6Q" }).render("#paypal-container-hero");
-      paypal.HostedButtons({ hostedButtonId: "XWNMZQABDMB6Q" }).render("#paypal-container-essential");
-      paypal.HostedButtons({ hostedButtonId: "XWNMZQABDMB6Q" }).render("#paypal-container-standard");
-      paypal.HostedButtons({ hostedButtonId: "XWNMZQABDMB6Q" }).render("#paypal-container-pro");
-      paypal.HostedButtons({ hostedButtonId: "XWNMZQABDMB6Q" }).render("#paypal-container-final");
     </script>
   </body>
 </html>

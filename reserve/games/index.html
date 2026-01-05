@@ -38,6 +38,10 @@
       gtag('config', 'G-LJLTHN5B4J');
     </script>
 
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAIwp7ucsqCAiH79iL1vEVpJ_8oRw5rvGT0J93Flw7OuJ6gOScHCPSxZyYBHUe9lFt5HWLCr9Hcg5X9AE&components=hosted-buttons&enable-funding=venmo&currency=USD">
+    </script>
+
     <style>
       @font-face {
         font-family: 'Space Grotesk';
@@ -175,7 +179,12 @@
         <div class="hero-content">
           <h1>New Games for Your Robot, Every Week</h1>
           <p class="hero-subtitle">Your robot vacuum is about to get a lot more interesting. An app store for robots means endless possibilities.</p>
-          <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button" id="hero-cta">Reserve for $1 &rarr; Get $20 Off</a>
+          <div id="paypal-container-BF55R6NSSX4S8-hero"></div>
+          <script>
+            paypal.HostedButtons({
+              hostedButtonId: "BF55R6NSSX4S8",
+            }).render("#paypal-container-BF55R6NSSX4S8-hero")
+          </script>
           <p class="scarcity-text">First production run: 2,000 units<br>Reservations filled in order received</p>
           <p class="fine-print">Fully refundable &bull; First 2,000 units &bull; Holiday 2026</p>
         </div>
@@ -208,7 +217,12 @@
               <li><span class="spec-label">Noise</span> 65 dB</li>
             </ul>
             <p class="tier-best-for">Best for: Apartments, small homes, hard floors</p>
-            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
+            <div id="paypal-container-BF55R6NSSX4S8-essential"></div>
+            <script>
+              paypal.HostedButtons({
+                hostedButtonId: "BF55R6NSSX4S8",
+              }).render("#paypal-container-BF55R6NSSX4S8-essential")
+            </script>
           </div>
           <div class="tier-card popular">
             <span class="popular-badge">Popular</span>
@@ -224,7 +238,12 @@
               <li><span class="spec-label">Threshold</span> 20mm climb</li>
             </ul>
             <p class="tier-best-for">Best for: Medium homes, families, pets</p>
-            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
+            <div id="paypal-container-BF55R6NSSX4S8-standard"></div>
+            <script>
+              paypal.HostedButtons({
+                hostedButtonId: "BF55R6NSSX4S8",
+              }).render("#paypal-container-BF55R6NSSX4S8-standard")
+            </script>
           </div>
           <div class="tier-card">
             <h3 class="tier-name">remake Pro</h3>
@@ -239,7 +258,12 @@
               <li><span class="spec-label">Threshold</span> 25mm climb</li>
             </ul>
             <p class="tier-best-for">Best for: Large homes, multiple floors, power users</p>
-            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
+            <div id="paypal-container-BF55R6NSSX4S8-pro"></div>
+            <script>
+              paypal.HostedButtons({
+                hostedButtonId: "BF55R6NSSX4S8",
+              }).render("#paypal-container-BF55R6NSSX4S8-pro")
+            </script>
           </div>
         </div>
         <p class="tier-disclaimer">* Specifications tentative, subject to change before launch. Final pricing confirmed at campaign launch. Your $1 reserves access to all tiers — choose your model at launch. First 2,000 units. Targeting delivery before Christmas 2026.</p>
@@ -378,7 +402,12 @@
     <section class="final-cta">
       <div class="container">
         <h2>Ready to play?</h2>
-        <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button" id="final-cta">Reserve for $1 &rarr; Get $20 Off</a>
+        <div id="paypal-container-BF55R6NSSX4S8-final"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "BF55R6NSSX4S8",
+          }).render("#paypal-container-BF55R6NSSX4S8-final")
+        </script>
         <p class="scarcity-text">First production run: 2,000 units<br>Reservations filled in order received</p>
         <p class="fine-print">Fully refundable &bull; First 2,000 units &bull; Holiday 2026</p>
       </div>

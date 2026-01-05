@@ -38,6 +38,9 @@
       gtag('config', 'G-LJLTHN5B4J');
     </script>
 
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAIwp7ucsqCAiH79iL1vEVpJ_8oRw5rvGT0J93Flw7OuJ6gOScHCPSxZyYBHUe9lFt5HWLCr9Hcg5X9AE&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+
     <style>
       @font-face {
         font-family: 'Space Grotesk';
@@ -169,6 +172,12 @@
         font-size: 0.8rem;
         color: var(--color-text-muted);
         opacity: 0.8;
+      }
+
+      [id^="paypal-container-"] {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
       }
 
       /* Video Section */
@@ -670,8 +679,7 @@
         <div class="hero-content">
           <h1>Your Robot Vacuum Wants to Play</h1>
           <p class="hero-subtitle">The first robot vacuum with games. Hide-and-seek, chase, patrol — your kids will actually want to play with this one.</p>
-          <!-- SETUP: Replace PAYPAL_BUTTON_PLACEHOLDER with your PayPal button code -->
-          <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button" id="hero-cta">Reserve for $1 &rarr; Get $20 Off</a>
+          <div id="paypal-container-hero"></div>
           <p class="scarcity-text">First production run: 2,000 units<br>Reservations filled in order received</p>
           <p class="fine-print">Fully refundable &bull; First 2,000 units &bull; Holiday 2026</p>
         </div>
@@ -713,7 +721,7 @@
               <li><span class="spec-label">Noise</span> 65 dB</li>
             </ul>
             <p class="tier-best-for">Best for: Apartments, small homes, hard floors</p>
-            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
+            <div id="paypal-container-essential"></div>
           </div>
 
           <!-- Standard Tier -->
@@ -731,7 +739,7 @@
               <li><span class="spec-label">Threshold</span> 20mm climb</li>
             </ul>
             <p class="tier-best-for">Best for: Medium homes, families, pets</p>
-            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
+            <div id="paypal-container-standard"></div>
           </div>
 
           <!-- Pro Tier -->
@@ -748,7 +756,7 @@
               <li><span class="spec-label">Threshold</span> 25mm climb</li>
             </ul>
             <p class="tier-best-for">Best for: Large homes, multiple floors, power users</p>
-            <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button tier-cta">Reserve for $1</a>
+            <div id="paypal-container-pro"></div>
           </div>
         </div>
 
@@ -1023,8 +1031,7 @@
     <section class="final-cta">
       <div class="container">
         <h2>Ready to play?</h2>
-        <!-- SETUP: Replace PAYPAL_BUTTON_PLACEHOLDER with your PayPal button code -->
-        <a href="PAYPAL_BUTTON_PLACEHOLDER" class="cta-button" id="final-cta">Reserve for $1 &rarr; Get $20 Off</a>
+        <div id="paypal-container-final"></div>
         <p class="scarcity-text">First production run: 2,000 units<br>Reservations filled in order received</p>
         <p class="fine-print">Fully refundable &bull; First 2,000 units &bull; Holiday 2026</p>
       </div>
@@ -1105,6 +1112,27 @@
           }
         });
       });
+
+      // PayPal Buttons
+      paypal.HostedButtons({
+        hostedButtonId: "SRHE8VW6CSKSY",
+      }).render("#paypal-container-hero");
+
+      paypal.HostedButtons({
+        hostedButtonId: "SRHE8VW6CSKSY",
+      }).render("#paypal-container-essential");
+
+      paypal.HostedButtons({
+        hostedButtonId: "SRHE8VW6CSKSY",
+      }).render("#paypal-container-standard");
+
+      paypal.HostedButtons({
+        hostedButtonId: "SRHE8VW6CSKSY",
+      }).render("#paypal-container-pro");
+
+      paypal.HostedButtons({
+        hostedButtonId: "SRHE8VW6CSKSY",
+      }).render("#paypal-container-final");
     </script>
   </body>
 </html>

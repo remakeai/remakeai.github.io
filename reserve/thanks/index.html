@@ -2,7 +2,7 @@
 <html
   lang="en"
   data-ws-project="45356a9d-7949-4ff4-807d-e2b220bf0153"
-  data-ws-last-published="2026-01-16T00:44:55.351Z"
+  data-ws-last-published="2026-01-16T01:08:27.945Z"
 >
   <head>
     <link
@@ -466,97 +466,6 @@
           </div>
         </div>
       </section>
-      <div class="w-html-embed">
-        <script>
-          // Detect funnel from URL parameter
-          function getFunnel() {
-            const params = new URLSearchParams(window.location.search);
-
-            // Check for ?games, ?playmate, ?screens, ?innovation
-            const funnels = ["games", "playmate", "screens", "innovation"];
-            for (const funnel of funnels) {
-              if (params.has(funnel)) {
-                return funnel;
-              }
-            }
-            return "games"; // Default fallback
-          }
-
-          // Funnel-specific configuration
-          const funnelConfig = {
-            games: {
-              url: "https://remake.ai/reserve/games/",
-              title:
-                "I just reserved a robot vacuum that plays hide-and-seek with kids!",
-            },
-            playmate: {
-              url: "https://remake.ai/reserve/playmate/",
-              title: "I just reserved a robot playmate that also vacuums!",
-            },
-            screens: {
-              url: "https://remake.ai/reserve/screens/",
-              title:
-                "I just reserved a screen-free way to keep kids entertained!",
-            },
-            innovation: {
-              url: "https://remake.ai/reserve/innovation/",
-              title:
-                "I just reserved the first robot vacuum with an app store!",
-            },
-          };
-
-          // Get current funnel config
-          const currentFunnel = getFunnel();
-          const shareConfig = {
-            url: funnelConfig[currentFunnel].url,
-            title: funnelConfig[currentFunnel].title,
-            hashtags: "remakeai,robotvacuum",
-          };
-
-          // Facebook Share
-          document
-            .getElementById("share-fb-btn")
-            .addEventListener("click", function () {
-              const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareConfig.url)}`;
-              window.open(fbUrl, "facebook-share", "width=580,height=400");
-            });
-
-          // X (Twitter) Share
-          document
-            .getElementById("share-x-btn")
-            .addEventListener("click", function () {
-              const xUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareConfig.url)}&text=${encodeURIComponent(shareConfig.title)}&hashtags=${shareConfig.hashtags}`;
-              window.open(xUrl, "x-share", "width=580,height=400");
-            });
-
-          // Copy Link
-          document
-            .getElementById("copy-link-btn")
-            .addEventListener("click", function () {
-              const btn = this;
-              const originalText = btn.textContent;
-
-              navigator.clipboard
-                .writeText(shareConfig.url)
-                .then(function () {
-                  btnText = document.getElementById("copy-link-text");
-                  btnText.textContent = "Copied!";
-                })
-                .catch(function () {
-                  // Fallback for older browsers
-                  const textarea = document.createElement("textarea");
-                  textarea.value = shareConfig.url;
-                  document.body.appendChild(textarea);
-                  textarea.select();
-                  document.execCommand("copy");
-                  document.body.removeChild(textarea);
-
-                  btnText = document.getElementById("copy-link-text");
-                  btnText.textContent = "Copied!";
-                });
-            });
-        </script>
-      </div>
     </div>
     <script id="vike_pageContext" type="application/json">
       {
@@ -590,13 +499,13 @@
       {}
     </script>
     <script
-      src="/assets/entries/entry-server-routing.Dz3nQzoe.js"
+      src="/assets/entries/entry-server-routing.DFWEoaYY.js"
       type="module"
       async
     ></script>
     <link
       rel="modulepreload"
-      href="/assets/entries/pages_reserve_thanks.qU08Glsq.js"
+      href="/assets/entries/pages_reserve_thanks.Dr0ziPE5.js"
       as="script"
       type="text/javascript"
     /><link

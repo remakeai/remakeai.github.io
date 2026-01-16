@@ -57,6 +57,15 @@ const funnelConfig = {
 
 // Get current funnel config
 const currentFunnel = getFunnel();
+
+// Facebook Pixel - Track Purchase
+fbq('track', 'Purchase', {
+  content_name: currentFunnel,
+  content_category: 'reservation',
+  currency: 'USD',
+  value: 1.00
+});
+
 const shareConfig = {
   url: funnelConfig[currentFunnel].url,
   title: funnelConfig[currentFunnel].title,

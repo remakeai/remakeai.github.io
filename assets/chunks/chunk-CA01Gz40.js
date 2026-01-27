@@ -1,1 +1,0 @@
-import{r as o,j as a}from"./chunk-B9ZMJJCP.js";const t=o.forwardRef((r,e)=>a.jsx("body",{...r,ref:e}));t.displayName="Body";const s="hr",f=o.forwardRef((r,e)=>o.createElement(s,{...r,ref:e}));f.displayName="Separator";export{t as f,f as p};

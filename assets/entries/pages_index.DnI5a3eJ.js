@@ -1,4 +1,45 @@
-import{j as c,l as d,P as s,n as e,m,a,y as u,b as t,d as n,f as o,R as _,c as v,i as j,e as C,g as S,h as R}from"../chunks/chunk-MsbaqMVK.js";import{f as M}from"../chunks/chunk-BH8GTiJ9.js";import{C as V,P as L,A as b,k as A,O as H,x as O,n as B,M as G,R as T,S as q,$ as r,a as l,b as P,p as f,w as h,y as p}from"../chunks/chunk-2DpKC3ks.js";import{d as x,i}from"../chunks/chunk-CxsTuLA6.js";import{$ as E,m as I,f as Z}from"../chunks/chunk-inpeCMiY.js";/* empty css                      */const z="Remake.ai",F=[{id:"3Biv6ltgkYKtgBQxdJrKw"},{id:"xBS5ozESn2cK63icHnvtC",maxWidth:991},{id:"0_ve5QOFHNb0fnZ1GQipb",maxWidth:767},{id:"OIYbx6NwwgecvCYuNuEar",maxWidth:479}],$="remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png",W=[],D=["checkmark_tcQ64i0i4p3NeIfwIIUNf.svg","robot_child_and_ball_LR6tnCnMaTtwlriSJgzi4.webp"],U=g=>c.jsxs(M,{className:"w-body",children:[c.jsx(d,{children:c.jsx(s,{code:`<style>
+import{j as c,l as d,m,P as s,n as e,a,y as u,b as t,d as n,f as o,R as _,c as v,i as j,e as C,g as S,h as R}from"../chunks/chunk-MsbaqMVK.js";import{f as M}from"../chunks/chunk-BH8GTiJ9.js";import{C as V,P as L,A as b,k as A,O as H,x as O,n as B,M as G,R as T,S as q,$ as r,a as l,b as P,p as f,w as h,y as p}from"../chunks/chunk-2DpKC3ks.js";import{d as x,i}from"../chunks/chunk-CxsTuLA6.js";import{$ as E,m as I,f as Z}from"../chunks/chunk-inpeCMiY.js";/* empty css                      */const z="Remake.ai",F=[{id:"3Biv6ltgkYKtgBQxdJrKw"},{id:"xBS5ozESn2cK63icHnvtC",maxWidth:991},{id:"0_ve5QOFHNb0fnZ1GQipb",maxWidth:767},{id:"OIYbx6NwwgecvCYuNuEar",maxWidth:479}],$="remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png",W=[],D=["checkmark_tcQ64i0i4p3NeIfwIIUNf.svg","robot_child_and_ball_LR6tnCnMaTtwlriSJgzi4.webp"],U=g=>c.jsxs(M,{className:"w-body",children:[c.jsx(d,{children:c.jsx(m,{children:c.jsx(s,{code:`<!-- Loading Overlay -->
+    <style>
+      #page-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(245 247 250);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+        transition: opacity 0.3s ease-out;
+      }
+      #page-loader.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgb(182 188 205);
+        border-top-color: rgb(45 102 196);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+    <div id="page-loader"><div class="spinner"></div></div>
+    <script>
+      window.addEventListener('load', function() {
+        var loader = document.getElementById('page-loader');
+        if (loader) {
+          loader.classList.add('hidden');
+          setTimeout(function() { loader.remove(); }, 300);
+        }
+      });
+    <\/script>
+    <!-- End Loading Overlay -->`,clientOnly:!0,className:"w-html-embed"})})}),c.jsx(d,{children:c.jsx(s,{code:`<style>
   /* Remove margin from all paragraphs so we don't need to use a Token on every one. */
   p {
     margin: 0;
@@ -328,48 +369,8 @@ import{j as c,l as d,P as s,n as e,m,a,y as u,b as t,d as n,f as o,R as _,c as v
 #mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
     border: 2px solid #e85c41;
 }
-</style>`,clientOnly:!0,className:"w-html-embed",children:c.jsx(s,{code:`<!-- Loading Overlay -->
-    <style>
-      #page-loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgb(245 247 250);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 99999;
-        transition: opacity 0.3s ease-out;
-      }
-      #page-loader.hidden {
-        opacity: 0;
-        pointer-events: none;
-      }
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid rgb(182 188 205);
-        border-top-color: rgb(45 102 196);
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
-      }
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
-    </style>
-    <div id="page-loader"><div class="spinner"></div></div>
-    <script>
-      window.addEventListener('load', function() {
-        var loader = document.getElementById('page-loader');
-        if (loader) {
-          loader.classList.add('hidden');
-          setTimeout(function() { loader.remove(); }, 300);
-        }
-      });
-    <\/script>
-    <!-- End Loading Overlay -->`,clientOnly:!0,className:"w-html-embed"})})}),c.jsxs(e,{className:"w-box",children:[c.jsx(d,{children:c.jsxs(m,{children:[c.jsx(s,{code:`<style>
+</style>
+`,clientOnly:!0,className:"w-html-embed"})}),c.jsxs(e,{className:"w-box",children:[c.jsx(d,{children:c.jsxs(m,{children:[c.jsx(s,{code:`<style>
   /* Remove margin from all paragraphs so we don't need to use a Token on every one. */
   p {
     margin: 0;

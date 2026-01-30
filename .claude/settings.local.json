@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(powershell -ExecutionPolicy Bypass -File:*)"
+      "Bash(powershell -ExecutionPolicy Bypass -File:*)",
+      "WebFetch(domain:connect.facebook.net)",
+      "WebFetch(domain:www.redditstatic.com)",
+      "Bash(curl:*)",
+      "Bash(wc:*)",
+      "Bash(powershell -Command \"Invoke-WebRequest -Uri ''https://connect.facebook.net/en_US/fbevents.js'' -OutFile ''c:/Users/ASUS/git/remakeai.github.io/assets/fbevents.js''; Write-Host ''Facebook pixel:''; \\(Get-Item ''c:/Users/ASUS/git/remakeai.github.io/assets/fbevents.js''\\).Length\")",
+      "Bash(powershell -Command \"Invoke-WebRequest -Uri ''https://www.redditstatic.com/ads/pixel.js'' -OutFile ''c:/Users/ASUS/git/remakeai.github.io/assets/reddit-pixel.js''; Write-Host ''Reddit pixel:''; \\(Get-Item ''c:/Users/ASUS/git/remakeai.github.io/assets/reddit-pixel.js''\\).Length\")"
     ]
   }
 }

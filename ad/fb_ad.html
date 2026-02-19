@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f2f5;
+        }
+
         .facebook-ad-post {
             background: white;
             border-radius: 8px;
@@ -110,6 +119,7 @@
 
         .ad-image-container {
             width: 100%;
+            max-height: 57vh;
             background: transparent;
             display: flex;
             align-items: center;
@@ -120,6 +130,13 @@
         .ad-image-container img {
             width: 100%;
             height: auto;
+            display: block;
+        }
+
+        .ad-image-container video {
+            width: 100%;
+            max-height: 57vh;
+            object-fit: contain;
             display: block;
         }
 
@@ -226,12 +243,12 @@
     <div class="facebook-ad-post">
         <div class="ad-post-header">
             <div class="ad-page-profile-picture">
-                <img src="unbelievably_cute_cat.png" 
+                <img src="../apple-icon-72x72.png"
                      alt="Page logo">
             </div>
             
             <div class="ad-header-info">
-                <span id="ad-preview-page-name" class="ad-page-name">I Love Feedback LLC</span>
+                <span id="ad-preview-page-name" class="ad-page-name">Remake AI</span>
                 <div class="ad-metadata">
                     <span class="sponsored-label">Sponsored</span>
                     <span>·</span>
@@ -247,16 +264,18 @@
             </div>
         </div>
     
-        <div id="ad-preview-text" class="ad-post-text">Our stuff is the best. Better than all the rest. Better than anything... Anything you&#39;ve ever met. We&#39;ll be stuck in your heart. You&#39;ll hang on every word we say. Oh, tear us apart? No, no baby, I would rather be dead. - Tina Turner (if she was a copywriter) <span class="ad-see-more">See more</span></div>
+        <div id="ad-preview-text" class="ad-post-text">Our stuff is the best. Better than all the rest. Better than anything... Anything you&#39;ve ever met. We&#39;ll be stuck in your heart. You&#39;ll hang on every word we say. Oh, tear us apart? No, no baby, I would rather be dead. - Tina Turner (if she was a copywriter) <!-- span class="ad-see-more">See more</span --></div>
         
         <div class="ad-image-container">
-            <img src="unbelievably_cute_cat.png" 
-                 alt="Ad image">
+            <video autoplay loop muted playsinline>
+                <source src="4_games_vertical_format.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     
         <div class="ad-link-preview">
-            <div id="ad-preview-domain" class="ad-link-domain">VeryGoodWebsite.com</div>
-            <div id="ad-preview-headline" class="ad-link-headline">FIRE! FIRE!!!</div>
+            <div id="ad-preview-domain" class="ad-link-domain">remake.ai</div>
+            <div id="ad-preview-headline" class="ad-link-headline">Vacuum plays games with kids</div>
             <button id="ad-preview-cta" class="ad-call-to-action-button">Click Here</button>
         </div>
     

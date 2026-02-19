@@ -3,6 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    '/fbevents.js');
+    fbq('init', '346568425169694');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=346568425169694&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJLTHN5B4J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-LJLTHN5B4J");
+    </script>
+    <!-- End Google Analytics -->
+    <!-- Reddit Pixel -->
+    <script>
+    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="/reddit-pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_feojnozacoug');rdt('track', 'PageVisit');
+    </script>
+    <!-- End Reddit Pixel -->
     <style>
         body {
             margin: 0;
@@ -11,6 +44,46 @@
             justify-content: center;
             align-items: center;
             background: #f0f2f5;
+        }
+
+        #page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            transition: opacity 0.3s ease-out;
+        }
+
+        #page-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #page-loader .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #ccd0d5;
+            border-top-color: #1877f2;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        #page-loader .loading-text {
+            margin-top: 12px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #65676b;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
         .facebook-ad-post {
@@ -240,6 +313,10 @@
     </style>
 </head>
 <body>
+    <div id="page-loader">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
     <div class="facebook-ad-post">
         <div class="ad-post-header">
             <div class="ad-page-profile-picture">
@@ -310,5 +387,27 @@ Dozens of games, apps available.<!-- span class="ad-see-more">See more</span -->
             </button>
         </div>
     </div>
+    <script>
+        var video = document.querySelector('video');
+        var loader = document.getElementById('page-loader');
+
+        function hideLoader() {
+            if (loader) {
+                loader.classList.add('hidden');
+                setTimeout(function() { loader.remove(); }, 300);
+            }
+        }
+
+        if (video) {
+            video.addEventListener('canplaythrough', hideLoader);
+            // Fallback in case video is already loaded
+            if (video.readyState >= 4) {
+                hideLoader();
+            }
+        } else {
+            // No video, hide on window load
+            window.addEventListener('load', hideLoader);
+        }
+    </script>
 </body>
 </html>

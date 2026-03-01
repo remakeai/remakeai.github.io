@@ -4,10 +4,10 @@ import{j as e,l as i,m as n,A as t,n as a,a as c,y as u,b as s,d as h,f as w,R a
     margin: 0;
   }
 
-  /* Make links scroll to their sections smoothly. */
+  /* Make links scroll to their sections smoothly.
   * {
     scroll-behavior: smooth;
-  }
+  } */
 
   /* Show parent dropdown link hover styles when dropdown is active. */
   button[data-state="open"].nav-dropdown-parent {

@@ -1,5 +1,6 @@
 # Apply Pixels and Loader Script
 # This script inserts Facebook/Reddit tracking pixels and a loading spinner into all HTML files.
+# It also fixes anchor navigation issues by removing smooth scroll and fixing same-page anchor links.
 # Run this after regenerating static site content.
 
 $basePath = $PSScriptRoot | Split-Path -Parent
@@ -126,6 +127,15 @@ foreach ($file in $htmlFiles) {
     if ($content -match 'scroll-behavior:\s*smooth') {
         $pattern = '/\*\s*Make links scroll to their sections smoothly\.\s*\*/\s*\r?\n\s*\*\s*\{\s*\r?\n\s*scroll-behavior:\s*smooth;\s*\r?\n\s*\}'
         $content = $content -replace $pattern, ''
+        $modified = $true
+    }
+
+    # Fix same-page anchor links to use relative hash (bypasses Vike's client-side routing)
+    $relativePath = $file.FullName.Replace($basePath, '').Replace('\', '/').Replace('/index.html', '')
+    if ($relativePath -eq '') { $relativePath = '/' }
+    $anchorPattern = "href=""$relativePath#([^""]+)"""
+    if ($content -match $anchorPattern) {
+        $content = $content -replace $anchorPattern, 'href="#$1"'
         $modified = $true
     }
 

@@ -13,7 +13,8 @@
       "Bash(curl --ssl-no-revoke -u admin:webstudio \"https://remakeai-axcen.wstd.io/reserve/games/\" -o /tmp/webstudio.html)",
       "Bash(curl --ssl-no-revoke \"https://remake.ai/reserve/games/\" -o /tmp/github.html)",
       "Read(//tmp/**)",
-      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ASUS\\\\AppData\\\\Local\\\\Temp\\\\add-pixels.ps1\")"
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ASUS\\\\AppData\\\\Local\\\\Temp\\\\add-pixels.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File remove-smooth-scroll.ps1)"
     ],
     "additionalDirectories": [
       "C:\\Users\\ASUS\\AppData\\Local\\Temp"

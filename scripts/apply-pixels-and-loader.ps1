@@ -122,6 +122,13 @@ foreach ($file in $htmlFiles) {
         $modified = $true
     }
 
+    # Remove scroll-behavior: smooth (causes issues with anchor navigation)
+    if ($content -match 'scroll-behavior:\s*smooth') {
+        $pattern = '/\*\s*Make links scroll to their sections smoothly\.\s*\*/\s*\r?\n\s*\*\s*\{\s*\r?\n\s*scroll-behavior:\s*smooth;\s*\r?\n\s*\}'
+        $content = $content -replace $pattern, ''
+        $modified = $true
+    }
+
     if ($modified) {
         Set-Content $file.FullName -Value $content -NoNewline
         Write-Host "Updated: $($file.FullName)"

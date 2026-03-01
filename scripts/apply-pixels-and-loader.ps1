@@ -35,6 +35,12 @@ $pixelCode = @'
 # Loading overlay HTML
 $loaderHtml = @'
 <!-- Loading Overlay -->
+    <script>
+      // Prevent browser's automatic scroll restoration
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      // Immediately scroll to top to prevent wrong initial scroll
+      window.scrollTo(0, 0);
+    </script>
     <style>
       #page-loader {
         position: fixed;
@@ -73,12 +79,10 @@ $loaderHtml = @'
           loader.classList.add('hidden');
           setTimeout(function() {
             loader.remove();
-            // Re-scroll to hash anchor after page fully loads
+            // Scroll to hash anchor after page fully loads
             if (window.location.hash) {
-              setTimeout(function() {
-                var el = document.querySelector(window.location.hash);
-                if (el) el.scrollIntoView({ behavior: 'instant' });
-              }, 100);
+              var el = document.querySelector(window.location.hash);
+              if (el) el.scrollIntoView({ behavior: 'instant' });
             }
           }, 300);
         }

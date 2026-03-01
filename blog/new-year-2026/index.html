@@ -6,7 +6,25 @@
 >
   <head>
 <!-- Scroll Fix -->
-    <script>if('scrollRestoration' in history)history.scrollRestoration='manual';window.scrollTo(0,0);</script>
+    <script>
+      if('scrollRestoration' in history)history.scrollRestoration='manual';
+      window.scrollTo(0,0);
+      // Intercept hash anchor clicks before Vike loads
+      document.addEventListener('click', function(e) {
+        var a = e.target;
+        while (a && a.tagName !== 'A') a = a.parentElement;
+        if (a && a.getAttribute('href') && a.getAttribute('href').charAt(0) === '#') {
+          var hash = a.getAttribute('href');
+          var el = document.querySelector(hash);
+          if (el) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            el.scrollIntoView({ behavior: 'instant' });
+            history.pushState(null, '', hash);
+          }
+        }
+      }, true);
+    </script>
 <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -134,20 +152,6 @@
           }, 300);
         }
       });
-      // Intercept hash-only anchor clicks to bypass Vike's client-side routing
-      document.addEventListener('click', function(e) {
-        var target = e.target.closest('a[href^="#"]');
-        if (target) {
-          var hash = target.getAttribute('href');
-          var el = document.querySelector(hash);
-          if (el) {
-            e.preventDefault();
-            e.stopPropagation();
-            el.scrollIntoView({ behavior: 'instant' });
-            history.pushState(null, '', hash);
-          }
-        }
-      }, true);
     </script>
     <!-- End Loading Overlay -->
     <div style="display: contents"><div style="display: contents"></div></div>

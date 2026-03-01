@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ASUS\\\\AppData\\\\Local\\\\Temp\\\\update-loader-script.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"c:\\\\Users\\\\ASUS\\\\git\\\\remakeai.github.io\\\\scripts\\\\apply-pixels-and-loader.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ASUS\\\\AppData\\\\Local\\\\Temp\\\\update-loader-v2.ps1\")",
+      "WebFetch(domain:remake.ai)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ASUS\\\\AppData\\\\Local\\\\Temp\\\\update-scroll-fix.ps1\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\ASUS\\AppData\\Local\\Temp"
+    ]
+  }
+}

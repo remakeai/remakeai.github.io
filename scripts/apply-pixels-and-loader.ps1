@@ -75,8 +75,10 @@ $loaderHtml = @'
             loader.remove();
             // Re-scroll to hash anchor after page fully loads
             if (window.location.hash) {
-              var el = document.querySelector(window.location.hash);
-              if (el) el.scrollIntoView();
+              setTimeout(function() {
+                var el = document.querySelector(window.location.hash);
+                if (el) el.scrollIntoView({ behavior: 'instant' });
+              }, 100);
             }
           }, 300);
         }

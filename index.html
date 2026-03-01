@@ -132,7 +132,14 @@
         var loader = document.getElementById('page-loader');
         if (loader) {
           loader.classList.add('hidden');
-          setTimeout(function() { loader.remove(); }, 300);
+          setTimeout(function() {
+            loader.remove();
+            // Re-scroll to hash anchor after page fully loads
+            if (window.location.hash) {
+              var el = document.querySelector(window.location.hash);
+              if (el) el.scrollIntoView();
+            }
+          }, 300);
         }
       });
     </script>

@@ -1,66 +1,17 @@
 <!doctype html>
 <html
   lang="en-US"
-  data-ws-project="7a20746a-9b63-473c-86ea-a8928229231f"
-  data-ws-last-published="2026-03-01T21:18:24.207Z"
+  data-ws-project="2d414f2d-006c-47d3-967b-cc07207bc548"
+  data-ws-last-published="2026-03-01T23:11:06.725Z"
 >
   <head>
-<!-- Scroll Fix -->
-    <script>
-      if('scrollRestoration' in history)history.scrollRestoration='manual';
-      window.scrollTo(0,0);
-      // Intercept hash anchor clicks before Vike loads
-      document.addEventListener('click', function(e) {
-        var a = e.target;
-        while (a && a.tagName !== 'A') a = a.parentElement;
-        if (a && a.getAttribute('href') && a.getAttribute('href').charAt(0) === '#') {
-          var hash = a.getAttribute('href');
-          var el = document.querySelector(hash);
-          if (el) {
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            el.scrollIntoView({ behavior: 'instant' });
-            history.pushState(null, '', hash);
-          }
-        }
-      }, true);
-    </script>
-<!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    '/fbevents.js');
-    fbq('init', '346568425169694');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=346568425169694&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    <!-- Reddit Pixel -->
-    <script>
-    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="/reddit-pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_feojnozacoug');rdt('track', 'PageVisit');
-    </script>
-    <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
-    <!-- End Reddit Pixel -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="/assets/static/app_generated_index-6937cd5a.C7oHSVha.css"
+      href="/assets/static/app_generated_index-6937cd5a.BWSdzwqp.css"
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link
-      rel="preload"
-      as="image"
-      imagesrcset="/assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png 16w, /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png 32w, /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png 48w, /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png 64w, /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png 96w, /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png 128w, /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png 256w"
-      imagesizes="100vw"
-    />
     <script
       async=""
       src="https://www.googletagmanager.com/gtag/js?id=G-LJLTHN5B4J"
@@ -106,55 +57,6 @@
     </script>
   </head>
   <body class="w-element">
-<!-- Loading Overlay -->
-    <style>
-      #page-loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgb(245 247 250);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 99999;
-        transition: opacity 0.3s ease-out;
-      }
-      #page-loader.hidden {
-        opacity: 0;
-        pointer-events: none;
-      }
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid rgb(182 188 205);
-        border-top-color: rgb(45 102 196);
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
-      }
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
-    </style>
-    <div id="page-loader"><div class="spinner"></div></div>
-    <script>
-      window.addEventListener('load', function() {
-        var loader = document.getElementById('page-loader');
-        if (loader) {
-          loader.classList.add('hidden');
-          setTimeout(function() {
-            loader.remove();
-            // Scroll to hash anchor after page fully loads
-            if (window.location.hash) {
-              var el = document.querySelector(window.location.hash);
-              if (el) el.scrollIntoView({ behavior: 'instant' });
-            }
-          }, 300);
-        }
-      });
-    </script>
-    <!-- End Loading Overlay -->
     <div style="display: contents"><div style="display: contents"></div></div>
     <div style="display: contents"></div>
     <div class="w-box">
@@ -167,7 +69,10 @@
                 margin: 0;
               }
 
-              
+              /* Make links scroll to their sections smoothly. */
+              * {
+                scroll-behavior: smooth;
+              }
 
               /* Show parent dropdown link hover styles when dropdown is active. */
               button[data-state="open"].nav-dropdown-parent {
@@ -176,59 +81,6 @@
               }
             </style>
           </div>
-          <nav
-            class="w-box c1y5gtuy ctwedid c4zv7o8 c1yxbcu3 ca0xin3 c1rlgl31 c15wov26 c45gf4w c1e4bhmr c59qywy cufu5ux ccanaxu cp2s6qt c1hkrd9w chwz02u"
-          >
-            <div
-              class="w-box c15wov26 ccanaxu cciowao c45gf4w c1n863ed c8yq6mq"
-            >
-              <div style="display: contents">
-                <div style="display: contents">
-                  <a href="/" class="w-link"
-                    ><img
-                      alt="Remake.ai logo"
-                      width="95"
-                      height="64"
-                      src="/assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png"
-                      class="w-image"
-                      sizes="100vw"
-                      srcset="
-                        /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png  16w,
-                        /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png  32w,
-                        /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png  48w,
-                        /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png  64w,
-                        /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png  96w,
-                        /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png 128w,
-                        /assets/remake_ai_logo_95x64px_sM-njGt3HJob3_3UYzTBG.png 256w
-                      "
-                      decoding="async"
-                      loading="eager"
-                  /></a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-box c15wov26 ccanaxu cuwsqp1 c1b8w41a co0w7fv c1pf08nf c1qen1nw c1iqe7m9 cvalzk8 c1jgectr c10ejo0o cllhkk0 c5r72b5 chls64z c16sav94"
-            >
-              <div class="w-html-embed c1i6u13o c28ohbo ctx7673 c119m53o">
-                <svg
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 21 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M16.3333 1.66667C16.6023 2.91924 17.5807 3.89769 18.8333 4.16667C17.5807 4.43564 16.6023 5.4141 16.3333 6.66667C16.0643 5.4141 15.0859 4.43564 13.8333 4.16667C15.0859 3.89769 16.0643 2.91924 16.3333 1.66667ZM8.06 1.83334C8.81958 5.3706 11.5827 8.13375 15.12 8.89334C11.5827 9.65292 8.81958 12.4161 8.06 15.9533C7.30042 12.4161 4.53726 9.65292 1 8.89334C4.53726 8.13375 7.30042 5.3706 8.06 1.83334ZM18.8333 15C17.1632 14.6414 15.8586 13.3368 15.5 11.6667C15.1413 13.3368 13.8367 14.6414 12.1666 15C13.8367 15.3586 15.1413 16.6632 15.5 18.3333C15.8586 16.6632 17.1632 15.3586 18.8333 15Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
-              <div class="w-text">Arriving by Christmas 2026</div>
-            </div>
-          </nav>
         </div>
       </div>
       <section class="w-box ckv9hzh c13a8eri cu196q0 cyk2hjc">
@@ -532,18 +384,18 @@
       {}
     </script>
     <script
-      src="/assets/entries/entry-server-routing.B8Vogo1k.js"
+      src="/assets/entries/entry-server-routing.yUOCNL2u.js"
       type="module"
       async
     ></script>
     <link
       rel="modulepreload"
-      href="/assets/entries/pages_reserve_thanks.9xtSJb2N.js"
+      href="/assets/entries/pages_reserve_thanks.Cy8mxaj-.js"
       as="script"
       type="text/javascript"
     /><link
       rel="modulepreload"
-      href="/assets/chunks/chunk-BBDKYSTh.js"
+      href="/assets/chunks/chunk-CfN2Iclr.js"
       as="script"
       type="text/javascript"
     />

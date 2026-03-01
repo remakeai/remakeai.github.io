@@ -1,57 +1,14 @@
 <!doctype html>
 <html
   lang="en-US"
-  data-ws-project="7a20746a-9b63-473c-86ea-a8928229231f"
-  data-ws-last-published="2026-03-01T21:18:24.207Z"
+  data-ws-project="2d414f2d-006c-47d3-967b-cc07207bc548"
+  data-ws-last-published="2026-03-01T23:11:06.725Z"
 >
   <head>
-<!-- Scroll Fix -->
-    <script>
-      if('scrollRestoration' in history)history.scrollRestoration='manual';
-      window.scrollTo(0,0);
-      // Intercept hash anchor clicks before Vike loads
-      document.addEventListener('click', function(e) {
-        var a = e.target;
-        while (a && a.tagName !== 'A') a = a.parentElement;
-        if (a && a.getAttribute('href') && a.getAttribute('href').charAt(0) === '#') {
-          var hash = a.getAttribute('href');
-          var el = document.querySelector(hash);
-          if (el) {
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            el.scrollIntoView({ behavior: 'instant' });
-            history.pushState(null, '', hash);
-          }
-        }
-      }, true);
-    </script>
-<!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    '/fbevents.js');
-    fbq('init', '346568425169694');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=346568425169694&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    <!-- Reddit Pixel -->
-    <script>
-    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="/reddit-pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_feojnozacoug');rdt('track', 'PageVisit');
-    </script>
-    <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
-    <!-- End Reddit Pixel -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="/assets/static/app_generated_index-6937cd5a.C7oHSVha.css"
+      href="/assets/static/app_generated_index-6937cd5a.BWSdzwqp.css"
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -108,55 +65,6 @@
     </script>
   </head>
   <body class="w-body">
-<!-- Loading Overlay -->
-    <style>
-      #page-loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgb(245 247 250);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 99999;
-        transition: opacity 0.3s ease-out;
-      }
-      #page-loader.hidden {
-        opacity: 0;
-        pointer-events: none;
-      }
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid rgb(182 188 205);
-        border-top-color: rgb(45 102 196);
-        border-radius: 50%;
-        animation: spin 0.8s linear infinite;
-      }
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
-    </style>
-    <div id="page-loader"><div class="spinner"></div></div>
-    <script>
-      window.addEventListener('load', function() {
-        var loader = document.getElementById('page-loader');
-        if (loader) {
-          loader.classList.add('hidden');
-          setTimeout(function() {
-            loader.remove();
-            // Scroll to hash anchor after page fully loads
-            if (window.location.hash) {
-              var el = document.querySelector(window.location.hash);
-              if (el) el.scrollIntoView({ behavior: 'instant' });
-            }
-          }, 300);
-        }
-      });
-    </script>
-    <!-- End Loading Overlay -->
     <div style="display: contents"><div style="display: contents"></div></div>
     <div style="display: contents"></div>
     <div class="w-box">
@@ -169,7 +77,10 @@
                 margin: 0;
               }
 
-              
+              /* Make links scroll to their sections smoothly. */
+              * {
+                scroll-behavior: smooth;
+              }
 
               /* Show parent dropdown link hover styles when dropdown is active. */
               button[data-state="open"].nav-dropdown-parent {
@@ -268,11 +179,11 @@
               <div style="display: contents">
                 <div style="display: contents">
                   <a
-                    href="/#video"
+                    href="#video"
                     class="w-link ccbw1jm cs9dmk2 c1fpz5b3 c15mi0k5 c1oaqx cwibe83 c17tuecw c3um137 c1yk18vo cpegdhn c1tdtvjs civrtzc c1i6u13o ccanaxu cuwsqp1 c1b8w41a co0w7fv c10olkz5 c1u4qls7 c1mucm95 c17skwfs c1ov2tmq cu196q0 c1lf7fm0 cp8q3ji c1pnksm3 c14kc0uq c1w68d12 c1dbnpsm cgqk3g6"
                     ><span class="w-text">Watch in Action</span></a
                   ><a
-                    href="/reserve/games"
+                    href="#choose_model"
                     class="w-link c16okbbg cg91gp7 c1fpz5b3 c15mi0k5 c1oaqx cwibe83 c17tuecw c3um137 c1yk18vo cpegdhn c1tdtvjs civrtzc c1i6u13o ccanaxu cuwsqp1 c1b8w41a co0w7fv c10olkz5 c1u4qls7 c1mucm95 c17skwfs c1ov2tmq cu196q0 c2pigo9 cp8q3ji c1pnksm3 c14kc0uq c1w68d12"
                     ><span class="w-text">Reserve Now</span></a
                   ><a
@@ -690,292 +601,6 @@
               </div>
             </div>
           </footer>
-          <div style="display: contents">
-            <div style="display: contents">
-              <div class="w-html-embed">
-                <style>
-                  :root {
-                    --ani-duration: var(--duration-default, 0.2s);
-                    --ani-delay: 0s;
-                    --ani-slide-offset: 20%;
-                    --ani-zoom-in-scale: 1;
-                    --ani-zoom-out-scale: 0.85;
-                    --ani-flip-rotate: 30deg;
-                    --ani-easing: var(--easing-default, ease);
-                    --ani-fill-mode: forwards;
-                  }
-                  [data-ani]:not([data-ani-children]),
-                  [data-ani-children]:not([data-ani-progress]) > * {
-                    animation-duration: var(--ani-duration);
-                    animation-delay: var(--ani-delay);
-                    animation-timing-function: var(--ani-easing);
-                    animation-fill-mode: var(--ani-fill-mode);
-                    opacity: 0;
-                  }
-                  [data-ani-progress]:not([data-ani-children]),
-                  [data-ani-children]:not([data-ani]) > * {
-                    transition-property: opacity, transform;
-                    transition-duration: var(--ani-duration);
-                    transition-timing-function: var(--ani-easing);
-                    opacity: 0;
-                  }
-                  @keyframes fadeIn {
-                    from {
-                      opacity: 0;
-                    }
-                    to {
-                      opacity: 1;
-                    }
-                  }
-                  @keyframes fadeOut {
-                    from {
-                      opacity: 1;
-                    }
-                    to {
-                      opacity: 0;
-                    }
-                  }
-                  [data-ani-children][data-ani="fade"] > .in,
-                  [data-ani="fade"]:where(
-                      .in:not([data-state]),
-                      [data-state$="open"],
-                      [data-state="active"]
-                    ) {
-                    animation-name: fadeIn;
-                  }
-                  [data-ani-children][data-ani="fade"] > .out,
-                  [data-ani="fade"]:where(
-                      .out:not([data-state]),
-                      [data-state="closed"],
-                      [data-state="inactive"]
-                    ) {
-                    animation-name: fadeOut;
-                  }
-                  @keyframes slideIn {
-                    from {
-                      opacity: 0;
-                      translate: var(--ani-slide-transform);
-                    }
-                    to {
-                      opacity: 1;
-                      translate: none;
-                    }
-                  }
-                  @keyframes slideOut {
-                    from {
-                      opacity: 1;
-                      translate: none;
-                    }
-                    to {
-                      opacity: 0;
-                      translate: var(--ani-slide-transform);
-                    }
-                  }
-                  [data-ani-children][data-ani|="slide"] > .in,
-                  [data-ani|="slide"]:where(
-                      .in:not([data-state]),
-                      [data-state$="open"],
-                      [data-state="active"]
-                    ) {
-                    animation-name: slideIn;
-                  }
-                  [data-ani-children][data-ani|="slide"] > .out,
-                  [data-ani|="slide"]:where(
-                      .out:not([data-state]),
-                      [data-state="closed"],
-                      [data-state="inactive"]
-                    ) {
-                    animation-name: slideOut;
-                  }
-                  [data-ani="slide-up"] {
-                    --ani-slide-transform: 0 var(--ani-slide-offset);
-                  }
-                  [data-ani="slide-down"] {
-                    --ani-slide-transform: 0 calc(-1 * var(--ani-slide-offset));
-                  }
-                  [data-ani="slide-left"] {
-                    --ani-slide-transform: var(--ani-slide-offset);
-                  }
-                  [data-ani="slide-right"] {
-                    --ani-slide-transform: calc(-1 * var(--ani-slide-offset));
-                  }
-                  @keyframes zoomIn {
-                    from {
-                      opacity: 0;
-                      scale: var(--ani-zoom-out-scale);
-                    }
-                    to {
-                      opacity: 1;
-                      scale: 1;
-                    }
-                  }
-                  @keyframes zoomOut {
-                    from {
-                      opacity: 1;
-                      scale: 1;
-                    }
-                    to {
-                      opacity: 0;
-                      scale: var(--ani-zoom-in-scale);
-                    }
-                  }
-                  [data-ani-children][data-ani="zoom"] > .in,
-                  [data-ani|="zoom"]:where(
-                      .in:not([data-state]),
-                      [data-state$="open"],
-                      [data-state="active"]
-                    ) {
-                    animation-name: zoomIn;
-                  }
-                  [data-ani-children][data-ani="zoom"] > .out,
-                  [data-ani|="zoom"]:where(
-                      .out:not([data-state]),
-                      [data-state="closed"],
-                      [data-state="inactive"]
-                    ) {
-                    animation-name: zoomOut;
-                  }
-                  [data-ani-children][data-ani-progress="zoom"] > *,
-                  [data-ani-progress="zoom"]:not([data-ani-children]) {
-                    transform: scale(var(--ani-zoom-out-scale));
-                  }
-                  @keyframes flipInY {
-                    from {
-                      rotate: y var(--ani-flip-rotate);
-                      perspective: 2000px;
-                      opacity: 0;
-                    }
-                    to {
-                      rotate: y 0;
-                      opacity: 1;
-                    }
-                  }
-                  @keyframes flipOutY {
-                    from {
-                      rotate: y 0;
-                      opacity: 1;
-                    }
-                    to {
-                      perspective: 2000px;
-                      rotate: y var(--ani-flip-rotate);
-                      opacity: 0;
-                    }
-                  }
-                  @keyframes flipInX {
-                    from {
-                      perspective: 2000px;
-                      rotate: x var(--ani-flip-rotate);
-                      opacity: 0;
-                    }
-                    to {
-                      rotate: x 0;
-                      opacity: 1;
-                    }
-                  }
-                  @keyframes flipOutX {
-                    from {
-                      rotate: x 0;
-                      opacity: 1;
-                    }
-                    to {
-                      perspective: 2000px;
-                      rotate: x var(--ani-flip-rotate);
-                      opacity: 0;
-                    }
-                  }
-                  [data-ani-children][data-ani="flip-y"] > .in,
-                  [data-ani="flip-y"]:where(
-                      .in:not([data-state]),
-                      [data-state$="open"],
-                      [data-state="active"]
-                    ) {
-                    animation-name: flipInY;
-                  }
-                  [data-ani-children][data-ani="flip-x"] > .in,
-                  [data-ani="flip-x"]:where(
-                      .in:not([data-state]),
-                      [data-state$="open"],
-                      [data-state="active"]
-                    ) {
-                    animation-name: flipInX;
-                  }
-                  [data-ani-children][data-ani="flip-y"] > .out,
-                  [data-ani="flip-y"]:where(
-                      .out:not([data-state]),
-                      [data-state="closed"],
-                      [data-state="inactive"]
-                    ) {
-                    animation-name: flipOutY;
-                  }
-                  [data-ani-children][data-ani="flip-x"] > .out,
-                  [data-ani="flip-x"]:where(
-                      .out:not([data-state]),
-                      [data-state="closed"],
-                      [data-state="inactive"]
-                    ) {
-                    animation-name: flipOutX;
-                  }
-                  @keyframes expandDown {
-                    from {
-                      height: 0;
-                    }
-                    to {
-                      height: var(--newHeight);
-                    }
-                  }
-                  @keyframes expandUp {
-                    from {
-                      height: var(--newHeight);
-                    }
-                    to {
-                      height: 0;
-                    }
-                  }
-                  [data-ani="expand"],
-                  [data-ani="expand"][data-state="open"],
-                  [data-ani="expand"].in {
-                    --newHeight: var(
-                      --custom-height,
-                      var(
-                        --radix-accordion-content-height,
-                        var(--radix-collapsible-content-height, 100%)
-                      )
-                    );
-                    overflow: hidden;
-                    opacity: 1;
-                  }
-                  [data-ani-children][data-ani="expand"] > .in,
-                  [data-ani="expand"]:where(
-                      .in:not([data-state]),
-                      [data-state$="open"],
-                      [data-state="active"]
-                    ) {
-                    animation: expandDown var(--ani-duration) var(--ani-easing);
-                  }
-                  [data-ani-children][data-ani="expand"] > .out,
-                  [data-ani="expand"]:where(
-                      .out:not([data-state]),
-                      [data-state="closed"],
-                      [data-state="inactive"]
-                    ) {
-                    animation: expandUp var(--ani-duration) var(--ani-easing);
-                  }
-                  @media (prefers-reduced-motion: reduce) {
-                    [data-ani]:not([data-ani-children]),
-                    [data-ani-progress]:not([data-ani-children]),
-                    [data-ani-children] > * {
-                      opacity: 1;
-                      transform: none;
-                      animation: none;
-                      rotate: none;
-                      scale: none;
-                      translate: none;
-                    }
-                  }
-                </style>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -1016,28 +641,28 @@
       {}
     </script>
     <script
-      src="/assets/entries/entry-server-routing.B8Vogo1k.js"
+      src="/assets/entries/entry-server-routing.yUOCNL2u.js"
       type="module"
       async
     ></script>
     <link
       rel="modulepreload"
-      href="/assets/entries/pages_blog_investing-1m.BHLONV8V.js"
+      href="/assets/entries/pages_blog_investing-1m.OCbZMo_0.js"
       as="script"
       type="text/javascript"
     /><link
       rel="modulepreload"
-      href="/assets/chunks/chunk-BBDKYSTh.js"
+      href="/assets/chunks/chunk-CfN2Iclr.js"
       as="script"
       type="text/javascript"
     /><link
       rel="modulepreload"
-      href="/assets/chunks/chunk-pfgbFGhB.js"
+      href="/assets/chunks/chunk-CqhHRdow.js"
       as="script"
       type="text/javascript"
     /><link
       rel="modulepreload"
-      href="/assets/chunks/chunk-DyZvrO9J.js"
+      href="/assets/chunks/chunk-DBdIzeue.js"
       as="script"
       type="text/javascript"
     />

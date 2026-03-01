@@ -1,33 +1,14 @@
 # Apply Pixels and Loader Script
 # This script inserts Facebook/Reddit tracking pixels and a loading spinner into all HTML files.
-# It also fixes anchor navigation issues by removing smooth scroll and fixing same-page anchor links.
 # Run this after regenerating static site content.
 
 $basePath = $PSScriptRoot | Split-Path -Parent
 $htmlFiles = Get-ChildItem -Path $basePath -Recurse -Filter "*.html"
 
-# Scroll fix and anchor interceptor - must be FIRST in head
+# Scroll fix - must be FIRST in head to prevent browser's initial scroll
 $scrollFix = @'
 <!-- Scroll Fix -->
-    <script>
-      if('scrollRestoration' in history)history.scrollRestoration='manual';
-      window.scrollTo(0,0);
-      // Intercept hash anchor clicks before Vike loads
-      document.addEventListener('click', function(e) {
-        var a = e.target;
-        while (a && a.tagName !== 'A') a = a.parentElement;
-        if (a && a.getAttribute('href') && a.getAttribute('href').charAt(0) === '#') {
-          var hash = a.getAttribute('href');
-          var el = document.querySelector(hash);
-          if (el) {
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            el.scrollIntoView({ behavior: 'instant' });
-            history.pushState(null, '', hash);
-          }
-        }
-      }, true);
-    </script>
+    <script>if('scrollRestoration' in history)history.scrollRestoration='manual';window.scrollTo(0,0);</script>
 '@
 
 # Pixel code to insert into <head>
@@ -117,12 +98,6 @@ foreach ($file in $htmlFiles) {
     $content = Get-Content $file.FullName -Raw
     $modified = $false
 
-    # Skip files in the ad folder
-    if ($file.FullName -like "*\ad\*") {
-        Write-Host "Skipped (ad folder): $($file.Name)"
-        continue
-    }
-
     # Insert scroll fix as FIRST thing in head (before anything else)
     if ($content -notmatch 'Scroll Fix') {
         $content = $content -replace '(<head[^>]*>)', "`$1`n$scrollFix"
@@ -138,22 +113,6 @@ foreach ($file in $htmlFiles) {
     # Insert loader after <body ...> if not already present
     if ($content -notmatch 'id="page-loader"') {
         $content = $content -replace '(<body[^>]*>)', "`$1`n$loaderHtml"
-        $modified = $true
-    }
-
-    # Remove scroll-behavior: smooth (causes issues with anchor navigation)
-    if ($content -match 'scroll-behavior:\s*smooth') {
-        $pattern = '/\*\s*Make links scroll to their sections smoothly\.\s*\*/\s*\r?\n\s*\*\s*\{\s*\r?\n\s*scroll-behavior:\s*smooth;\s*\r?\n\s*\}'
-        $content = $content -replace $pattern, ''
-        $modified = $true
-    }
-
-    # Fix same-page anchor links to use relative hash (bypasses Vike's client-side routing)
-    $relativePath = $file.FullName.Replace($basePath, '').Replace('\', '/').Replace('/index.html', '')
-    if ($relativePath -eq '') { $relativePath = '/' }
-    $anchorPattern = "href=""$relativePath#([^""]+)"""
-    if ($content -match $anchorPattern) {
-        $content = $content -replace $anchorPattern, 'href="#$1"'
         $modified = $true
     }
 

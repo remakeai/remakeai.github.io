@@ -1,0 +1,8 @@
+_site
+.DS_Store
+*.swp
+.sass-cache
+*~
+docs/
+*:Zone.Identifier
+.claude/

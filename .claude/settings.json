@@ -16,7 +16,8 @@
       "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ASUS\\\\AppData\\\\Local\\\\Temp\\\\add-pixels.ps1\")",
       "Bash(powershell -ExecutionPolicy Bypass -File remove-smooth-scroll.ps1)",
       "Bash(grep -o '.\\\\\\\\{0,50\\\\\\\\}scrollTo.\\\\\\\\{0,50\\\\\\\\}' assets/entries/entry-server-routing.B8Vogo1k.js)",
-      "Bash(powershell -ExecutionPolicy Bypass -File fix-anchor-links.ps1)"
+      "Bash(powershell -ExecutionPolicy Bypass -File fix-anchor-links.ps1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File add-anchor-interceptor.ps1)"
     ],
     "additionalDirectories": [
       "C:\\Users\\ASUS\\AppData\\Local\\Temp"

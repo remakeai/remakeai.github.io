@@ -142,6 +142,20 @@
           }, 300);
         }
       });
+      // Intercept hash-only anchor clicks to bypass Vike's client-side routing
+      document.addEventListener('click', function(e) {
+        var target = e.target.closest('a[href^="#"]');
+        if (target) {
+          var hash = target.getAttribute('href');
+          var el = document.querySelector(hash);
+          if (el) {
+            e.preventDefault();
+            e.stopPropagation();
+            el.scrollIntoView({ behavior: 'instant' });
+            history.pushState(null, '', hash);
+          }
+        }
+      }, true);
     </script>
     <!-- End Loading Overlay -->
     <div style="display: contents"><div style="display: contents"></div></div>

@@ -5,7 +5,15 @@
       "Bash(powershell -ExecutionPolicy Bypass -File \"c:\\\\Users\\\\ASUS\\\\git\\\\remakeai.github.io\\\\scripts\\\\apply-pixels-and-loader.ps1\")",
       "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ASUS\\\\AppData\\\\Local\\\\Temp\\\\update-loader-v2.ps1\")",
       "WebFetch(domain:remake.ai)",
-      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ASUS\\\\AppData\\\\Local\\\\Temp\\\\update-scroll-fix.ps1\")"
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ASUS\\\\AppData\\\\Local\\\\Temp\\\\update-scroll-fix.ps1\")",
+      "WebFetch(domain:remakeai-axcen.wstd.io)",
+      "Bash(curl -s -I \"https://remake.ai/reserve/games/\")",
+      "Bash(curl -sI \"https://remake.ai/reserve/games/\")",
+      "Bash(powershell -Command \"\\(Invoke-WebRequest -Uri ''https://remake.ai/reserve/games/'' -Method HEAD\\).Headers | Format-Table -AutoSize\")",
+      "Bash(curl --ssl-no-revoke -u admin:webstudio \"https://remakeai-axcen.wstd.io/reserve/games/\" -o /tmp/webstudio.html)",
+      "Bash(curl --ssl-no-revoke \"https://remake.ai/reserve/games/\" -o /tmp/github.html)",
+      "Read(//tmp/**)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\ASUS\\\\AppData\\\\Local\\\\Temp\\\\add-pixels.ps1\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\ASUS\\AppData\\Local\\Temp"

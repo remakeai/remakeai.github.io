@@ -1,0 +1,1 @@
+import{v as t,j as a}from"./chunk-DcH7z4fR.js";const o="ul",i="ol",d=t.forwardRef(({ordered:e=!1,...r},s)=>t.createElement(e?i:o,{...r,ref:s}));d.displayName="List";const l=t.forwardRef(({children:e,...r},s)=>a.jsx("li",{...r,ref:s,children:e}));l.displayName="ListItem";export{d,l as i};

@@ -5,12 +5,6 @@
 $basePath = $PSScriptRoot | Split-Path -Parent
 $htmlFiles = Get-ChildItem -Path $basePath -Recurse -Filter "*.html"
 
-# Scroll fix - must be FIRST in head to prevent browser's initial scroll
-$scrollFix = @'
-<!-- Scroll Fix -->
-    <script>if('scrollRestoration' in history)history.scrollRestoration='manual';window.scrollTo(0,0);</script>
-'@
-
 # Pixel code to insert into <head>
 $pixelCode = @'
 <!-- Meta Pixel Code -->
@@ -79,11 +73,6 @@ $loaderHtml = @'
           loader.classList.add('hidden');
           setTimeout(function() {
             loader.remove();
-            // Scroll to hash anchor after page fully loads
-            if (window.location.hash) {
-              var el = document.querySelector(window.location.hash);
-              if (el) el.scrollIntoView({ behavior: 'instant' });
-            }
           }, 300);
         }
       });
@@ -98,15 +87,9 @@ foreach ($file in $htmlFiles) {
     $content = Get-Content $file.FullName -Raw
     $modified = $false
 
-    # Insert scroll fix as FIRST thing in head (before anything else)
-    if ($content -notmatch 'Scroll Fix') {
-        $content = $content -replace '(<head[^>]*>)', "`$1`n$scrollFix"
-        $modified = $true
-    }
-
-    # Insert pixels after scroll fix
+    # Insert pixels after <head> if not already present
     if ($content -notmatch 'Meta Pixel Code') {
-        $content = $content -replace '(<!-- Scroll Fix -->.*?</script>)', "`$1`n$pixelCode"
+        $content = $content -replace '(<head[^>]*>)', "`$1`n$pixelCode"
         $modified = $true
     }
 

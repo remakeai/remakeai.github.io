@@ -137,32 +137,27 @@
           }, 300);
         }
       }
-      function allImagesLoaded() {
-        var images = document.querySelectorAll('img');
-        for (var i = 0; i < images.length; i++) {
-          if (!images[i].complete) return false;
-        }
-        return true;
-      }
       window.addEventListener('load', function() {
-        if (allImagesLoaded()) {
+        // Only wait for eager images (not lazy-loaded ones)
+        var images = document.querySelectorAll('img:not([loading="lazy"])');
+        var pending = 0;
+        images.forEach(function(img) {
+          if (!img.complete) pending++;
+        });
+        if (pending === 0) {
           hideLoader();
         } else {
-          var images = document.querySelectorAll('img');
           var loaded = 0;
           images.forEach(function(img) {
-            if (img.complete) {
+            if (img.complete) return;
+            img.addEventListener('load', function() {
               loaded++;
-            } else {
-              img.addEventListener('load', function() {
-                loaded++;
-                if (loaded === images.length) hideLoader();
-              });
-              img.addEventListener('error', function() {
-                loaded++;
-                if (loaded === images.length) hideLoader();
-              });
-            }
+              if (loaded === pending) hideLoader();
+            });
+            img.addEventListener('error', function() {
+              loaded++;
+              if (loaded === pending) hideLoader();
+            });
           });
         }
       });

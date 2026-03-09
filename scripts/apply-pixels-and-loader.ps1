@@ -122,12 +122,6 @@ foreach ($file in $htmlFiles) {
         $modified = $true
     }
 
-    # Remove old loader if present (to allow updating)
-    if ($content -match '<!-- Loading Overlay -->') {
-        $content = $content -replace '(?s)<!-- Loading Overlay -->.*?<!-- End Loading Overlay -->\r?\n?', ''
-        $modified = $true
-    }
-
     # Insert loader after <body ...> if not already present
     if ($content -notmatch 'id="page-loader"') {
         $content = $content -replace '(<body[^>]*>)', "`$1`n$loaderHtml"

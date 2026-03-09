@@ -67,13 +67,42 @@ $loaderHtml = @'
     </style>
     <div id="page-loader"><div class="spinner"></div></div>
     <script>
-      window.addEventListener('load', function() {
+      function hideLoader() {
         var loader = document.getElementById('page-loader');
         if (loader) {
           loader.classList.add('hidden');
           setTimeout(function() {
             loader.remove();
           }, 300);
+        }
+      }
+      function allImagesLoaded() {
+        var images = document.querySelectorAll('img');
+        for (var i = 0; i < images.length; i++) {
+          if (!images[i].complete) return false;
+        }
+        return true;
+      }
+      window.addEventListener('load', function() {
+        if (allImagesLoaded()) {
+          hideLoader();
+        } else {
+          var images = document.querySelectorAll('img');
+          var loaded = 0;
+          images.forEach(function(img) {
+            if (img.complete) {
+              loaded++;
+            } else {
+              img.addEventListener('load', function() {
+                loaded++;
+                if (loaded === images.length) hideLoader();
+              });
+              img.addEventListener('error', function() {
+                loaded++;
+                if (loaded === images.length) hideLoader();
+              });
+            }
+          });
         }
       });
     </script>
@@ -90,6 +119,12 @@ foreach ($file in $htmlFiles) {
     # Insert pixels after <head> if not already present
     if ($content -notmatch 'Meta Pixel Code') {
         $content = $content -replace '(<head[^>]*>)', "`$1`n$pixelCode"
+        $modified = $true
+    }
+
+    # Remove old loader if present (to allow updating)
+    if ($content -match '<!-- Loading Overlay -->') {
+        $content = $content -replace '(?s)<!-- Loading Overlay -->.*?<!-- End Loading Overlay -->\r?\n?', ''
         $modified = $true
     }
 

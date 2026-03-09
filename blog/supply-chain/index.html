@@ -2,7 +2,7 @@
 <html
   lang="en-US"
   data-ws-project="2d414f2d-006c-47d3-967b-cc07207bc548"
-  data-ws-last-published="2026-03-07T01:27:57.586Z"
+  data-ws-last-published="2026-03-09T04:24:34.669Z"
 >
   <head>
 <!-- Meta Pixel Code -->
@@ -31,7 +31,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/assets/static/app_generated_index-6937cd5a.BuO6Sq88.css"
+      href="/assets/static/app_generated_index-6937cd5a.D31Jx330.css"
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -123,13 +123,42 @@
     </style>
     <div id="page-loader"><div class="spinner"></div></div>
     <script>
-      window.addEventListener('load', function() {
+      function hideLoader() {
         var loader = document.getElementById('page-loader');
         if (loader) {
           loader.classList.add('hidden');
           setTimeout(function() {
             loader.remove();
           }, 300);
+        }
+      }
+      function allImagesLoaded() {
+        var images = document.querySelectorAll('img');
+        for (var i = 0; i < images.length; i++) {
+          if (!images[i].complete) return false;
+        }
+        return true;
+      }
+      window.addEventListener('load', function() {
+        if (allImagesLoaded()) {
+          hideLoader();
+        } else {
+          var images = document.querySelectorAll('img');
+          var loaded = 0;
+          images.forEach(function(img) {
+            if (img.complete) {
+              loaded++;
+            } else {
+              img.addEventListener('load', function() {
+                loaded++;
+                if (loaded === images.length) hideLoader();
+              });
+              img.addEventListener('error', function() {
+                loaded++;
+                if (loaded === images.length) hideLoader();
+              });
+            }
+          });
         }
       });
     </script>
@@ -957,13 +986,13 @@
       {}
     </script>
     <script
-      src="/assets/entries/entry-server-routing.DgDmIqeu.js"
+      src="/assets/entries/entry-server-routing.-Hui64F2.js"
       type="module"
       async
     ></script>
     <link
       rel="modulepreload"
-      href="/assets/entries/pages_blog_supply-chain.DcI_97Ha.js"
+      href="/assets/entries/pages_blog_supply-chain.BPqUa6ia.js"
       as="script"
       type="text/javascript"
     /><link

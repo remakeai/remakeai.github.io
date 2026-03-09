@@ -2,7 +2,7 @@
 <html
   lang="en-US"
   data-ws-project="2d414f2d-006c-47d3-967b-cc07207bc548"
-  data-ws-last-published="2026-03-07T01:27:57.586Z"
+  data-ws-last-published="2026-03-09T04:24:34.669Z"
 >
   <head>
 <!-- Meta Pixel Code -->
@@ -31,7 +31,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/assets/static/app_generated_index-6937cd5a.BuO6Sq88.css"
+      href="/assets/static/app_generated_index-6937cd5a.D31Jx330.css"
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -146,13 +146,42 @@
     </style>
     <div id="page-loader"><div class="spinner"></div></div>
     <script>
-      window.addEventListener('load', function() {
+      function hideLoader() {
         var loader = document.getElementById('page-loader');
         if (loader) {
           loader.classList.add('hidden');
           setTimeout(function() {
             loader.remove();
           }, 300);
+        }
+      }
+      function allImagesLoaded() {
+        var images = document.querySelectorAll('img');
+        for (var i = 0; i < images.length; i++) {
+          if (!images[i].complete) return false;
+        }
+        return true;
+      }
+      window.addEventListener('load', function() {
+        if (allImagesLoaded()) {
+          hideLoader();
+        } else {
+          var images = document.querySelectorAll('img');
+          var loaded = 0;
+          images.forEach(function(img) {
+            if (img.complete) {
+              loaded++;
+            } else {
+              img.addEventListener('load', function() {
+                loaded++;
+                if (loaded === images.length) hideLoader();
+              });
+              img.addEventListener('error', function() {
+                loaded++;
+                if (loaded === images.length) hideLoader();
+              });
+            }
+          });
         }
       });
     </script>
@@ -840,7 +869,7 @@
                   <h1
                     class="w-heading c19rr8t3 c1amecmh c1e9izlp cc1w4m0 c1qzbu4v c1fxshi"
                   >
-                    New apps added regularly
+                    New Games Added Regularly
                   </h1>
                   <p
                     class="w-paragraph c1dn7zc3 c1amecmh c1e9izlp cc1w4m0 cuivlhx cu196q0"
@@ -1099,12 +1128,12 @@
                   <h2
                     class="w-heading cl0htyc c1amecmh c1e9izlp cc1w4m0 c12hhu5u cnaibx6"
                   >
-                    More Than a Vacuum
+                    Get New Games on App Store
                   </h2>
                   <p
                     class="w-element c1kxlxba civrtzc c1e9izlp cc1w4m0 c18eqy83 cnaibx6"
                   >
-                    Your robot keeps learning new tricks
+                    Download new games &amp; apps
                   </p>
                 </div>
                 <div
@@ -2434,6 +2463,89 @@
           </section>
         </div>
       </div>
+      <section
+        id="launch_waitlist_signup"
+        class="w-box c85p0b cjlv4cu cu196q0 c10evo5s c1mo6drd"
+      >
+        <div
+          id="signup"
+          class="w-box c1y5gtuy ctwedid c4zv7o8 c1yxbcu3 ca0xin3 c1rlgl31 c15wov26 c9vbpot cj6cf3e c10c0lh2 cufu5ux c6yjhq6 cciowao cu196q0"
+        >
+          <h2 class="w-heading cl0htyc c1amecmh c1e9izlp cc1w4m0 c1qzbu4v">
+            Not ready to reserve?
+          </h2>
+          <div class="w-html-embed">
+            <div id="mc_embed_signup">
+              <form
+                action="https://remake.us4.list-manage.com/subscribe/post?u=663434fd966b5f4d9c0a117ee&amp;id=697a9ef02c&amp;f_id=004805e2f0"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                class="validate"
+                target="_self"
+                novalidate=""
+              >
+                <div id="mc_embed_signup_scroll">
+                  <h2>Get updates on launch, pricing &amp; new apps</h2>
+                  <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address</label
+                    ><input
+                      type="email"
+                      name="EMAIL"
+                      class="required email"
+                      id="mce-EMAIL"
+                      required=""
+                      value=""
+                    />
+                  </div>
+                  <div hidden="">
+                    <input type="hidden" name="tags" value="4536918" />
+                  </div>
+                  <div id="mce-responses" class="clear foot">
+                    <div
+                      class="response"
+                      id="mce-error-response"
+                      style="display: none"
+                    ></div>
+                    <div
+                      class="response"
+                      id="mce-success-response"
+                      style="display: none"
+                    ></div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    style="position: absolute; left: -5000px"
+                  >
+                    /* real people should not fill this in and expect good
+                    things - do not remove this or risk form bot signups */
+                    <input
+                      type="text"
+                      name="b_663434fd966b5f4d9c0a117ee_697a9ef02c"
+                      tabindex="-1"
+                      value=""
+                    />
+                  </div>
+                  <div class="optionalParent">
+                    <div class="clear foot">
+                      <input
+                        type="submit"
+                        name="subscribe"
+                        id="mc-embedded-subscribe"
+                        class="button"
+                        value="Subscribe"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <p class="w-element cu196q0 c1gyoec">
+            No spam. Unsubscribe any time.
+          </p>
+        </div>
+      </section>
       <div style="display: contents">
         <div style="display: contents">
           <section class="w-box ckv9hzh c13a8eri cu196q0">
@@ -2493,11 +2605,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rgct6:"
+                        aria-controls="radix-:Rgcv6:"
                         aria-expanded="true"
                         data-state="open"
                         data-orientation="vertical"
-                        id="radix-:Rct6:"
+                        id="radix-:Rcv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -2531,9 +2643,9 @@
                     </h3>
                     <div
                       data-state="open"
-                      id="radix-:Rgct6:"
+                      id="radix-:Rgcv6:"
                       role="region"
-                      aria-labelledby="radix-:Rct6:"
+                      aria-labelledby="radix-:Rcv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -2569,11 +2681,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rgkt6:"
+                        aria-controls="radix-:Rgkv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rkt6:"
+                        id="radix-:Rkv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -2607,10 +2719,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rgkt6:"
+                      id="radix-:Rgkv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rkt6:"
+                      aria-labelledby="radix-:Rkv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -2637,11 +2749,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rgst6:"
+                        aria-controls="radix-:Rgsv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rst6:"
+                        id="radix-:Rsv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -2675,10 +2787,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rgst6:"
+                      id="radix-:Rgsv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rst6:"
+                      aria-labelledby="radix-:Rsv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -2705,11 +2817,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rh4t6:"
+                        aria-controls="radix-:Rh4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R14t6:"
+                        id="radix-:R14v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -2743,10 +2855,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rh4t6:"
+                      id="radix-:Rh4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R14t6:"
+                      aria-labelledby="radix-:R14v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -2773,11 +2885,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rhct6:"
+                        aria-controls="radix-:Rhcv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R1ct6:"
+                        id="radix-:R1cv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -2811,10 +2923,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rhct6:"
+                      id="radix-:Rhcv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R1ct6:"
+                      aria-labelledby="radix-:R1cv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -2841,11 +2953,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rhkt6:"
+                        aria-controls="radix-:Rhkv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R1kt6:"
+                        id="radix-:R1kv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -2879,10 +2991,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rhkt6:"
+                      id="radix-:Rhkv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R1kt6:"
+                      aria-labelledby="radix-:R1kv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -2909,11 +3021,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rhst6:"
+                        aria-controls="radix-:Rhsv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R1st6:"
+                        id="radix-:R1sv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -2947,10 +3059,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rhst6:"
+                      id="radix-:Rhsv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R1st6:"
+                      aria-labelledby="radix-:R1sv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -2977,11 +3089,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Ri4t6:"
+                        aria-controls="radix-:Ri4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R24t6:"
+                        id="radix-:R24v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3015,10 +3127,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Ri4t6:"
+                      id="radix-:Ri4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R24t6:"
+                      aria-labelledby="radix-:R24v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3045,11 +3157,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rict6:"
+                        aria-controls="radix-:Ricv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R2ct6:"
+                        id="radix-:R2cv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3083,10 +3195,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rict6:"
+                      id="radix-:Ricv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R2ct6:"
+                      aria-labelledby="radix-:R2cv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3113,11 +3225,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rikt6:"
+                        aria-controls="radix-:Rikv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R2kt6:"
+                        id="radix-:R2kv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3151,10 +3263,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rikt6:"
+                      id="radix-:Rikv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R2kt6:"
+                      aria-labelledby="radix-:R2kv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3181,11 +3293,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rist6:"
+                        aria-controls="radix-:Risv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R2st6:"
+                        id="radix-:R2sv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3219,10 +3331,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rist6:"
+                      id="radix-:Risv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R2st6:"
+                      aria-labelledby="radix-:R2sv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3249,11 +3361,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rj4t6:"
+                        aria-controls="radix-:Rj4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R34t6:"
+                        id="radix-:R34v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3287,10 +3399,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rj4t6:"
+                      id="radix-:Rj4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R34t6:"
+                      aria-labelledby="radix-:R34v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3317,11 +3429,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rjct6:"
+                        aria-controls="radix-:Rjcv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R3ct6:"
+                        id="radix-:R3cv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3355,10 +3467,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rjct6:"
+                      id="radix-:Rjcv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R3ct6:"
+                      aria-labelledby="radix-:R3cv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3385,11 +3497,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rjkt6:"
+                        aria-controls="radix-:Rjkv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R3kt6:"
+                        id="radix-:R3kv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3423,10 +3535,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rjkt6:"
+                      id="radix-:Rjkv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R3kt6:"
+                      aria-labelledby="radix-:R3kv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3453,11 +3565,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rjst6:"
+                        aria-controls="radix-:Rjsv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R3st6:"
+                        id="radix-:R3sv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3491,10 +3603,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rjst6:"
+                      id="radix-:Rjsv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R3st6:"
+                      aria-labelledby="radix-:R3sv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3521,11 +3633,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rk4t6:"
+                        aria-controls="radix-:Rk4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R44t6:"
+                        id="radix-:R44v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3559,10 +3671,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rk4t6:"
+                      id="radix-:Rk4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R44t6:"
+                      aria-labelledby="radix-:R44v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3589,11 +3701,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rkct6:"
+                        aria-controls="radix-:Rkcv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R4ct6:"
+                        id="radix-:R4cv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3627,10 +3739,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rkct6:"
+                      id="radix-:Rkcv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R4ct6:"
+                      aria-labelledby="radix-:R4cv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3657,11 +3769,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rkkt6:"
+                        aria-controls="radix-:Rkkv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R4kt6:"
+                        id="radix-:R4kv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3695,10 +3807,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rkkt6:"
+                      id="radix-:Rkkv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R4kt6:"
+                      aria-labelledby="radix-:R4kv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3725,11 +3837,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rkst6:"
+                        aria-controls="radix-:Rksv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R4st6:"
+                        id="radix-:R4sv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3763,10 +3875,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rkst6:"
+                      id="radix-:Rksv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R4st6:"
+                      aria-labelledby="radix-:R4sv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3793,11 +3905,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rl4t6:"
+                        aria-controls="radix-:Rl4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R54t6:"
+                        id="radix-:R54v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3831,10 +3943,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rl4t6:"
+                      id="radix-:Rl4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R54t6:"
+                      aria-labelledby="radix-:R54v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3861,11 +3973,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rlct6:"
+                        aria-controls="radix-:Rlcv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R5ct6:"
+                        id="radix-:R5cv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3899,10 +4011,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rlct6:"
+                      id="radix-:Rlcv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R5ct6:"
+                      aria-labelledby="radix-:R5cv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3929,11 +4041,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rlkt6:"
+                        aria-controls="radix-:Rlkv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R5kt6:"
+                        id="radix-:R5kv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -3967,10 +4079,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rlkt6:"
+                      id="radix-:Rlkv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R5kt6:"
+                      aria-labelledby="radix-:R5kv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -3997,11 +4109,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rlst6:"
+                        aria-controls="radix-:Rlsv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R5st6:"
+                        id="radix-:R5sv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4035,10 +4147,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rlst6:"
+                      id="radix-:Rlsv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R5st6:"
+                      aria-labelledby="radix-:R5sv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4065,11 +4177,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rm4t6:"
+                        aria-controls="radix-:Rm4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R64t6:"
+                        id="radix-:R64v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4103,10 +4215,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rm4t6:"
+                      id="radix-:Rm4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R64t6:"
+                      aria-labelledby="radix-:R64v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4133,11 +4245,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rmct6:"
+                        aria-controls="radix-:Rmcv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R6ct6:"
+                        id="radix-:R6cv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4171,10 +4283,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rmct6:"
+                      id="radix-:Rmcv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R6ct6:"
+                      aria-labelledby="radix-:R6cv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4201,11 +4313,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rmkt6:"
+                        aria-controls="radix-:Rmkv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R6kt6:"
+                        id="radix-:R6kv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4239,10 +4351,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rmkt6:"
+                      id="radix-:Rmkv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R6kt6:"
+                      aria-labelledby="radix-:R6kv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4269,11 +4381,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rmst6:"
+                        aria-controls="radix-:Rmsv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R6st6:"
+                        id="radix-:R6sv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4307,10 +4419,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rmst6:"
+                      id="radix-:Rmsv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R6st6:"
+                      aria-labelledby="radix-:R6sv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4337,11 +4449,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rn4t6:"
+                        aria-controls="radix-:Rn4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R74t6:"
+                        id="radix-:R74v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4375,10 +4487,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rn4t6:"
+                      id="radix-:Rn4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R74t6:"
+                      aria-labelledby="radix-:R74v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4405,11 +4517,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rnct6:"
+                        aria-controls="radix-:Rncv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R7ct6:"
+                        id="radix-:R7cv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4443,10 +4555,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rnct6:"
+                      id="radix-:Rncv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R7ct6:"
+                      aria-labelledby="radix-:R7cv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4473,11 +4585,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rnkt6:"
+                        aria-controls="radix-:Rnkv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R7kt6:"
+                        id="radix-:R7kv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4511,10 +4623,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rnkt6:"
+                      id="radix-:Rnkv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R7kt6:"
+                      aria-labelledby="radix-:R7kv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4541,11 +4653,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rnst6:"
+                        aria-controls="radix-:Rnsv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R7st6:"
+                        id="radix-:R7sv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4579,10 +4691,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rnst6:"
+                      id="radix-:Rnsv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R7st6:"
+                      aria-labelledby="radix-:R7sv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4609,11 +4721,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Ro4t6:"
+                        aria-controls="radix-:Ro4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R84t6:"
+                        id="radix-:R84v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4647,10 +4759,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Ro4t6:"
+                      id="radix-:Ro4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R84t6:"
+                      aria-labelledby="radix-:R84v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4677,11 +4789,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Roct6:"
+                        aria-controls="radix-:Rocv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R8ct6:"
+                        id="radix-:R8cv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4715,10 +4827,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Roct6:"
+                      id="radix-:Rocv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R8ct6:"
+                      aria-labelledby="radix-:R8cv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4745,11 +4857,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rokt6:"
+                        aria-controls="radix-:Rokv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R8kt6:"
+                        id="radix-:R8kv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4783,10 +4895,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rokt6:"
+                      id="radix-:Rokv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R8kt6:"
+                      aria-labelledby="radix-:R8kv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4813,11 +4925,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rost6:"
+                        aria-controls="radix-:Rosv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R8st6:"
+                        id="radix-:R8sv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4851,10 +4963,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rost6:"
+                      id="radix-:Rosv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R8st6:"
+                      aria-labelledby="radix-:R8sv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4881,11 +4993,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rp4t6:"
+                        aria-controls="radix-:Rp4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R94t6:"
+                        id="radix-:R94v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4919,10 +5031,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rp4t6:"
+                      id="radix-:Rp4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R94t6:"
+                      aria-labelledby="radix-:R94v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -4949,11 +5061,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rpct6:"
+                        aria-controls="radix-:Rpcv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R9ct6:"
+                        id="radix-:R9cv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -4987,10 +5099,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rpct6:"
+                      id="radix-:Rpcv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R9ct6:"
+                      aria-labelledby="radix-:R9cv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5017,11 +5129,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rpkt6:"
+                        aria-controls="radix-:Rpkv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R9kt6:"
+                        id="radix-:R9kv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5055,10 +5167,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rpkt6:"
+                      id="radix-:Rpkv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R9kt6:"
+                      aria-labelledby="radix-:R9kv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5085,11 +5197,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rpst6:"
+                        aria-controls="radix-:Rpsv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R9st6:"
+                        id="radix-:R9sv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5123,10 +5235,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rpst6:"
+                      id="radix-:Rpsv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R9st6:"
+                      aria-labelledby="radix-:R9sv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5153,11 +5265,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rq4t6:"
+                        aria-controls="radix-:Rq4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Ra4t6:"
+                        id="radix-:Ra4v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5191,10 +5303,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rq4t6:"
+                      id="radix-:Rq4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Ra4t6:"
+                      aria-labelledby="radix-:Ra4v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5221,11 +5333,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rqct6:"
+                        aria-controls="radix-:Rqcv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Ract6:"
+                        id="radix-:Racv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5259,10 +5371,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rqct6:"
+                      id="radix-:Rqcv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Ract6:"
+                      aria-labelledby="radix-:Racv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5289,11 +5401,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rqkt6:"
+                        aria-controls="radix-:Rqkv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rakt6:"
+                        id="radix-:Rakv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5327,10 +5439,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rqkt6:"
+                      id="radix-:Rqkv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rakt6:"
+                      aria-labelledby="radix-:Rakv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5357,11 +5469,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rqst6:"
+                        aria-controls="radix-:Rqsv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rast6:"
+                        id="radix-:Rasv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5395,10 +5507,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rqst6:"
+                      id="radix-:Rqsv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rast6:"
+                      aria-labelledby="radix-:Rasv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5425,11 +5537,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rr4t6:"
+                        aria-controls="radix-:Rr4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rb4t6:"
+                        id="radix-:Rb4v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5463,10 +5575,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rr4t6:"
+                      id="radix-:Rr4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rb4t6:"
+                      aria-labelledby="radix-:Rb4v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5493,11 +5605,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rrct6:"
+                        aria-controls="radix-:Rrcv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rbct6:"
+                        id="radix-:Rbcv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5531,10 +5643,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rrct6:"
+                      id="radix-:Rrcv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rbct6:"
+                      aria-labelledby="radix-:Rbcv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5561,11 +5673,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rrkt6:"
+                        aria-controls="radix-:Rrkv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rbkt6:"
+                        id="radix-:Rbkv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5599,10 +5711,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rrkt6:"
+                      id="radix-:Rrkv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rbkt6:"
+                      aria-labelledby="radix-:Rbkv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5629,11 +5741,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rrst6:"
+                        aria-controls="radix-:Rrsv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rbst6:"
+                        id="radix-:Rbsv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5667,10 +5779,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rrst6:"
+                      id="radix-:Rrsv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rbst6:"
+                      aria-labelledby="radix-:Rbsv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5697,11 +5809,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rs4t6:"
+                        aria-controls="radix-:Rs4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rc4t6:"
+                        id="radix-:Rc4v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5735,10 +5847,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rs4t6:"
+                      id="radix-:Rs4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rc4t6:"
+                      aria-labelledby="radix-:Rc4v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5765,11 +5877,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rsct6:"
+                        aria-controls="radix-:Rscv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rcct6:"
+                        id="radix-:Rccv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5803,10 +5915,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rsct6:"
+                      id="radix-:Rscv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rcct6:"
+                      aria-labelledby="radix-:Rccv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content c77hrx0 cvvwboj"
@@ -5833,11 +5945,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rskt6:"
+                        aria-controls="radix-:Rskv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rckt6:"
+                        id="radix-:Rckv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5872,10 +5984,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rskt6:"
+                      id="radix-:Rskv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rckt6:"
+                      aria-labelledby="radix-:Rckv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5902,11 +6014,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rsst6:"
+                        aria-controls="radix-:Rssv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rcst6:"
+                        id="radix-:Rcsv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -5940,10 +6052,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rsst6:"
+                      id="radix-:Rssv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rcst6:"
+                      aria-labelledby="radix-:Rcsv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -5970,11 +6082,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rt4t6:"
+                        aria-controls="radix-:Rt4v6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rd4t6:"
+                        id="radix-:Rd4v6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -6008,10 +6120,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rt4t6:"
+                      id="radix-:Rt4v6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rd4t6:"
+                      aria-labelledby="radix-:Rd4v6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content c77hrx0 cvvwboj"
@@ -6038,11 +6150,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:Rtct6:"
+                        aria-controls="radix-:Rtcv6:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rdct6:"
+                        id="radix-:Rdcv6:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -6076,10 +6188,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:Rtct6:"
+                      id="radix-:Rtcv6:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rdct6:"
+                      aria-labelledby="radix-:Rdcv6:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -6160,11 +6272,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:R2cv6:"
+                        aria-controls="radix-:R2d16:"
                         aria-expanded="true"
                         data-state="open"
                         data-orientation="vertical"
-                        id="radix-:Rcv6:"
+                        id="radix-:Rd16:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -6198,9 +6310,9 @@
                     </h3>
                     <div
                       data-state="open"
-                      id="radix-:R2cv6:"
+                      id="radix-:R2d16:"
                       role="region"
-                      aria-labelledby="radix-:Rcv6:"
+                      aria-labelledby="radix-:Rd16:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -6241,11 +6353,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:R2kv6:"
+                        aria-controls="radix-:R2l16:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rkv6:"
+                        id="radix-:Rl16:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -6279,10 +6391,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:R2kv6:"
+                      id="radix-:R2l16:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rkv6:"
+                      aria-labelledby="radix-:Rl16:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -6309,11 +6421,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:R2sv6:"
+                        aria-controls="radix-:R2t16:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:Rsv6:"
+                        id="radix-:Rt16:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -6347,10 +6459,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:R2sv6:"
+                      id="radix-:R2t16:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:Rsv6:"
+                      aria-labelledby="radix-:Rt16:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -6377,11 +6489,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:R34v6:"
+                        aria-controls="radix-:R3516:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R14v6:"
+                        id="radix-:R1516:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -6415,10 +6527,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:R34v6:"
+                      id="radix-:R3516:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R14v6:"
+                      aria-labelledby="radix-:R1516:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -6445,11 +6557,11 @@
                     >
                       <button
                         type="button"
-                        aria-controls="radix-:R3cv6:"
+                        aria-controls="radix-:R3d16:"
                         aria-expanded="false"
                         data-state="closed"
                         data-orientation="vertical"
-                        id="radix-:R1cv6:"
+                        id="radix-:R1d16:"
                         class="w-item-trigger c19vmayk c1aa03kv cowgl8j cohim7t c15wov26 cciowao ccanaxu c77hrx0 cq1libe c1dq3r5 c1f1r4bb cyp6dig c1ei055y cg9t561 c1n863ed c8yq6mq ca0xin3 c1xha3pc"
                         data-radix-collection-item=""
                       >
@@ -6484,10 +6596,10 @@
                     </h3>
                     <div
                       data-state="closed"
-                      id="radix-:R3cv6:"
+                      id="radix-:R3d16:"
                       hidden=""
                       role="region"
-                      aria-labelledby="radix-:R1cv6:"
+                      aria-labelledby="radix-:R1d16:"
                       data-orientation="vertical"
                       data-ani="expand"
                       class="w-item-content"
@@ -6507,160 +6619,6 @@
           </section>
         </div>
       </div>
-      <section
-        id="launch_waitlist_signup"
-        class="w-box ckv9hzh c13a8eri cu196q0 c10evo5s c1mo6drd"
-      >
-        <div
-          id="signup"
-          class="w-box c1y5gtuy ctwedid c4zv7o8 c1yxbcu3 ca0xin3 c1rlgl31 c15wov26 c9vbpot c1e4bhmr c59qywy cufu5ux c6yjhq6 cciowao cu196q0"
-        >
-          <h2 class="w-heading cl0htyc c1amecmh c1e9izlp cc1w4m0 c1qzbu4v">
-            Not ready to reserve?
-          </h2>
-          <div class="w-html-embed">
-            <div id="mc_embed_shell">
-              <div id="mc_embed_signup">
-                <form
-                  action="https://remake.us4.list-manage.com/subscribe/post?u=663434fd966b5f4d9c0a117ee&amp;id=697a9ef02c&amp;f_id=004805e2f0"
-                  method="post"
-                  id="mc-embedded-subscribe-form"
-                  name="mc-embedded-subscribe-form"
-                  class="validate"
-                  target="_self"
-                  novalidate=""
-                >
-                  <div id="mc_embed_signup_scroll">
-                    <h2>Get updates on launch, pricing &amp; new apps</h2>
-                    <div class="mc-field-group">
-                      <label for="mce-EMAIL">Email Address</label
-                      ><input
-                        type="email"
-                        name="EMAIL"
-                        class="required email"
-                        id="mce-EMAIL"
-                        required=""
-                        value=""
-                      />
-                    </div>
-                    <div hidden="">
-                      <input type="hidden" name="tags" value="4536918" />
-                    </div>
-                    <div id="mce-responses" class="clear foot">
-                      <div
-                        class="response"
-                        id="mce-error-response"
-                        style="display: none"
-                      ></div>
-                      <div
-                        class="response"
-                        id="mce-success-response"
-                        style="display: none"
-                      ></div>
-                    </div>
-                    <div
-                      aria-hidden="true"
-                      style="position: absolute; left: -5000px"
-                    >
-                      /* real people should not fill this in and expect good
-                      things - do not remove this or risk form bot signups */
-                      <input
-                        type="text"
-                        name="b_663434fd966b5f4d9c0a117ee_697a9ef02c"
-                        tabindex="-1"
-                        value=""
-                      />
-                    </div>
-                    <div class="optionalParent">
-                      <div class="clear foot">
-                        <input
-                          type="submit"
-                          name="subscribe"
-                          id="mc-embedded-subscribe"
-                          class="button"
-                          value="Subscribe"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <p class="w-element cu196q0 c1gyoec">
-            No spam. Unsubscribe any time.
-          </p>
-        </div>
-      </section>
-      <section class="w-box ckv9hzh c1ugk8yy cu196q0">
-        <div
-          class="w-box c1y5gtuy ctwedid c4zv7o8 c1yxbcu3 ca0xin3 c1rlgl31 c15wov26 c9vbpot cj6cf3e c10c0lh2 cufu5ux c6yjhq6 c16kl2d4 ctz832q cqdf4j1 ch9s07v cky5twr"
-        >
-          <h1
-            class="w-heading cb90jah c1amecmh cng3uvv cc1w4m0 c1qzbu4v c1fxshi c18pi350 cahhjr6 c1mlsyky"
-          >
-            Ready to Play?
-          </h1>
-          <div class="w-element cu196q0">
-            <div class="w-html-embed">
-              <style>
-                .pp-QMWRAQ3T2S82A {
-                  text-align: center;
-                  border: none;
-                  border-radius: 0.25rem;
-                  min-width: 11.625rem;
-                  padding: 0 2rem;
-                  height: 2.625rem;
-                  font-weight: bold;
-                  background-color: #ffd140;
-                  color: #000000;
-                  font-family: "Helvetica Neue", Arial, sans-serif;
-                  font-size: 1rem;
-                  line-height: 1.25rem;
-                  cursor: pointer;
-                }
-              </style>
-              <form
-                action="https://www.paypal.com/ncp/payment/QMWRAQ3T2S82A"
-                method="post"
-                target="_blank"
-                data-tier="bottom"
-                style="
-                  display: inline-grid;
-                  justify-items: center;
-                  align-content: start;
-                  gap: 0.5rem;
-                "
-              >
-                <input
-                  class="pp-QMWRAQ3T2S82A"
-                  type="submit"
-                  value="Reserve for $1"
-                />
-                <img
-                  src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg"
-                  alt="cards"
-                />
-                <section style="font-size: 0.75rem">
-                  Powered by
-                  <img
-                    src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg"
-                    alt="paypal"
-                    style="height: 0.875rem; vertical-align: middle"
-                  />
-                </section>
-              </form>
-            </div>
-            <p class="w-element cu196q0 c1gyoec c86xzcz c1ebfaau">
-              First production run: 2,000 units<br />Reservations filled in
-              order received
-            </p>
-            <p class="w-element c1k8deyj cu196q0 cuivlhx">
-              Fully refundable • Super Early Bird pricing • Launching Fall 2026
-            </p>
-          </div>
-        </div>
-      </section>
       <div style="display: contents"><div style="display: contents"></div></div>
       <div style="display: contents">
         <div style="display: contents">
@@ -7261,13 +7219,13 @@
       {}
     </script>
     <script
-      src="/assets/entries/entry-server-routing.DgDmIqeu.js"
+      src="/assets/entries/entry-server-routing.-Hui64F2.js"
       type="module"
       async
     ></script>
     <link
       rel="modulepreload"
-      href="/assets/entries/pages_reserve_games.qcK2ib93.js"
+      href="/assets/entries/pages_reserve_games.BNem7wqn.js"
       as="script"
       type="text/javascript"
     /><link

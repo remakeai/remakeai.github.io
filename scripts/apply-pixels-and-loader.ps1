@@ -67,37 +67,13 @@ $loaderHtml = @'
     </style>
     <div id="page-loader"><div class="spinner"></div></div>
     <script>
-      function hideLoader() {
+      window.addEventListener('load', function() {
         var loader = document.getElementById('page-loader');
         if (loader) {
           loader.classList.add('hidden');
           setTimeout(function() {
             loader.remove();
           }, 300);
-        }
-      }
-      window.addEventListener('load', function() {
-        // Only wait for eager images (not lazy-loaded ones)
-        var images = document.querySelectorAll('img:not([loading="lazy"])');
-        var pending = 0;
-        images.forEach(function(img) {
-          if (!img.complete) pending++;
-        });
-        if (pending === 0) {
-          hideLoader();
-        } else {
-          var loaded = 0;
-          images.forEach(function(img) {
-            if (img.complete) return;
-            img.addEventListener('load', function() {
-              loaded++;
-              if (loaded === pending) hideLoader();
-            });
-            img.addEventListener('error', function() {
-              loaded++;
-              if (loaded === pending) hideLoader();
-            });
-          });
         }
       });
     </script>

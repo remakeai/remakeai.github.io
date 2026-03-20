@@ -1,0 +1,44 @@
+<svg width="28" height="28" viewBox="0 0 680 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- ── DAD (left, tallest) ── -->
+  <circle cx="175" cy="118" r="52" stroke="#ff4e1f" stroke-width="14"/>
+  <line x1="175" y1="170" x2="175" y2="198" stroke="#ff4e1f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 95 198 Q 95 170 175 170 Q 255 170 255 198 L 268 340 L 82 340 Z"
+        stroke="#ff4e1f" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="96" y1="290" x2="254" y2="290" stroke="#ff4e1f" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <rect x="161" y="282" width="28" height="16" rx="3" stroke="#ff4e1f" stroke-width="5" opacity="0.5"/>
+  <line x1="120" y1="340" x2="112" y2="460" stroke="#ff4e1f" stroke-width="14" stroke-linecap="round"/>
+  <line x1="230" y1="340" x2="238" y2="460" stroke="#ff4e1f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 112 460 Q 90 460 82 472 Q 90 478 120 476" stroke="#ff4e1f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 238 460 Q 260 460 268 472 Q 260 478 230 476" stroke="#ff4e1f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 95 220 Q 52 260 44 320" stroke="#ff4e1f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 255 220 Q 295 255 310 295" stroke="#ff4e1f" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- ── MOM (right, slightly shorter) ── -->
+  <circle cx="505" cy="130" r="48" stroke="#ff4e1f" stroke-width="14"/>
+  <path d="M 462 110 Q 505 68 548 110" stroke="#ff4e1f" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <line x1="505" y1="178" x2="505" y2="202" stroke="#ff4e1f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 435 202 Q 435 178 505 178 Q 575 178 575 202 L 598 390 L 412 390 Z"
+        stroke="#ff4e1f" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M 442 280 Q 505 268 568 280" stroke="#ff4e1f" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <line x1="448" y1="390" x2="440" y2="466" stroke="#ff4e1f" stroke-width="14" stroke-linecap="round"/>
+  <line x1="562" y1="390" x2="570" y2="466" stroke="#ff4e1f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 440 466 Q 418 466 410 478 Q 418 484 448 482" stroke="#ff4e1f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 570 466 Q 592 466 600 478 Q 592 484 562 482" stroke="#ff4e1f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 435 224 Q 398 260 375 295" stroke="#ff4e1f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 575 224 Q 618 264 626 320" stroke="#ff4e1f" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- ── CHILD (center, shortest, no arms) ── -->
+  <circle cx="340" cy="198" r="40" stroke="#ff4e1f" stroke-width="14"/>
+  <line x1="340" y1="238" x2="340" y2="258" stroke="#ff4e1f" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 284 258 Q 284 238 340 238 Q 396 238 396 258 L 406 380 L 274 380 Z"
+        stroke="#ff4e1f" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="298" y1="380" x2="292" y2="468" stroke="#ff4e1f" stroke-width="12" stroke-linecap="round"/>
+  <line x1="382" y1="380" x2="388" y2="468" stroke="#ff4e1f" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 292 468 Q 274 468 268 478 Q 274 484 298 482" stroke="#ff4e1f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 388 468 Q 406 468 412 478 Q 406 484 382 482" stroke="#ff4e1f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Ground line -->
+  <line x1="60" y1="488" x2="620" y2="488" stroke="#ff4e1f" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
+
+</svg>

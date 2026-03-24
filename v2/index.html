@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Remake — The Vacuum that Plays Games with Your Kids</title>
+<meta name="description" content="A robot vacuum that cleans your floors AND plays Soccer, Hide-and-Seek, Racing with children ages 6–12. Reserve yours for $1. Launching Fall 2026."/>
+
+
+<link rel="preload" as="image" href="./assets/robot_child_and_toys_1920px_VA7W9SKSceZLHOnX1E5tD.webp"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap"/>
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap"/></noscript>
+
+<!-- Meta Pixel (local /scripts — same as index.html) -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','/scripts/fbevents.js');fbq('init','346568425169694');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=346568425169694&ev=PageView&noscript=1"/></noscript>
+
+<!-- Reddit Pixel (local /scripts — same as index.html) -->
+<script>!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="/scripts/reddit-pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_feojnozacoug');rdt('track','PageVisit');</script>
+
+<!-- Google Analytics — same measurement ID as index.html -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LJLTHN5B4J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-LJLTHN5B4J");
+</script>
+
+<style>
+/* ─────────────────────────────────────────────
+   TOKENS
+───────────────────────────────────────────── */
+:root{
+  --sand:   #f5f0e8;
+  --sand2:  #ede7d9;
+  --sand3:  #e2d9c8;
+  --ink:    #1a1612;
+  --ink2:   #3d352a;
+  --ink3:   #6b5f52;
+  --coral:  #ff4e1f;
+  --coral2: #ff6b40;
+  --cream:  #faf7f2;
+  --white:  #ffffff;
+  --border: rgba(26,22,18,.1);
+  --border2:rgba(26,22,18,.06);
+  --ff-head:'Fraunces',Georgia,serif;
+  --ff-body:'Cabinet Grotesk',system-ui,sans-serif;
+  --r:16px;
+  --r-sm:10px;
+  --max:1140px;
+  --ease-out-expo:cubic-bezier(.16,1,.3,1);
+}
+
+/* ─────────────────────────────────────────────
+   RESET
+───────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--ff-body);font-size:16px;line-height:1.6}
+/* overflow-x on a wrapper, not body — keeps fixed nav unaffected */
+.site-wrap{overflow-x:hidden}
+/* scrollbar-width compensation — prevents layout shift when locking scroll */
+body.scroll-locked{
+  overflow:hidden;
+  padding-right:var(--scrollbar-width,0px);
+}
+.nav.scroll-locked-offset{
+  padding-right:var(--scrollbar-width,0px);
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input{font-family:inherit;border:none;background:none;cursor:pointer}
+::selection{background:var(--coral);color:#fff}
+
+/* ─────────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────────── */
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+@media(min-width:768px){.wrap{padding:0 40px}}
+
+/* ─────────────────────────────────────────────
+   TYPOGRAPHY SCALE
+───────────────────────────────────────────── */
+.t-eyebrow{
+  font-family:var(--ff-body);
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--coral);
+}
+.t-hero{
+  font-family:var(--ff-head);
+  font-size:clamp(3.2rem,10vw,7.2rem);
+  font-weight:900;
+  line-height:.95;
+  letter-spacing:-.03em;
+  color:var(--ink);
+}
+.t-hero em{font-style:italic;font-weight:300;color:var(--coral)}
+.t-section{
+  font-family:var(--ff-head);
+  font-size:clamp(2.2rem,6vw,4.4rem);
+  font-weight:900;
+  line-height:1.0;
+  letter-spacing:-.025em;
+  color:var(--ink);
+}
+.t-section em{font-style:italic;font-weight:300}
+.t-body-lg{font-size:clamp(1rem,2.2vw,1.15rem);line-height:1.75;color:var(--ink3)}
+
+/* ─────────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────────── */
+.btn-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--coral);color:#fff;
+  font-family:var(--ff-body);font-size:1rem;font-weight:700;
+  padding:15px 32px;border-radius:100px;
+  transition:background .2s,transform .18s,box-shadow .18s;
+  box-shadow:0 4px 24px rgba(255,78,31,.28);
+  white-space:nowrap;
+}
+.btn-primary:hover{background:var(--coral2);transform:translateY(-2px);box-shadow:0 8px 36px rgba(255,78,31,.38)}
+.btn-primary:active{transform:translateY(0)}
+.btn-primary.xl{font-size:1.1rem;padding:12px 42px}
+
+/* ─────────────────────────────────────────────
+   NAV
+───────────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .25s,backdrop-filter .25s,border-color .25s;
+  border-bottom:1px solid transparent;
+}
+.nav.stuck{
+  background:rgba(250,247,242,.88);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-color:var(--border2);
+}
+.nav-inner{
+  max-width:var(--max);margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:60px;
+}
+@media(min-width:768px){.nav-inner{padding:0 40px}}
+.nav-brand{
+  font-family:var(--ff-head);font-size:1.4rem;font-weight:900;
+  letter-spacing:-.03em;color:#fff;
+  transition:color .25s ease;
+  display:flex;align-items:center;gap:8px;align-content: center;
+}
+.nav.stuck .nav-brand{color:var(--ink)}
+.nav-links{display:none;list-style:none;gap:28px}
+@media(min-width:820px){.nav-links{display:flex}}
+.nav-links a{
+  font-size:.88rem;font-weight:500;color:#fff;
+  transition:color .25s ease;
+}
+.nav-links a:hover{color:rgba(255,255,255,.85)}
+.nav.stuck .nav-links a{color:var(--ink3)}
+.nav.stuck .nav-links a:hover{color:var(--ink)}
+.nav-cta-wrap{display:none}
+@media(min-width:600px){.nav-cta-wrap{display:block}}
+
+/* ── Burger button (mobile only) */
+.nav-burger{
+  display:flex;flex-direction:column;justify-content:center;gap:5px;
+  width:40px;height:40px;padding:8px;
+  background:none;cursor:pointer;border:none;
+  flex-shrink:0;
+}
+@media(min-width:820px){.nav-burger{display:none}}
+.nav-burger span{
+  display:block;width:22px;height:2px;border-radius:2px;
+  background:#fff;
+  transition:transform .25s var(--ease-out-expo),opacity .2s,width .2s,background .25s ease;
+  transform-origin:center;
+}
+.nav.stuck .nav-burger span{background:var(--ink)}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0;width:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ── Mobile drawer */
+.nav-drawer{
+  position:fixed;
+  top:60px;left:0;right:0;z-index:99;
+  background:var(--cream);
+  border-top:1px solid var(--border2);
+  box-shadow:0 16px 48px rgba(26,22,18,.1);
+  overflow:hidden;
+  max-height:0;
+  visibility:hidden;
+  transition:
+    max-height .42s var(--ease-out-expo),
+    visibility 0s linear .42s,
+    box-shadow .3s;
+}
+.nav-drawer.open{
+  max-height:480px;
+  visibility:visible;
+  transition:
+    max-height .42s var(--ease-out-expo),
+    visibility 0s linear 0s,
+    box-shadow .3s;
+}
+@media(min-width:820px){.nav-drawer{display:none!important}}
+
+/* Stagger each link sliding in */
+.drawer-links li{
+  opacity:0;
+  transform:translateY(-10px);
+  transition:opacity .3s ease,transform .3s var(--ease-out-expo);
+}
+.nav-drawer.open .drawer-links li:nth-child(1){opacity:1;transform:none;transition-delay:.08s}
+.nav-drawer.open .drawer-links li:nth-child(2){opacity:1;transform:none;transition-delay:.13s}
+.nav-drawer.open .drawer-links li:nth-child(3){opacity:1;transform:none;transition-delay:.18s}
+.nav-drawer.open .drawer-links li:nth-child(4){opacity:1;transform:none;transition-delay:.23s}
+.nav-drawer.open .drawer-links li:nth-child(5){opacity:1;transform:none;transition-delay:.28s}
+
+/* CTA fades in last */
+.drawer-cta{
+  opacity:0;transform:translateY(-6px);
+  transition:opacity .3s ease .32s,transform .3s var(--ease-out-expo) .32s;
+}
+.nav-drawer.open .drawer-cta{opacity:1;transform:none}
+
+.drawer-inner{padding:8px 24px 28px}
+.drawer-links{
+  list-style:none;
+  padding:4px 0;
+  border-bottom:1px solid var(--border2);
+  margin-bottom:20px;
+}
+.drawer-links li a{
+  display:block;
+  padding:15px 0;
+  font-size:1.05rem;font-weight:600;color:var(--ink2);
+  border-bottom:1px solid var(--border2);
+  transition:color .15s,padding-left .2s;
+}
+.drawer-links li:last-child a{border-bottom:none}
+.drawer-links li a:hover{color:var(--coral);padding-left:4px}
+.drawer-cta{
+  display:flex;justify-content:center;
+}
+.drawer-cta a{
+  width:100%;justify-content:center;
+  font-size:1rem;padding:17px 32px;
+}
+
+/* ─────────────────────────────────────────────
+   HERO
+───────────────────────────────────────────── */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:100px 0 60px;
+  overflow:hidden;
+  background:var(--ink);
+}
+
+/* Photo background — mirrored horizontally */
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('./assets/robot_child_and_ball_2600_2lWvCVkryFVz-4C1bmYXF.webp');
+  background-size:cover;
+  background-position: center;
+  transform:scaleX(-1);
+}
+/* Favor the right side of the image when the viewport crops (narrow / tablet) */
+@media(max-width:1199px){
+  .hero-bg{background-position:left 20% center}
+}
+@media(max-width:500px){
+  .hero-bg{background-position:left 30% center}
+}
+/* Uniform dim — slight darken over the whole hero photo */
+.hero-grad{
+  position:absolute;inset:0;
+  background:rgba(26,22,18,.50);
+}
+
+/* Hero text overrides for dark background */
+.hero .t-hero{color:#fff}
+.hero .t-body-lg{color:rgba(255,255,255,.72)}
+.hero .hero-badge{ background:rgba(146, 136, 125, 0.45);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  padding:5px 12px;
+  border-radius:100px;
+  border:1px solid rgba(255,255,255,.1);}
+.hero .hero-badge span{color:rgba(255,255,255,.9)}
+.hero .proof-text{color:rgba(255,255,255,.55)}
+.hero .proof-text strong{color:#fff}
+.hero .hero-trust{border-top-color:rgba(255,255,255,.1)}
+.hero .trust-item{
+  color:rgba(255,255,255,.9);
+  background:rgba(146, 136, 125, 0.45);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  padding:5px 12px;
+  border-radius:100px;
+  border:1px solid rgba(255,255,255,.1);
+}
+.hero .trust-check{background:rgba(255,78,31,.2)}
+
+/* Narrow phones: no photo overlay — cream hero + default ink typography */
+@media(max-width:650px){
+  .hero{background:var(--cream)}
+  .hero-bg{background-image:none}
+  .hero-grad{display:none}
+  .hero .t-hero{color:var(--ink)}
+  .hero .t-body-lg{color:var(--ink3)}
+  .hero .hero-badge{
+    background:var(--white);
+    border:1.5px solid var(--border);
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+  }
+  .hero .hero-badge span{color:var(--ink2)}
+  .hero .proof-text{color:var(--ink3)}
+  .hero .proof-text strong{color:var(--ink)}
+  .hero .hero-trust{border-top-color:var(--border2)}
+  .hero .trust-item{
+    color:var(--ink3);
+    background:transparent;
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+    border:none;
+    padding:0;
+    border-radius:0;
+  }
+  .hero .trust-check{background:rgba(255,78,31,.1)}
+  /* Transparent nav over cream hero */
+  .nav:not(.stuck) .nav-brand{color:var(--ink)}
+  .nav:not(.stuck) .nav-links a{color:var(--ink3)}
+  .nav:not(.stuck) .nav-links a:hover{color:var(--ink)}
+  .nav:not(.stuck) .nav-burger span{background:var(--ink)}
+}
+
+.hero-content{position:relative;z-index:1}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:100px;padding:6px 14px 6px 8px;
+  margin-bottom:28px;
+}
+.hero-badge-pip{
+  width:7px;height:7px;border-radius:50%;background:var(--coral);
+  animation:blink 2.2s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+.hero-badge span{font-size:.85rem;font-weight:600;color:var(--ink2)}
+
+.hero-grid{
+  display:grid;grid-template-columns:1fr;
+  gap:40px;align-items:center;
+}
+.hero-title{margin-bottom:24px}
+.hero-body{margin-bottom:36px;max-width:460px}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:40px}
+.hero-social-proof{
+  display:flex;align-items:center;gap:0;
+}
+.proof-text{font-size:1rem;color:var(--ink3)}
+.proof-text strong{color:var(--ink);font-weight:700}
+
+/* trust strip under hero */
+.hero-trust{
+  display:flex;align-items:center;gap:24px;
+  flex-wrap:wrap;
+  margin-top:48px;
+  padding-top:24px;
+  border-top:1px solid var(--border2);
+}
+@media(min-width:900px){.hero-trust{margin-top:0;padding:32px 0 0}}
+.trust-item{
+  display:flex;align-items:center;gap:7px;
+  font-size:.9rem;font-weight:500;color:var(--ink3);
+}
+.trust-check{
+  width:18px;height:18px;border-radius:50%;
+  background:rgba(255,78,31,.1);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.trust-check svg{width:10px;height:10px;stroke:var(--coral);fill:none;stroke-width:2.5}
+
+/* ─────────────────────────────────────────────
+   STAT BAND
+───────────────────────────────────────────── */
+.stat-band{
+  background:var(--ink);
+  padding:0;
+  overflow:hidden;
+}
+.stat-band-inner{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+}
+@media(min-width:640px){.stat-band-inner{grid-template-columns:repeat(4,1fr)}}
+.stat-item{
+  padding:32px 24px;
+  border-right:1px solid rgba(255,255,255,.07);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  text-align:center;
+}
+.stat-item:nth-child(2n){border-right:none}
+@media(min-width:640px){
+  .stat-item{border-right:1px solid rgba(255,255,255,.07);border-bottom:none}
+  .stat-item:last-child{border-right:none}
+}
+.stat-num{
+  font-family:var(--ff-head);
+  font-size:clamp(2rem,4vw,2.8rem);
+  font-weight:900;
+  color:#fff;
+  line-height:1;
+  letter-spacing:-.03em;
+  margin-bottom:4px;
+}
+.stat-num em{font-style:italic;font-weight:300;color:var(--coral2)}
+.stat-label{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.38);letter-spacing:.08em;text-transform:uppercase}
+
+/* ─────────────────────────────────────────────
+   SECTION SHARED
+───────────────────────────────────────────── */
+.section{padding:88px 0}
+.section-sm{padding:64px 0}
+.section-head{margin-bottom:56px}
+.section-head .t-eyebrow{margin-bottom:10px}
+.section-head .t-section{margin-bottom:16px}
+.section-head p{max-width:520px}
+.section-head.center{text-align:center}
+.section-head.center p{margin-left:auto;margin-right:auto}
+
+/* ─────────────────────────────────────────────
+   TWO-FOR-ONE — intro + modes-split layout (remake-cursor-edit)
+───────────────────────────────────────────── */
+.tfo-section{background:var(--sand); padding-bottom: 0; }
+.tfo-intro{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto;
+  padding:0 24px clamp(40px,6vw,56px);
+}
+@media(min-width:768px){.tfo-intro{padding-left:40px;padding-right:40px}}
+.tfo-intro .t-section{margin-left:auto;margin-right:auto}
+.tfo-intro .t-body-lg{margin-left:auto;margin-right:auto;max-width:36rem}
+/* Slightly shorter than original modes-split (was 420px / 70vh / 720px) */
+.tfo-split{
+  display:grid;
+  grid-template-columns:1fr;
+  min-height:clamp(400px,65vh,660px);
+}
+@media(min-width:900px){
+  .tfo-split{grid-template-columns:1fr 1fr}
+}
+.tfo-mode-panel{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:clamp(32px,5vw,56px);
+  min-height:360px;
+}
+.tfo-mode-panel img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+ transition:transform 1s var(--ease-out-expo);
+}
+.tfo-mode-panel:hover img{transform:scale(1.04)}
+.tfo-mode-scrim{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,rgba(12,12,12,.85) 0%,rgba(12,12,12,.2) 55%,transparent 100%);
+  pointer-events:none;
+}
+.tfo-mode-panel .tfo-mode-inner{
+  position:relative;
+  z-index:2;
+  color:#fff;
+}
+.tfo-mode-tag{
+  font-size:.8125rem;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.85;
+  margin-bottom:8px;
+}
+.tfo-mode-label{
+  font-family:var(--ff-head);
+  font-size:clamp(3rem,10vw,5.5rem);
+  line-height:.9;
+  font-weight:700;
+  letter-spacing:-.03em;
+  margin-bottom:12px;
+}
+.tfo-mode-desc{
+  font-size:1.125rem;
+  line-height:1.6;
+  max-width:28rem;
+  opacity:.9;
+}
+
+/* ─────────────────────────────────────────────
+   GAMES
+───────────────────────────────────────────── */
+.games-section{background:var(--cream)}
+.games-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+@media(min-width:640px){.games-grid{grid-template-columns:1fr 1fr;gap:16px}}
+
+.game-card{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  aspect-ratio:3/2;
+  background:var(--ink);
+}
+.game-card-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+}
+.game-card-img img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 1s var(--ease-out-expo);
+}
+.game-card:hover .game-card-img img{transform:scale(1.04)}
+.game-card-scrim{
+  position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(12,12,12,.88) 0%,rgba(12,12,12,.2) 55%,transparent 100%);
+  pointer-events:none;
+}
+.game-card-body{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  padding:28px 28px 24px;
+  z-index:2;
+}
+.game-name{
+  font-family:var(--ff-head);
+  font-weight:700;
+  font-size:clamp(1.4rem,2.5vw,1.9rem);
+  color:#fff;margin-bottom:6px;
+  line-height:1.1;letter-spacing:-.02em;
+}
+.game-desc{font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.4}
+
+.game-card-plus{
+  position:relative;border-radius:20px;overflow:hidden;
+  aspect-ratio:3/2;
+  border:2px dashed var(--sand3);
+  background:var(--sand);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:12px;padding:24px;text-align:center;
+}
+.game-card-plus .game-name{
+  font-family:var(--ff-head);font-weight:700;
+  font-size:clamp(1.3rem,2.5vw,1.8rem);
+  color:var(--coral);position:static;margin:0;
+  line-height:1.1;letter-spacing:-.02em;
+}
+.game-card-plus .game-desc{color:var(--ink3);position:static;font-size:.9rem}
+.game-card-plus-icon{font-size:2.8rem;opacity:.35;line-height:1}
+
+.games-footer{
+  margin-top:32px;
+  text-align:center;
+  color:var(--ink3);
+  font-size:.88rem;
+}
+.games-footer strong{color:var(--coral)}
+
+/* ─────────────────────────────────────────────
+   BENEFITS — same layout as remake-v2 .twomode-split
+───────────────────────────────────────────── */
+.benefits-section{background:var(--sand);padding-bottom:0; }
+.benefits-section .twomode-split{
+  display:grid;
+  grid-template-columns:1fr;
+  width:100vw;
+  max-width:none;
+  margin-left:calc(50% - 50vw);
+  padding:0;
+  border-radius:0;
+  overflow:hidden;
+}
+@media(min-width:600px){
+  .benefits-section .twomode-split{
+    grid-template-columns:1fr 1fr;
+    gap:0;
+  }
+}
+.benefits-section .twomode-panel{
+  position:relative;overflow:hidden;min-height:520px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  border-radius:0;
+}
+.benefits-section .panel-photo{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  transition:transform 1s var(--ease-out-expo);
+}
+.benefits-section .twomode-panel:hover .panel-photo{transform:scale(1.04)}
+.benefits-section .panel-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(26,22,18,.15) 0%,rgba(26,22,18,.72) 55%,rgba(26,22,18,.92) 100%);
+  pointer-events:none;
+}
+.benefits-section .panel-cnt{position:relative;z-index:1;padding:36px 40px}
+@media(max-width:400px){.benefits-section .panel-cnt{padding:24px 20px}}
+.benefits-section .panel-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  border-radius:100px;padding:5px 14px;
+  font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:14px;
+}
+.benefits-section .pb-clean{
+  background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.18);
+}
+.benefits-section .pb-play{
+  background:rgba(255,78,31,.18);color:var(--coral2);
+  border:1px solid rgba(255,78,31,.3);
+}
+.benefits-section .panel-cnt h3{
+  font-family:var(--ff-head);
+  font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:700;
+  line-height:1.05;letter-spacing:-.02em;color:#fff;margin-bottom:18px;
+}
+.benefits-section .panel-list{
+  list-style:none;display:flex;flex-direction:column;gap:10px;
+}
+.benefits-section .panel-list li{
+  display:flex;align-items:flex-start;gap:9px;
+  font-size:.92rem;font-weight:500;color:rgba(255,255,255,.72);
+  line-height:1.45;
+}
+.benefits-section .panel-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--coral);flex-shrink:0;margin-top:.45em;
+}
+
+/* ─────────────────────────────────────────────
+   APP STORE FEATURE
+───────────────────────────────────────────── */
+.appstore-section{background:var(--ink);position:relative;overflow:hidden}
+.appstore-section::before{
+  content:'';position:absolute;
+  top:-40%;left:-20%;
+  width:80%;height:160%;
+  background:radial-gradient(ellipse,rgba(255,78,31,.08) 0%,transparent 60%);
+  pointer-events:none;
+}
+.appstore-section::after{
+  content:'';position:absolute;
+  bottom:-30%;right:-10%;
+  width:60%;height:120%;
+  background:radial-gradient(ellipse,rgba(212,160,23,.05) 0%,transparent 60%);
+  pointer-events:none;
+}
+.appstore-inner{position:relative;z-index:1}
+.appstore-section .t-eyebrow{color:var(--coral2)}
+.appstore-section .t-section{color:#fff}
+.appstore-section .t-body-lg{color:rgba(255,255,255,.55)}
+
+.app-features-grid{
+  display:grid;gap:16px;
+  margin-top:48px;
+}
+@media(min-width:640px){.app-features-grid{grid-template-columns:repeat(3,1fr)}}
+.app-feat{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px;
+  padding:24px;
+  transition:background .2s,border-color .2s;
+}
+.app-feat:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12)}
+.app-feat-icon{
+  width:74px;height:74px;border-radius:10px;
+  background:rgba(255,78,31,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;margin-bottom:16px;
+}
+.app-feat-title{font-weight:700;color:#fff;margin-bottom:6px;font-size:.95rem}
+.app-feat-desc{font-size:.85rem;color:rgba(255,255,255,.45);line-height:1.6}
+
+/* ─────────────────────────────────────────────
+   TESTIMONIALS
+───────────────────────────────────────────── */
+.testimonials-section{background:var(--white)}
+.testimonials-grid{
+  display:grid;gap:16px;
+}
+@media(min-width:640px){.testimonials-grid{grid-template-columns:repeat(3,1fr)}}
+.testi-card{
+  display:flex;flex-direction:column;
+  background:var(--white);
+  border:1.5px solid var(--border2);
+  border-radius:16px;
+  padding:28px;
+  transition:border-color .2s,transform .2s;
+}
+.testi-card:hover{border-color:var(--border);transform:translateY(-2px)}
+.testi-quote{
+  font-family:var(--ff-head);
+  font-size:1.05rem;
+  font-style:italic;
+  font-weight:300;
+  color:var(--ink2);
+  line-height:1.6;
+  margin-bottom:24px;
+}
+.testi-author{margin-top:auto;display:flex;align-items:center;gap:10px}
+.testi-avatar{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--sand2);border:2px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.95rem;flex-shrink:0;
+}
+.testi-name{font-size:.85rem;font-weight:700;color:var(--ink)}
+.testi-role{font-size:.75rem;color:var(--ink3)}
+
+/* ─────────────────────────────────────────────
+   PRICING
+───────────────────────────────────────────── */
+.pricing-section{background:var(--sand)}
+.pricing-grid{
+  display:grid;gap:20px;align-items:start;
+}
+@media(min-width:768px){.pricing-grid{grid-template-columns:repeat(3,1fr);align-items:stretch}}
+
+.pricing-return{display:inline-flex;align-items:center;gap:9px;background:rgba(229,60,25,.12);border:1px solid rgba(229,60,25,.28);border-radius:10px;padding:10px 16px;margin-bottom:36px}
+.pricing-return svg{width:17px;height:17px;stroke:var(--coral);fill:none;stroke-width:2;flex-shrink:0}
+.pricing-return-text{font-size:.85rem;font-weight:700;color:var(--coral)}
+
+.pricing-card{
+  background:var(--white);
+  border:1.5px solid var(--border2);
+  border-radius:20px;
+  padding:32px 28px;
+  position:relative;
+  transition:transform .25s var(--ease-out-expo),box-shadow .2s;
+}
+.pricing-card:hover{transform:translateY(-3px);box-shadow:0 24px 56px rgba(26,22,18,.1)}
+.pricing-card.pop{
+  border-color:var(--coral);
+  box-shadow:0 0 0 4px rgba(255,78,31,.08),0 20px 48px rgba(26,22,18,.1);
+}
+.pop-badge{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--coral);color:#fff;
+  font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 14px;border-radius:100px;white-space:nowrap;
+}
+.pc-title{font-family:var(--ff-head);font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:12px}
+.pc-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.pc-old{font-size:.95rem;color:var(--ink3);text-decoration:line-through}
+.pc-new{
+  font-family:var(--ff-head);
+  font-size:2.6rem;font-weight:900;
+  color:var(--ink);line-height:1;
+  letter-spacing:-.03em;
+}
+.pc-save{
+  display:inline-flex;align-items:center;
+  background:rgba(255,78,31,.08);color:var(--coral);
+  font-size:.75rem;font-weight:700;
+  border-radius:100px;padding:3px 10px;
+  margin-bottom:24px;
+}
+.pc-specs{
+  list-style:none;display:flex;flex-direction:column;gap:10px;
+  padding-bottom:20px;margin-bottom:20px;
+  border-bottom:1px solid var(--border2);
+}
+.pc-specs li{display:flex;justify-content:space-between;font-size:.85rem}
+.pc-spec-k{color:var(--ink3)}
+.pc-spec-v{font-weight:600;color:var(--ink)}
+.pc-for{font-size:.80rem;color:var(--ink3);margin-bottom:20px}
+.pc-cta{width:100%;justify-content:center;border-radius:100px}
+
+.pricing-note{
+  margin-top:32px;
+  font-size:.75rem;color:var(--ink3);line-height:1.6;
+  text-align:center;max-width:680px;margin-left:auto;margin-right:auto;
+  padding-top:20px;border-top:1px solid var(--border2);
+}
+
+/* ─────────────────────────────────────────────
+   RESERVATION STEPS
+───────────────────────────────────────────── */
+.steps-section{background:var(--cream)}
+.steps-row{
+  display:grid;gap:16px;
+}
+.step-card{
+  background:var(--sand);
+  border-radius:16px;padding:28px 24px;
+  border:1.5px solid var(--border2);
+  text-align:center;
+}
+@media(min-width:640px){
+  .steps-row{
+    grid-template-columns:1fr 45px 1fr 45px 1fr;
+    align-items:stretch;
+  }
+  .step-card{height:100%;display:flex;flex-direction:column;}
+  .step-desc{flex:1;}
+}
+@media(min-width:640px){
+  .step-card{text-align:left;}
+  .step-icon-wrap{display:flex;align-items:flex-start;}
+}
+.step-title{font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:6px}
+.step-desc{font-size:.85rem;color:var(--ink3);line-height:1.55}
+.step-arrow{
+  display:none;
+  align-items:center;justify-content:center;
+  padding-top:0;
+}
+.step-arrow img{
+  display:block;
+  /* width:100%; */
+  /* height:auto;
+  max-width:none; */
+}
+@media(min-width:640px){.step-arrow{display:flex}}
+.steps-note{text-align:center;margin-top:24px;font-size:.75rem;color:var(--ink3)}
+
+/* ─────────────────────────────────────────────
+   FOUNDER
+───────────────────────────────────────────── */
+.founder-section{background:var(--white)}
+.founder-card{
+  background:var(--white);
+  border:1.5px solid var(--border2);
+  border-radius:20px;padding:40px;
+  display:grid;gap:36px;
+}
+@media(min-width:768px){
+  .founder-card{grid-template-columns:auto 1fr 1fr;align-items:start;gap:48px}
+}
+.founder-avatar-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+.founder-avatar{
+  width:180px;height:180px;border-radius:50%;
+  background:var(--sand2);
+  border:3px solid var(--border2);
+  overflow:hidden;display:flex;align-items:center;justify-content:center;
+  font-size:2.4rem;flex-shrink:0;
+}
+.founder-avatar img{width:100%;height:100%;object-fit:cover}
+.founder-name{
+  font-family:var(--ff-head);font-size:1.5rem;font-weight:700;
+  color:var(--ink);margin-bottom:6px;
+}
+.founder-creds{
+  font-size:.85rem;font-weight:600;color:var(--ink3);margin-bottom:14px;
+}
+.founder-bio{font-size:.9rem;color:var(--ink3);line-height:1.7;margin-bottom:16px}
+.founder-socials{display:flex;flex-wrap:wrap;gap:8px}
+.soc-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.78rem;font-weight:600;color:var(--ink2);
+  background:var(--sand);border:1px solid var(--border2);
+  border-radius:100px;padding:7px 14px;
+  transition:border-color .15s,color .15s,background .15s;
+}
+.soc-btn:hover{border-color:var(--border);color:var(--ink)}
+.company-info .t-eyebrow{margin-bottom:8px}
+.company-name{font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:10px}
+.company-desc{font-size:.88rem;color:var(--ink3);line-height:1.7}
+.company-link{
+  display:inline-flex;align-items:center;gap:5px;
+  margin-top:14px;font-size:.85rem;font-weight:600;color:var(--coral);
+}
+.company-link:hover{text-decoration:underline}
+
+/* ─────────────────────────────────────────────
+   FINAL CTA
+───────────────────────────────────────────── */
+.final-cta{
+  background:var(--ink);
+  position:relative;overflow:hidden;
+  padding:100px 0;text-align:center;
+}
+.final-cta::before{
+  content:'';position:absolute;
+  top:-50%;left:-20%;
+  width:80%;height:180%;
+  background:radial-gradient(ellipse,rgba(255,78,31,.1) 0%,transparent 60%);
+}
+.final-cta::after{
+  content:'';position:absolute;
+  bottom:-40%;right:-10%;
+  width:60%;height:120%;
+  background:radial-gradient(ellipse,rgba(212,160,23,.06) 0%,transparent 60%);
+}
+.final-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:0 24px}
+.final-cta .t-eyebrow{color:var(--coral2)}
+.final-cta .t-section{color:#fff;margin:10px 0 16px}
+.final-cta .t-body-lg{color:rgba(255,255,255,.5);margin-bottom:40px}
+.final-payments{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;margin-top:20px;text-align:center;
+}
+.final-pay-cards{display:block;max-width:140px;height:auto;opacity:.92}
+.final-pay-secured{margin:0;font-size:.75rem;font-weight:500;color:rgba(255,255,255,.55);line-height:1.4}
+.final-pay-powered{
+  margin:0;font-size:.75rem;color:rgba(255,255,255,.5);
+  display:flex;align-items:center;justify-content:center;gap:5px;line-height:1;
+}
+.final-pay-wordmark{height:0.875rem;width:auto;vertical-align:middle;opacity:.9;filter: brightness(0) invert(1);}
+.final-footnote{
+  margin-top:20px;
+  font-size:.75rem;color:rgba(255,255,255,.28);line-height:1.7;
+}
+.final-footnote a{color:rgba(255,255,255,.5);transition:color .15s}
+.final-footnote a:hover{color:rgba(255,255,255,.8)}
+
+/* ─────────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────────── */
+.footer{
+  background:var(--ink);
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:32px 0;
+}
+.footer-inner{
+  max-width:var(--max);margin:0 auto;padding:0 24px;
+  display:flex;flex-direction:column;gap:20px;
+  align-items:center;text-align:center;
+}
+@media(min-width:640px){
+  .footer-inner{flex-direction:row;justify-content:space-between;text-align:left}
+}
+.footer-brand{
+  font-family:var(--ff-head);font-size:1.2rem;font-weight:900;
+  color:rgba(255,255,255,.7);letter-spacing:-.02em;
+  display:flex;align-items:center;gap:7px;
+}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.footer-links a{font-size:.8rem;color:rgba(255,255,255,.3);transition:color .15s}
+.footer-links a:hover{color:rgba(255,255,255,.7)}
+.footer-copy{font-size:.75rem;color:rgba(255,255,255,.2)}
+
+/* ─────────────────────────────────────────────
+   SCROLL ANIMATION
+───────────────────────────────────────────── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease-out-expo),transform .65s var(--ease-out-expo)}
+.reveal.in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.08s}
+.reveal-d2{transition-delay:.16s}
+.reveal-d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ─────────────────────────────────────────────
+   VIDEO MODAL
+───────────────────────────────────────────── */
+.modal{
+  display:none;position:fixed;inset:0;z-index:999;
+  background:rgba(0,0,0,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  align-items:center;justify-content:center;padding:24px;
+}
+.modal.open{display:flex}
+.modal-box{
+  background:var(--ink2);border-radius:20px;
+  width:100%;max-width:800px;
+  padding:8px;
+  box-shadow:0 40px 120px rgba(0,0,0,.5);
+  position:relative;
+}
+.modal-close-btn{
+  position:absolute;top:-16px;right:-16px;
+  width:36px;height:36px;border-radius:50%;
+  background:var(--white);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 16px rgba(0,0,0,.3);
+  transition:transform .15s;font-size:1.1rem;font-weight:700;
+}
+.modal-close-btn:hover{transform:scale(1.08)}
+.modal-video{border-radius:14px;overflow:hidden;aspect-ratio:16/9;background:#000}
+.modal-video iframe{width:100%;height:100%;border:0}
+/* ─────────────────────────────────────────────
+   ALL MODELS INCLUDE (pricing addon)
+───────────────────────────────────────────── */
+.all-include{
+  margin-top:32px;
+  background:var(--white);
+  border:1.5px solid var(--border2);
+  border-radius:16px;padding:28px 32px;
+}
+.all-include-title{
+  font-family:var(--ff-head);font-size:1.1rem;font-weight:700;
+  color:var(--ink);margin-bottom:18px;
+}
+.all-include-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
+}
+@media(min-width:640px){.all-include-grid{grid-template-columns:repeat(3,1fr)}}
+.ai-item{
+  display:flex;align-items:center;gap:8px;
+  font-size:.85rem;font-weight:500;color:var(--ink2);
+}
+.ai-check{
+  width:18px;height:18px;border-radius:50%;flex-shrink:0;
+  background:rgba(255,78,31,.1);
+  display:flex;align-items:center;justify-content:center;
+}
+.ai-check svg{width:9px;height:9px;stroke:var(--coral);fill:none;stroke-width:2.5}
+
+/* ─────────────────────────────────────────────
+   PRIVACY / YOUR RULES
+───────────────────────────────────────────── */
+.privacy-section{background:var(--ink);position:relative;overflow:hidden}
+.privacy-section::before{
+  content:'';position:absolute;top:-40%;right:-10%;
+  width:60%;height:150%;
+  background:radial-gradient(ellipse,rgba(255,78,31,.07) 0%,transparent 60%);
+  pointer-events:none;
+}
+.privacy-inner{position:relative;z-index:1}
+.privacy-section .t-eyebrow{color:var(--coral2)}
+.privacy-section .t-section{color:#fff}
+.privacy-section .t-body-lg{color:rgba(255,255,255,.5)}
+.privacy-grid{
+  display:grid;gap:16px;margin-top:48px;
+}
+@media(min-width:640px){.privacy-grid{grid-template-columns:1fr 1fr}}
+.privacy-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:16px;padding:28px;
+  transition:background .2s,border-color .2s;
+}
+.privacy-card:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14)}
+.privacy-card-title{
+  font-family:var(--ff-head);font-size:1.1rem;font-weight:700;
+  color:#fff;margin-bottom:18px;
+  display:flex;align-items:center;gap:8px;
+}
+.privacy-card-title span{
+  font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 8px;border-radius:100px;
+  background:rgba(255,78,31,.15);color:var(--coral2);
+}
+.privacy-feat{
+  display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;
+}
+.privacy-feat:last-child{margin-bottom:0}
+.privacy-feat-dot{
+  width:20px;height:20px;border-radius:50%;flex-shrink:0;margin-top:1px;
+  background:rgba(255,78,31,.15);
+  display:flex;align-items:center;justify-content:center;
+}
+.privacy-feat-dot svg{width:10px;height:10px;stroke:var(--coral2);fill:none;stroke-width:2.5}
+.privacy-feat-title{font-size:.85rem;font-weight:600;color:#fff;line-height:1.4}
+.privacy-feat-sub{font-size:.75rem;color:rgba(255,255,255,.38);margin-top:1px}
+
+/* ─────────────────────────────────────────────
+   WAITLIST
+───────────────────────────────────────────── */
+.waitlist-section{background:var(--cream);text-align:center}
+.waitlist-inner{max-width:500px;margin:0 auto}
+.waitlist-form{
+  display:flex;margin-top:28px;position:relative;
+  border:1.5px solid var(--border);border-radius:100px;
+  overflow:hidden;background:var(--white);
+}
+.waitlist-form input[type="email"]{
+  flex:1;min-width:0;padding:14px 16px;
+  background:transparent;border:none;outline:none;
+  font-family:var(--ff-body);font-size:.95rem;color:var(--ink);
+}
+.waitlist-form input[type="email"]::placeholder{color:var(--ink3)}
+.waitlist-form button[type="submit"]{
+  background:var(--coral);color:#fff;
+  font-size:.85rem;font-weight:700;
+  padding:12px 18px;border-radius:100px;margin:3px;
+  transition:background .2s;white-space:nowrap;
+  flex-shrink:0;border:none;cursor:pointer;font-family:inherit;
+}
+.waitlist-form button[type="submit"]:hover{background:var(--coral2)}
+.waitlist-mc-responses{margin-top:12px;text-align:center;font-size:.85rem}
+.waitlist-mc-responses .response{color:var(--coral);min-height:1.2em}
+.waitlist-note{margin-top:10px;font-size:.75rem;color:var(--ink3)}
+
+/* ─────────────────────────────────────────────
+   FAQ
+───────────────────────────────────────────── */
+.faq-section{background:var(--sand)}
+.faq-inner{max-width:720px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border2)}
+.faq-item:first-of-type{border-top:1px solid var(--border2)}
+.faq-btn{
+  width:100%;text-align:left;background:none;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 0;gap:16px;
+  font-family:var(--ff-body);font-size:.95rem;font-weight:600;color:var(--ink);
+  cursor:pointer;transition:color .15s;
+}
+.faq-btn:hover{color:var(--coral)}
+.faq-icon{
+  width:26px;height:26px;border-radius:50%;flex-shrink:0;
+  background:var(--sand2);border:1px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s,transform .25s;
+}
+.faq-item.open .faq-icon{background:var(--coral);border-color:var(--coral);transform:rotate(45deg)}
+.faq-item.open .faq-icon svg{stroke:#fff}
+.faq-icon svg{width:12px;height:12px;stroke:var(--ink3);fill:none;stroke-width:2.5;transition:stroke .2s}
+.faq-answer{
+  max-height:0;overflow:hidden;
+  transition:max-height .4s cubic-bezier(.16,1,.3,1);
+}
+.faq-item.open .faq-answer{max-height:600px}
+.faq-answer-inner{
+  padding-bottom:18px;
+  font-size:.9rem;color:var(--ink3);line-height:1.75;
+  opacity:0;transform:translateY(-6px);
+  transition:opacity .3s ease .1s,transform .3s cubic-bezier(.16,1,.3,1) .1s;
+}
+.faq-item.open .faq-answer-inner{opacity:1;transform:translateY(0);}
+.faq-answer-inner ul{margin-top:8px;padding-left:18px}
+.faq-answer-inner li{margin-bottom:4px}
+.faq-answer-inner a{color:var(--coral);font-weight:600}
+.faq-answer-inner a:hover{text-decoration:underline}
+.faq-cta{text-align:center;margin-top:36px}
+.faq-cta .btn-primary{white-space:normal;text-align:center;max-width:100%}
+@media(max-width:480px){
+  .faq-cta .btn-primary{width:100%;justify-content:center;}
+}
+
+/* ── Step icons */
+.step-icon-wrap{margin-bottom:16px;display:flex;align-items:flex-start;justify-content:center;}
+.step-icon-wrap img{width:84px;height:84px;object-fit:contain;}
+@media(min-width:640px){
+  .step-icon-wrap{justify-content:flex-start;}
+}
+
+/* ── Privacy section title line-height fix (apostrophe clipping) */
+.privacy-section .t-section{line-height:1.15}
+
+/* ── Pricing mobile button size reduction */
+@media(max-width:640px){
+  .pc-cta{padding:11px 20px !important;font-size:.9rem !important;}
+}
+
+/* ── PayPal trust row (Debit_Credit_APM + copy, aligned with /reserve/games) */
+.pc-paypal{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;margin-top:12px;text-align:center;
+}
+.pc-paypal-cards{display:block;height:auto;max-width:140px;width:100%}
+.pc-paypal-secured{
+  margin:0;font-size:.75rem;font-weight:500;color:var(--ink3);line-height:1.4;
+}
+.pc-paypal-powered{
+  margin:0;font-size:.75rem;color:var(--ink3);
+  display:flex;align-items:center;justify-content:center;gap:4px;line-height:1;
+}
+.pc-paypal-wordmark{height:0.875rem;width:auto;vertical-align:middle;display:inline-block}
+
+/* ── FAQ load more */
+.faq-load-more-wrap{text-align:center;margin-top:24px}
+.faq-load-more{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:100px;padding:12px 28px;
+  font-size:.9rem;font-weight:600;color:var(--ink2);
+  cursor:pointer;transition:border-color .2s,background .2s;
+}
+.faq-load-more:hover{border-color:var(--coral);color:var(--coral)}
+.faq-load-more svg{transition:transform .3s}
+.faq-load-more.expanded svg{transform:rotate(180deg)}
+
+/* ── FAQ more section hidden by default */
+#faq-more{
+  max-height:0;overflow:hidden;visibility:hidden;
+  transition:max-height .6s cubic-bezier(.16,1,.3,1),visibility 0s linear .6s;
+}
+#faq-more.open{
+  max-height:6000px;visibility:visible;
+  transition:max-height .6s cubic-bezier(.16,1,.3,1),visibility 0s linear 0s;
+}
+#faq-more .faq-item{
+  opacity:0;transform:translateY(10px);
+  transition:opacity .35s ease,transform .35s cubic-bezier(.16,1,.3,1);
+}
+#faq-more.open .faq-item:nth-child(1){opacity:1;transform:none;transition-delay:.05s}
+#faq-more.open .faq-item:nth-child(2){opacity:1;transform:none;transition-delay:.1s}
+#faq-more.open .faq-item:nth-child(3){opacity:1;transform:none;transition-delay:.15s}
+#faq-more.open .faq-item:nth-child(4){opacity:1;transform:none;transition-delay:.2s}
+#faq-more.open .faq-item:nth-child(5){opacity:1;transform:none;transition-delay:.25s}
+#faq-more.open .faq-item:nth-child(6){opacity:1;transform:none;transition-delay:.3s}
+#faq-more.open .faq-item:nth-child(n+7){opacity:1;transform:none;transition-delay:.35s}
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAV
+════════════════════════════════════════ -->
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="Remake home">
+      Remake Robotics
+    </a>
+    <ul class="nav-links">
+      <li><a href="#games">Games</a></li>
+      <li><a href="#app-store">App Store</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#founder">About</a></li>
+    </ul>
+    <div class="nav-cta-wrap">
+      <a href="#pricing" class="btn-primary" style="padding:10px 22px;font-size:.88rem"
+         onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">
+        Reserve for $1
+      </a>
+    </div>
+    
+    <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <div class="drawer-inner">
+    <ul class="drawer-links">
+      <li><a href="#games" class="drawer-link">Games</a></li>
+      <li><a href="#app-store" class="drawer-link">App Store</a></li>
+      <li><a href="#pricing" class="drawer-link">Pricing</a></li>
+      <li><a href="#founder" class="drawer-link">About</a></li>
+      <li><a href="#faq" class="drawer-link">FAQ</a></li>
+    </ul>
+    <div class="drawer-cta">
+      <a href="#pricing" class="btn-primary"
+         onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');closeDrawer()">
+        Reserve for $1
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<div class="site-wrap">
+<section class="hero" id="hero">
+
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grad" aria-hidden="true"></div>
+
+  <div class="wrap hero-content">
+    <div class="hero-badge reveal">
+      <span class="hero-badge-pip"></span>
+      <span>Now accepting reservations &nbsp;·&nbsp; Fall 2026</span>
+    </div>
+
+    <div class="hero-grid">
+      
+      <div class="hero-left reveal reveal-d1">
+        <h1 class="t-hero hero-title">
+          Vacuum<br/>that Plays <em>Games</em>
+        </h1>
+        <p class="t-body-lg hero-body">
+          Soccer, Races, Hide-and-Seek &amp; Dozens of Apps — 
+          a robot vacuum that cleans your floors and plays with your kids.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary xl" id="watch-btn" style="padding-left: 32px">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch in Action
+          </button>
+        </div>
+        <div class="hero-social-proof">
+          <p class="proof-text"><strong>Early testers love it</strong> · Ages 4–12</p>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="hero-trust reveal reveal-d2">
+      <div class="trust-item">
+        <div class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        Super Early Bird pricing
+      </div>
+      <div class="trust-item">
+        <div class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        First 2,000 units only
+      </div>
+      <div class="trust-item">
+        <div class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        Launching Fall 2026
+      </div>
+      <div class="trust-item">
+        <div class="trust-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        30-day returns, no questions
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     STAT BAND
+════════════════════════════════════════ -->
+<div class="stat-band">
+  <div class="stat-band-inner" style="max-width:var(--max);margin:0 auto">
+    <div class="stat-item reveal">
+      <div class="stat-num">5<em>+</em></div>
+      <div class="stat-label">Games at launch</div>
+    </div>
+    <div class="stat-item reveal reveal-d1">
+      <div class="stat-num">2<em>,</em>000</div>
+      <div class="stat-label">First production run</div>
+    </div>
+    <div class="stat-item reveal reveal-d2">
+      <div class="stat-num">6<em>–</em>12</div>
+      <div class="stat-label">Ages designed for</div>
+    </div>
+    <div class="stat-item reveal reveal-d3">
+      <div class="stat-num">$<em>1</em></div>
+      <div class="stat-label">To reserve your spot</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TWO FOR ONE
+════════════════════════════════════════ -->
+<section class="section tfo-section" id="about">
+  <div class="tfo-intro reveal">
+    <p class="t-eyebrow" style="margin-bottom:10px">Vacuum + Toy</p>
+    <h2 class="t-section" style="margin-bottom:16px">
+      Two for<br/><em>Price of One</em>
+    </h2>
+    <p class="t-body-lg" style="margin-bottom:0">
+      Remake has two operation modes — it cleans when you need it to,
+      and plays when kids want to.
+    </p>
+  </div>
+  <div class="tfo-split">
+    <div class="tfo-mode-panel reveal">
+      <img src="./assets/vacuum_cleaning_floor_6aszBe7xUjUUnRQCRtML3.webp" alt="Robot vacuum cleaning a wood floor" width="800" height="600" loading="lazy"/>
+      <div class="tfo-mode-scrim" aria-hidden="true"></div>
+      <div class="tfo-mode-inner">
+        <div class="tfo-mode-tag">When you need clean floors</div>
+        <div class="tfo-mode-label">Clean</div>
+        <p class="tfo-mode-desc">Full vacuum power, LiDAR mapping, and scheduled runs — spotless floors without the hassle.</p>
+      </div>
+    </div>
+    <div class="tfo-mode-panel reveal reveal-d1">
+      <img src="./assets/child_racing_robot_d8oprRtjGQLF8z5gVr_ZQ.webp" alt="Child playing with the robot" width="1920" height="1280" loading="lazy"/>
+      <div class="tfo-mode-scrim" aria-hidden="true"></div>
+      <div class="tfo-mode-inner">
+        <div class="tfo-mode-tag">When kids want to play</div>
+        <div class="tfo-mode-label">Play</div>
+        <p class="tfo-mode-desc">Soccer, racing, hide-and-seek, and more — physical play in the real world, no screen required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     GAMES
+════════════════════════════════════════ -->
+<section class="section games-section" id="games">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="t-eyebrow">Games &amp; Apps</p>
+      <h2 class="t-section">New Games Added<br/>Regularly</h2>
+      <p class="t-body-lg">It gets better over time, not boring.</p>
+    </div>
+    <div class="games-grid">
+      <div class="game-card reveal">
+        <div class="game-card-img">
+          <img src="./assets/child_and_robot_play_socker3_K3t-71D-dOZiWRKdKQit3.webp" alt="Soccer game" width="1920" height="1280" loading="lazy"/>
+        </div>
+        <div class="game-card-scrim"></div>
+        <div class="game-card-body">
+          <div class="game-name">Soccer</div>
+          <div class="game-desc">Score goals — robot defends</div>
+        </div>
+      </div>
+      <div class="game-card reveal reveal-d1">
+        <div class="game-card-img">
+          <img src="./assets/child_racing_robot_d8oprRtjGQLF8z5gVr_ZQ.webp" alt="Race the robot" width="1920" height="1280" loading="lazy"/>
+        </div>
+        <div class="game-card-scrim"></div>
+        <div class="game-card-body">
+          <div class="game-name">Race</div>
+          <div class="game-desc">Race the robot across the room</div>
+        </div>
+      </div>
+      <div class="game-card reveal reveal-d1">
+        <div class="game-card-img">
+          <img src="./assets/hide_and_seek_robot_hides_N08vCl1q30Hygci6y0S1l.webp" alt="Hide and seek" width="1920" height="1280" loading="lazy"/>
+        </div>
+        <div class="game-card-scrim"></div>
+        <div class="game-card-body">
+          <div class="game-name">Hide-and-Seek</div>
+          <div class="game-desc">Robot hides, child seeks</div>
+        </div>
+      </div>
+      <div class="game-card reveal reveal-d2">
+        <div class="game-card-img">
+          <img src="./assets/hide_and_seek_child_hides_blurred_Mu8aDayI_-a3i6U7oE3sf.webp" alt="Reverse hide and seek" width="1920" height="1280" loading="lazy"/>
+        </div>
+        <div class="game-card-scrim"></div>
+        <div class="game-card-body">
+          <div class="game-name">Reverse Hide-and-Seek</div>
+          <div class="game-desc">Child hides, robot seeks</div>
+        </div>
+      </div>
+      <div class="game-card reveal reveal-d2">
+        <div class="game-card-img">
+          <img src="./assets/flower_pot_on_the_floor_g4eNvLE2WxmP-7s_cvCc3.webp" alt="Home Patrol" width="1920" height="1280" loading="lazy"/>
+        </div>
+        <div class="game-card-scrim"></div>
+        <div class="game-card-body">
+          <div class="game-name">Home Patrol</div>
+          <div class="game-desc">Detect items fallen or out of place</div>
+        </div>
+      </div>
+      <div class="game-card-plus reveal reveal-d3">
+        <div class="game-card-plus-icon">＋</div>
+        <div class="game-name">Dozens More</div>
+        <div class="game-desc">From us, developers — maybe from you</div>
+      </div>
+    </div>
+    <p class="games-footer reveal">The app store keeps growing. <strong>Your robot keeps getting better.</strong></p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════ -->
+<section class="section testimonials-section" id="reviews">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="t-eyebrow">Early Testers</p>
+      <h2 class="t-section">What Parents Are Saying</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <!-- testi-stars hidden until verified reviews: -->
+        <p class="testi-quote">"It can play reverse hide and seek so you can hide and then it goes searching for you. That's pretty cool."</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><svg viewBox="0 0 32 24" fill="none" stroke="var(--coral)" stroke-width="1.5" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="7" r="3.5"/><path d="M3 21v-1a7 7 0 0 1 14 0v1"/><circle cx="22" cy="7" r="3.5"/><path d="M15 21v-1a7 7 0 0 1 14 0v1" opacity=".6"/></svg></div>
+          <div>
+            <div class="testi-name">Parent of Two, USA</div>
+            <div class="testi-role">Early Tester</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-d1">
+        <!-- testi-stars hidden until verified reviews -->
+        <p class="testi-quote">"Some of the games I just saw this vacuum play would be entertaining to a large segment of children — ages 4 to 11, 12 I would say."</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><svg viewBox="0 0 32 24" fill="none" stroke="var(--coral)" stroke-width="1.5" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="7" r="3.5"/><path d="M3 21v-1a7 7 0 0 1 14 0v1"/><circle cx="22" cy="7" r="3.5"/><path d="M15 21v-1a7 7 0 0 1 14 0v1" opacity=".6"/></svg></div>
+          <div>
+            <div class="testi-name">Parent of One, USA</div>
+            <div class="testi-role">Early Tester</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-d2">
+        <!-- testi-stars hidden until verified reviews -->
+        <p class="testi-quote">"It does set itself apart. I think you have something going here."</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><svg viewBox="0 0 32 24" fill="none" stroke="var(--coral)" stroke-width="1.5" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="7" r="3.5"/><path d="M3 21v-1a7 7 0 0 1 14 0v1"/><circle cx="22" cy="7" r="3.5"/><path d="M15 21v-1a7 7 0 0 1 14 0v1" opacity=".6"/></svg></div>
+          <div>
+            <div class="testi-name">Parent of Two, USA</div>
+            <div class="testi-role">Early Tester</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════
+     BENEFITS
+════════════════════════════════════════ -->
+<section class="section benefits-section" id="benefits">
+<div class="wrap reveal" style="padding-bottom:40px;text-align:center;">
+  <p class="t-eyebrow">Why families love it</p>
+  <h2 class="t-section">Built for the Whole House</h2>
+</div>
+  <div class="twomode-split">
+    <div class="twomode-panel reveal">
+      <div class="panel-photo" style="background-image:url('./assets/robot_child_and_toys_1920px_VA7W9SKSceZLHOnX1E5tD.webp');background-position:left bottom"></div>
+      <div class="panel-ov" aria-hidden="true"></div>
+      <div class="panel-cnt">
+        <div class="panel-badge pb-clean">Screen-free play</div>
+        <h3>Put screens away</h3>
+        <ul class="panel-list">
+          <li><span class="panel-dot"></span>Remake gives kids a physical playmate they can chase, hide from, and interact with in the real world.</li>
+          <li><span class="panel-dot"></span>Movement, laughter — no screen addiction.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="twomode-panel reveal reveal-d1">
+      <div class="panel-photo" style="background-image:url('./assets/parent_coffee_cup_g82FhwHcTrV6ZPIzt4jWw.webp');background-position:center 25%"></div>
+      <div class="panel-ov" aria-hidden="true"></div>
+      <div class="panel-cnt">
+        <div class="panel-badge pb-play">For parents</div>
+        <h3>They play. You rest.</h3>
+        <ul class="panel-list">
+          <li><span class="panel-dot"></span>20 minutes of giggles — 20 minutes to breathe.</li>
+          <li><span class="panel-dot"></span>Remake keeps kids engaged while you get a moment that's actually yours.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     APP STORE
+════════════════════════════════════════ -->
+<section class="section appstore-section" id="app-store">
+  <div class="wrap appstore-inner">
+    <div class="section-head reveal">
+      <p class="t-eyebrow">Robot App Store</p>
+      <h2 class="t-section">Get New Games<br/>on App Store</h2>
+      <p class="t-body-lg">Just like your phone has an app store — now your robot does too.</p>
+    </div>
+    <div class="app-features-grid">
+      <div class="app-feat reveal">
+        <div class="app-feat-icon">
+          <img src="./assets/icon_mobile_app.svg" alt="" width="44" height="44" loading="lazy" />
+
+        </div>
+        <div class="app-feat-title">Apps for your robot</div>
+        <div class="app-feat-desc">Download games and experiences directly to your Remake — just like your phone.</div>
+      </div>
+      <div class="app-feat reveal reveal-d1">
+        <div class="app-feat-icon">
+          <img src="./assets/icon_games.svg" alt="" width="54" height="54" loading="lazy" />
+
+        </div>
+        <div class="app-feat-title">Always something new</div>
+        <div class="app-feat-desc">New games and features added regularly. Your robot keeps getting better over time.</div>
+      </div>
+      <div class="app-feat reveal reveal-d2">
+        <div class="app-feat-icon">
+          <img src="./assets/icon_family.svg" alt="" width="44" height="44" loading="lazy" />
+
+        </div>
+        <div class="app-feat-title">Built for families</div>
+        <div class="app-feat-desc">Games designed for kids 6–12, but fun for the whole family. Dozens of apps on the way.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOUNDER
+════════════════════════════════════════ -->
+<section class="section-sm founder-section" id="founder">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-bottom:32px">
+      <p class="t-eyebrow">Who's Behind This New Technology</p>
+      <h2 class="t-section" style="font-size:clamp(1.8rem,4vw,3rem)">Meet the Founder</h2>
+    </div>
+    <div class="founder-card reveal">
+      <div class="founder-avatar-wrap">
+        <div class="founder-avatar">
+          <img src="./assets/ilia_400px_T7xvE4rX35ec_ccx3Xvwk.webp" alt="Dr. Ilia Ovsiannikov" width="400" height="400" loading="lazy" />
+        </div>
+      </div>
+      <div class="founder-info">
+        <div class="founder-name">Dr. Ilia Ovsiannikov</div>
+        <div class="founder-creds">20+ years in consumer tech · 70+ patents · Former Samsung</div>
+        <p class="founder-bio">
+          I've spent decades building technology at Samsung and beyond. 
+          70+ patents later, I'm building something entirely different — apps for robots. 
+          Now I'm validating with real families before we launch.
+        </p>
+        <div class="founder-socials">
+          <a href="https://www.linkedin.com/in/iliao/" target="_blank" rel="noopener" class="soc-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.facebook.com/remakeai" target="_blank" rel="noopener" class="soc-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            Facebook
+          </a>
+          <a href="https://youtube.com/@remakeai" target="_blank" rel="noopener" class="soc-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            YouTube
+          </a>
+          <a href="https://iliaov.substack.com/" target="_blank" rel="noopener" class="soc-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+            Substack
+          </a>
+          <a href="https://github.com/remakeai/" target="_blank" rel="noopener" class="soc-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="company-info">
+        <p class="t-eyebrow">About the Company</p>
+        <div class="company-name">California-Based Startup</div>
+        <p class="company-desc">
+          We're building new robotics technology. Working prototypes, 
+          a first version of the cloud platform and manufacturing 
+          partnerships are already in place. Now validating product demand.
+        </p>
+        <a href="https://remake.ai/blog" target="_blank" rel="noopener" class="company-link">
+          Follow our startup journey →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════
+     PRICING
+════════════════════════════════════════ -->
+<section class="section pricing-section" id="pricing">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="t-eyebrow">Super Early Bird Pricing</p>
+      <h2 class="t-section">Choose Your Vacuum</h2>
+        <div class="pricing-return">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span class="pricing-return-text">30-Day Returns &nbsp;·&nbsp; No Questions Asked</span>
+        </div>
+    </div>
+    <div class="pricing-grid">
+
+      
+      <div class="pricing-card reveal">
+        <div class="pc-title">Remake Essential</div>
+        <div class="pc-price-row">
+          <span class="pc-old">$349</span>
+          <span class="pc-new">$199</span>
+        </div>
+        <div class="pc-save">Save $150 · 42% off</div>
+        <ul class="pc-specs">
+          <li><span class="pc-spec-k">Suction</span><span class="pc-spec-v">4,500 Pa</span></li>
+          <li><span class="pc-spec-k">Navigation</span><span class="pc-spec-v">LiDAR + Mapping</span></li>
+          <li><span class="pc-spec-k">Mop</span><span class="pc-spec-v">Fixed pad</span></li>
+          <li><span class="pc-spec-k">Runtime</span><span class="pc-spec-v">90 min</span></li>
+          <li><span class="pc-spec-k">Dock</span><span class="pc-spec-v">Charging only</span></li>
+          <li><span class="pc-spec-k">Noise</span><span class="pc-spec-v">65 dB</span></li>
+        </ul>
+        <p class="pc-for">Best for: Apartments, small homes</p>
+        <a href="https://www.paypal.com/ncp/payment/JNZYB7M68386C" target="_blank" rel="noopener"
+           class="btn-primary pc-cta"
+           onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');if(typeof rdt!=='undefined')rdt('track','AddToCart')">
+          Reserve for $1
+        </a>
+        <div class="pc-paypal">
+          <img class="pc-paypal-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="" width="140" height="20" loading="lazy"/>
+          <p class="pc-paypal-secured">Secured checkout · Fully refundable</p>
+          <p class="pc-paypal-powered">Powered by <img class="pc-paypal-wordmark" src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" width="50" height="14" loading="lazy"/></p>
+        </div>
+      </div>
+
+      
+      <div class="pricing-card pop reveal reveal-d1">
+        <div class="pop-badge">Most Popular</div>
+        <div class="pc-title">Remake Standard</div>
+        <div class="pc-price-row">
+          <span class="pc-old">$599</span>
+          <span class="pc-new">$349</span>
+        </div>
+        <div class="pc-save">Save $250 · 43% off</div>
+        <ul class="pc-specs">
+          <li><span class="pc-spec-k">Suction</span><span class="pc-spec-v">10,000 Pa</span></li>
+          <li><span class="pc-spec-k">Navigation</span><span class="pc-spec-v">LiDAR + Mapping</span></li>
+          <li><span class="pc-spec-k">Mop</span><span class="pc-spec-v">Fixed pad</span></li>
+          <li><span class="pc-spec-k">Runtime</span><span class="pc-spec-v">120 min</span></li>
+          <li><span class="pc-spec-k">Dock</span><span class="pc-spec-v">Auto-empty</span></li>
+          <li><span class="pc-spec-k">Noise</span><span class="pc-spec-v">60 dB</span></li>
+        </ul>
+        <p class="pc-for">Best for: Medium homes, pet hair</p>
+        <a href="https://www.paypal.com/ncp/payment/KKVFJP959WJZJ" target="_blank" rel="noopener"
+           class="btn-primary pc-cta"
+           onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');if(typeof rdt!=='undefined')rdt('track','AddToCart')">
+          Reserve for $1
+        </a>
+        <div class="pc-paypal">
+          <img class="pc-paypal-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="" width="140" height="20" loading="lazy"/>
+          <p class="pc-paypal-secured">Secured checkout · Fully refundable</p>
+          <p class="pc-paypal-powered">Powered by <img class="pc-paypal-wordmark" src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" width="50" height="14" loading="lazy"/></p>
+        </div>
+      </div>
+
+      
+      <div class="pricing-card reveal reveal-d2">
+        <div class="pc-title">Remake Premium</div>
+        <div class="pc-price-row">
+          <span class="pc-old">$849</span>
+          <span class="pc-new">$499</span>
+        </div>
+        <div class="pc-save">Save $350 · 41% off</div>
+        <ul class="pc-specs">
+          <li><span class="pc-spec-k">Suction</span><span class="pc-spec-v">13,000 Pa</span></li>
+          <li><span class="pc-spec-k">Navigation</span><span class="pc-spec-v">LiDAR + Mapping</span></li>
+          <li><span class="pc-spec-k">Mop</span><span class="pc-spec-v">Dual spinning</span></li>
+          <li><span class="pc-spec-k">Runtime</span><span class="pc-spec-v">180 min</span></li>
+          <li><span class="pc-spec-k">Dock</span><span class="pc-spec-v">Auto-empty, wash &amp; dry</span></li>
+          <li><span class="pc-spec-k">Noise</span><span class="pc-spec-v">55 dB</span></li>
+        </ul>
+        <p class="pc-for">Best for: Large homes, power users</p>
+        <a href="https://www.paypal.com/ncp/payment/DD2A6L4GRJ7EJ" target="_blank" rel="noopener"
+           class="btn-primary pc-cta"
+           onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');if(typeof rdt!=='undefined')rdt('track','AddToCart')">
+          Reserve for $1
+        </a>
+        <div class="pc-paypal">
+          <img class="pc-paypal-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="" width="140" height="20" loading="lazy"/>
+          <p class="pc-paypal-secured">Secured checkout · Fully refundable</p>
+          <p class="pc-paypal-powered">Powered by <img class="pc-paypal-wordmark" src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" width="50" height="14" loading="lazy"/></p>
+        </div>
+      </div>
+
+    </div>
+    <p class="pricing-note reveal">
+      *Specifications, pricing, models &amp; apps lineup tentative, subject to change before launch.
+      $1 reserves access to all tiers at Super Early Bird pricing — choose your model at launch.
+      Reservation fully refundable before launch. First production run: 2,000 units. Launching Fall 2026.
+    </p>
+
+    
+    <div class="all-include reveal">
+      <div class="all-include-title">All Models Include</div>
+      <div class="all-include-grid">
+        <div class="ai-item"><div class="ai-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Full app store access</div>
+        <div class="ai-item"><div class="ai-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Free apps — hide &amp; seek, chase, patrol</div>
+        <div class="ai-item"><div class="ai-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>New apps added regularly</div>
+        <div class="ai-item"><div class="ai-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Home Assistant compatible</div>
+        <div class="ai-item"><div class="ai-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>US-based cloud &amp; mobile app</div>
+        <div class="ai-item"><div class="ai-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Cloud &amp; fully local operation</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════
+     HOW RESERVATION WORKS
+════════════════════════════════════════ -->
+<section class="section steps-section" id="how-it-works">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <h2 class="t-section">How Reservation Works</h2>
+      <p class="t-body-lg">Fully refundable any time before launch.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step-card reveal">
+        <div class="step-icon-wrap">
+          <img src="./assets/icon_reserve.svg" alt="" width="64" height="64" loading="lazy" />
+        </div>
+        <div class="step-title">Reserve for $1</div>
+        <div class="step-desc">Lock in Super Early Bird pricing. Be first when we launch. Fully refundable.</div>
+      </div>
+      <div class="step-arrow"><img src="./assets/Union_coral.svg" alt="" width="60" height="60" loading="lazy"/></div>
+      <div class="step-card reveal reveal-d1">
+        <div class="step-icon-wrap">
+          <img src="./assets/icon_choose.svg" alt="" width="64" height="64" loading="lazy" />
+        </div>
+        <div class="step-title">Choose your model</div>
+        <div class="step-desc">Pick your model when we launch in Fall 2026.</div>
+      </div>
+      <div class="step-arrow"><img src="./assets/Union-1_coral.svg" alt="" width="60" height="60" loading="lazy"/></div>
+      <div class="step-card reveal reveal-d2">
+        <div class="step-icon-wrap">
+          <img src="./assets/icon_delivery.svg" alt="" width="64" height="64" loading="lazy" />
+        </div>
+        <div class="step-title">Spring 2027 Delivery</div>
+        <div class="step-desc">$1 reservers get priority fulfillment. First come, first served.</div>
+      </div>
+    </div>
+    <p class="steps-note reveal">*First come, first served for first 2,000 units. We'll keep you updated on progress.</p>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════
+     PRIVACY / YOUR ROBOT YOUR RULES
+════════════════════════════════════════ -->
+<section class="section privacy-section" id="privacy">
+  <div class="wrap privacy-inner">
+    <div class="section-head reveal">
+      <p class="t-eyebrow">Your robot, your rules</p>
+      <h2 class="t-section" style="color:#fff">Unplug from Cloud.<br/><em style="color:var(--coral2)">We Won't Mind.</em></h2>
+      <p class="t-body-lg" style="color:rgba(255,255,255,.5)">Privacy is core to our platform. You're always in control.</p>
+    </div>
+    <div class="privacy-grid">
+      <div class="privacy-card reveal">
+        <div class="privacy-card-title">
+          Online Operation
+          <span>Cloud connected</span>
+        </div>
+        <div class="privacy-feat">
+          <div class="privacy-feat-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="privacy-feat-title">All features enabled</div>
+            <div class="privacy-feat-sub">Full access to app store and updates</div>
+          </div>
+        </div>
+        <div class="privacy-feat">
+          <div class="privacy-feat-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="privacy-feat-title">Remote access anywhere</div>
+            <div class="privacy-feat-sub">Control your robot from anywhere in the world</div>
+          </div>
+        </div>
+        <div class="privacy-feat">
+          <div class="privacy-feat-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="privacy-feat-title">US-owned, operated cloud</div>
+            <div class="privacy-feat-sub">We never sell your data</div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy-card reveal reveal-d1">
+        <div class="privacy-card-title">
+          Offline Operation
+          <span>Local only</span>
+        </div>
+        <div class="privacy-feat">
+          <div class="privacy-feat-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="privacy-feat-title">No data leaves home</div>
+            <div class="privacy-feat-sub">Internet disconnected, local WiFi only</div>
+          </div>
+        </div>
+        <div class="privacy-feat">
+          <div class="privacy-feat-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="privacy-feat-title">Apps run on home network</div>
+            <div class="privacy-feat-sub">Full control stays in your home</div>
+          </div>
+        </div>
+        <div class="privacy-feat">
+          <div class="privacy-feat-dot"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="privacy-feat-title">Home Assistant compatible</div>
+            <div class="privacy-feat-sub">Full privacy control, your way</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════
+     WAITLIST
+════════════════════════════════════════ -->
+<section class="section waitlist-section" id="waitlist">
+  <div class="wrap">
+    <div class="waitlist-inner reveal">
+      <p class="t-eyebrow">Not ready to reserve?</p>
+      <h2 class="t-section" style="margin-bottom:12px">Join Launch Waitlist</h2>
+      <p class="t-body-lg" style="margin-bottom:0">Be the first to know when we launch.</p>
+
+      <form
+        class="waitlist-form validate"
+        action="https://remake.us4.list-manage.com/subscribe/post?u=663434fd966b5f4d9c0a117ee&amp;id=697a9ef02c&amp;f_id=004805e2f0"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        target="_self"
+        novalidate
+        onsubmit="if(typeof fbq!=='undefined')fbq('track','Lead');"
+      >
+        <input
+          type="email"
+          name="EMAIL"
+          class="required email"
+          id="mce-EMAIL"
+          required
+          placeholder="Your email address"
+          aria-label="Email for waitlist"
+          autocomplete="email"
+          value=""
+        />
+        <div hidden>
+          <input type="hidden" name="tags" value="4536918"/>
+        </div>
+        <div aria-hidden="true" style="position:absolute;left:-5000px">
+          <input type="text" name="b_663434fd966b5f4d9c0a117ee_697a9ef02c" tabindex="-1" value=""/>
+        </div>
+        <button type="submit" name="subscribe" id="mc-embedded-subscribe">Get Updates</button>
+      </form>
+      <div id="mce-responses" class="waitlist-mc-responses">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+      <p class="waitlist-note">No spam. Unsubscribe any time.</p>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════
+     FAQ
+════════════════════════════════════════ -->
+<section class="section faq-section" id="faq">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="t-eyebrow">Got questions?</p>
+      <h2 class="t-section">Frequently Asked<br/>Questions</h2>
+    </div>
+    <div class="faq-inner">
+
+      <div class="faq-item">
+        <button class="faq-btn">Is my $1 fully refundable?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes, 100%. <a href="mailto:support@remake.ai">Email us</a> anytime before launch for a full refund, no questions asked.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">What do I get for my $1 reservation?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Your $1 reserves Super Early Bird pricing — our best discount (up to 43% off MSRP). You'll get exclusive VIP access when we launch and priority fulfillment. The $1 is applied to your final purchase or fully refunded anytime before launch — zero risk.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">Is this just a vacuum or does it actually play games?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Both! It's a fully functional robot vacuum, mop AND playmate. Your kids can play hide-and-seek with it, then it cleans the floors. When it's cleaning, it cleans. When it's playing, it plays. Same robot, different jobs.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">Is it safe for kids?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Yes — safety is built into every layer: the robot moves at walking speed, has bump sensors, obstacle detection and stops when picked up. Spinning brushes and vacuum are disabled during playtime. The dustbin has a child-proof lock. Like any active play, parental supervision is recommended.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">Is it sanitary? Do kids touch the vacuum?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Kids do NOT touch the robot during play — they interact with balls and toys. The dustbin has a child-proof access and lock. The smooth top wipes clean like any household surface.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn">What ages is this for?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Ages 4–12. The 4–7 crowd goes wild for it — that's when kids are most excited by active, physical play. Older kids can still enjoy it, especially as a companion or tinkering with automations. Each app has its own recommended age range.</div></div>
+      </div>
+
+      
+      <div id="faq-more">
+        <div class="faq-item">
+          <button class="faq-btn">Does it work on carpet?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. All models work on hard floors and low-pile carpet. Some games play better on certain surfaces — soccer is best on hard floors. The Essential model is best for apartments and small homes with primarily hard floors.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Is there a subscription?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">No. Your robot works fully out of the box. No monthly fees, no unlocking features later. Buy it, own it. Individual apps set their own pricing — many are free, some are paid. Your choice.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">When does it ship?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We're targeting Spring 2027. We will send monthly updates so you always know where we stand. Full preorders start Fall 2026. Your reservation is fully refundable anytime.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">When do you launch?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Full preorders start Fall 2026. We'll email you when we're ready.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Where do you ship? Is shipping included?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We ship to the US for our first production run. Shipping costs will be calculated at checkout on Kickstarter, based on your location. VIP backers ($1 reservers) get priority fulfillment.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Are there any extra fees?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Shipping costs will be calculated at checkout based on your location. Sales tax will be added at checkout based on your state — just like any US retailer.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Does it clean while playing games?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">No — they're separate modes. When it's cleaning, it cleans. When it's playing, it plays. Think of it like a phone: you don't make calls while watching videos. Same robot, different jobs.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">What apps/games are included?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We plan to include Hide-and-Seek, Race, Follow-the-Leader, Patrol mode, and scheduled routines at launch. More apps added over time through our app store — built by our team and independent developers.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Are the apps free or do I have to pay extra?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Your Remake comes with free games — hide-and-seek, race, patrol, and more. Over time, our app store will include additional apps (free and paid) from both us and independent developers.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Will this get my kid off screens?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">That's the idea. Instead of watching videos or playing tablet games, your kid is running around the house playing hide-and-seek with a robot. It's active, physical play — no screen required.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Can it play with my pet?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">You can attach a string to the back and let it tease your cat, or have it roll a ball around. Some pets may love it, others won't be interested. Every pet is different — we can't guarantee yours will play along.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Can I decorate the robot?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Stick on ears, a tail, googly eyes — whatever you like. Just make sure the robot can still move freely and the LiDAR sensor on top isn't blocked.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Will it work in my home?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">The robot works on hardwood, tile, laminate, and low-pile carpet. It handles thresholds under ½ inch. For games, more open floor space means more fun — but it'll navigate around furniture and obstacles. It can't climb stairs or move between floors.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Does it work outdoors?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">No — indoor only, like all home robot vacuums. It's built for home floors, not driveways or lawns.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Does the robot have microphones or cameras?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">For now, no cameras or microphones. Your Remake navigates with 2D LiDAR — a distance sensor that detects obstacles at ankle height. It sees walls, furniture legs, feet, paws, and toys. It has no idea what's happening above that height.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Does it use AI?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Remake runs machine learning on-device for navigation and mapping. Apps can also connect to AI services to control the robot — think conversations, decisions, or adaptive play. Not every app uses AI, but the platform supports it.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">How long does the battery last?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">In cleaning mode, up to 150 minutes on a full charge (varies by floor type and suction level). During active play, expect around 60–90 minutes — games use more power. Charging takes approximately 4 hours. Final specs confirmed at launch.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Is there a warranty?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Your Remake comes with a 1-year warranty covering manufacturing defects. If something's wrong, contact us and we'll repair or replace it.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">What's the return policy?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">If you're not happy with your Remake within 30 days of delivery, contact us. We'll make it right — troubleshooting, replacement, or refund. Return shipping is on you, unless the product arrived defective or damaged.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">How does this compare to Roomba or Roborock?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Cleaning tech is comparable (LiDAR navigation, mopping). What's different: we built an app store for robot vacuums. Yours cleans, then plays hide-and-seek with your kids. New games and features are added over time — those robots don't do that.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">How is this different from robots like Loona or Vector?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Those robots are entertainment-only — once the novelty wears off, they sit on a shelf. Remake is a fully functional robot vacuum first. Even if you never play a game, it still cleans your floors every day. The games are a bonus, not the whole point.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Who makes this?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Remake.ai is a US-based company. Our firmware, cloud services, and mobile app are developed and operated in the USA. Hardware is manufactured in China (like virtually all robot vacuums). The founder, Dr. Ilia Ovsiannikov, has 20+ years in consumer tech and 70+ patents.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">How far along is the project?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We have working prototypes, a first version of the cloud platform and manufacturing partnerships lined up. Now we are validating product demand.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Is this Kickstarter?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We plan to launch on Kickstarter, Indiegogo and/or directly on our website. We will email you the details once the launch plans are finalized.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">How many are you making?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Our first production run is 2,000 units. Reservations are fulfilled in the order received. If demand exceeds supply, we'll increase the batch size or open a waitlist for the next batch.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn">What is Super Early Bird pricing?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Super Early Bird is our best pricing tier — available only to $1 reservers. You lock in the lowest price before we launch. When we go to full preorder on Kickstarter, the price will be higher. Your $1 guarantees you the Super Early Bird rate regardless of when you complete your purchase.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">How much will the robots cost?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Super Early Bird prices (for $1 reservers): Essential $199, Standard $349, Premium $499. Full preorder prices will be higher — we'll announce those at launch. MSRP after launch will be higher still.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">How many apps are in the app store?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We're launching with 5+ games — Hide-and-Seek, Race, Soccer, Home Patrol, and more. The app store will grow over time as we and independent developers add new apps.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Will there be other apps besides games?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Games are just the start. We're building a full app platform — think automations, routines, integrations, creative apps. Developers can build anything that uses the robot's sensors and movement.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Can seniors use this?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely — the cleaning functions work the same as any premium robot vacuum. The games are designed for kids, but seniors who enjoy technology or want to entertain grandkids will find plenty to explore.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">I have two kids. Can they both play with the robot?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Most games are designed for one player at a time, but kids naturally take turns. Some games like soccer work well with multiple kids playing together or competing.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Can it act as a pet?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">In a way — it moves, reacts, and explores your home. Some kids treat it like a companion. It won't replace a dog, but it's a lot less fur.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">What toys can it play with?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">The robot interacts with lightweight balls and objects that can be pushed or deflected. Soccer uses a lightweight ball included with the robot. Other apps may introduce their own accessories over time.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Can I play with multiple robots?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Not at launch. Multi-robot play is something we're exploring for the future. For now, one robot per home.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">What are the technical requirements?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">You'll need a smartphone (iOS or Android) and a home WiFi network. The app will be available on the App Store and Google Play. For offline operation, a local WiFi network is still required — just no internet connection.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">What can't the robot see?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Your Remake navigates with 2D LiDAR — it detects obstacles at ankle height. It sees walls, furniture legs, feet, paws, and toys at floor level. It has no idea what's happening above that height, and it has no cameras or microphones.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Does it require internet?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">For cloud features (app store, remote access, updates) yes. For basic operation and running already-installed apps, no — it can run on your local WiFi network without internet.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Can it work without the internet?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. In offline mode, apps run on your home network only. You won't be able to download new apps or access remote features, but everything already installed keeps working.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Are all features released at once?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Core features and the initial app lineup will be available at launch. The app store grows over time. Some advanced features may roll out in updates after launch.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">How long will the product last?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We're building this to last. The hardware is designed for years of use — the same vacuum lifespan you'd expect from a premium robot vacuum. Software updates will keep adding value over time.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Will it work with my smart home?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes — Remake is Home Assistant compatible. You can integrate it into automation routines, trigger cleaning schedules, and connect it with other smart home devices.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Will everything work perfectly at launch?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We'll be honest: it's a first-generation product from a startup. Core functions — cleaning, navigation, and the launch game lineup — will be solid. Some features may improve post-launch through updates. We'll communicate openly about what's ready.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">What's in the box?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">The robot, charging dock, power adapter, cleaning accessories (side brushes, filter, mop pad), and a quick start guide. Final box contents confirmed at launch.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">What color is it?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">White. A clean, premium finish that fits any home. We may offer limited color options in the future.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Is it certified for use in the US?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Remake will be FCC and UL certified before shipping. We won't ship a product that hasn't passed US safety certification.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">How do I get help if something goes wrong?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7a090f0a0a15080e3a081f171b111f541b13">[email&#160;protected]</a>. We also have a community support forum on GitHub. We're a small team and we respond personally.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Will this work with a vacuum I already own?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Remake is a standalone robot vacuum — it's not an add-on to your existing vacuum. You'd replace your current robot vacuum with Remake, or use both for different areas of your home.</div></div>
+        </div>
+      </div>
+
+      
+      <div class="faq-load-more-wrap reveal">
+        <button class="faq-load-more" id="faq-load-more-btn">
+          More questions
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+
+    </div>
+    <div class="faq-dev-section" style="margin-top:56px;">
+      <div class="section-head center reveal" style="margin-bottom:32px">
+        <p class="t-eyebrow">For Developers</p>
+        <h2 class="t-section" style="font-size:clamp(1.6rem,4vw,2.8rem)">Build for Remake</h2>
+        <p class="t-body-lg"><a href="https://remake.ai/developers" style="color:var(--coral);font-weight:600">Join the Developer Program →</a></p>
+      </div>
+      <div class="faq-inner">
+        <div class="faq-item">
+          <button class="faq-btn">I'm a developer. Can I build apps for Remake?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes! We're building a developer program with SDK access, documentation, and an app store with revenue sharing. <a href="https://remake.ai/developers">Join the Developer Program →</a></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Why should I develop for your app store?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">You get access to a growing install base of engaged families, a revenue share model, and a completely new platform with very little competition. Robot app development is a genuinely new frontier.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Are there other robots that run your apps?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Not yet. We're starting with the Remake hardware. We're exploring partnerships with other robot manufacturers and ROS2 compatibility for the future.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Can I connect my ROS2 robot?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We're building ROS2 SDK support. <a href="https://github.com/remakeai/remakeai_ros2">Follow progress on GitHub →</a></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn">Can I connect the robot to my home sensors using IFTTT?<div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Home Assistant integration is supported at launch. IFTTT and other automation platforms are on our roadmap.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="faq-cta reveal">
+      <a href="#pricing" class="btn-primary"
+         onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">
+        Reserve for $1 — Fully Refundable
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════
+     FINAL CTA
+════════════════════════════════════════ -->
+<section class="final-cta" id="reserve">
+  <div class="final-inner">
+    <p class="t-eyebrow reveal">Limited · 2,000 Units</p>
+    <h2 class="t-section reveal">Ready to Reserve?</h2>
+    <p class="t-body-lg reveal">Lock in Super Early Bird pricing — fully refundable any time before launch.</p>
+    <a href="https://www.paypal.com/ncp/payment/KKVFJP959WJZJ" target="_blank" rel="noopener"
+       class="btn-primary xl reveal"
+       onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');if(typeof rdt!=='undefined')rdt('track','AddToCart')">
+      Reserve for $1
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <div class="final-payments reveal">
+      <img class="final-pay-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="" width="140" height="20" loading="lazy"/>
+      <p class="final-pay-secured">Secured checkout · Fully refundable</p>
+      <p class="final-pay-powered">Powered by <img class="final-pay-wordmark" src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" width="50" height="14" loading="lazy"/></p>
+    </div>
+    <p class="final-footnote reveal">
+      Fully refundable · Super Early Bird pricing · Launching Fall 2026<br/>
+      <a href="/privacy-policy">Privacy Policy</a> · <a href="/about">About</a> · <a href="/partners">Partners</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+    <a href="#" class="nav-brand" aria-label="Remake home">
+      Remake Robotics
+    </a>
+    </div>
+    <div class="footer-links">
+      <a href="#games">Games</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#founder">About</a>
+      <a href="/partners">Partners</a>
+      <a href="/privacy-policy">Privacy</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="footer-copy">© 2026 Remake Robotics</div>
+  </div>
+</footer>
+</div><!-- /.site-wrap -->
+
+<!-- ═══════════════════════════════════════
+     VIDEO MODAL
+════════════════════════════════════════ -->
+<div class="modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Demo video">
+  <div class="modal-box">
+    <button class="modal-close-btn" id="modal-close" aria-label="Close">✕</button>
+    <div class="modal-video" id="modal-video-slot"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     JS
+════════════════════════════════════════ -->
+<script>
+// ── Nav sticky
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('stuck', window.scrollY > 50);
+}, { passive: true });
+
+// ── Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+revealEls.forEach(el => revealObs.observe(el));
+
+// ── Video modal (YouTube Error 153 when page is opened via file:// — serve the page over http)
+const modal    = document.getElementById('video-modal');
+const slot     = document.getElementById('modal-video-slot');
+const YT_ID    = 'qSQ1bPrajrg';
+const YT_WATCH = 'https://www.youtube.com/watch?v=' + YT_ID;
+const canEmbedYoutube = window.location.protocol === 'http:' || window.location.protocol === 'https:';
+
+function openModal() {
+  const sbw = window.innerWidth - document.documentElement.clientWidth;
+  document.documentElement.style.setProperty('--scrollbar-width', sbw + 'px');
+  modal.classList.add('open');
+  document.body.classList.add('scroll-locked');
+  document.getElementById('navbar').classList.add('scroll-locked-offset');
+  if (canEmbedYoutube) {
+    slot.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${YT_ID}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Remake demo"></iframe>`;
+  } else {
+    slot.innerHTML = '<div class="modal-video-fallback" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:32px;text-align:center;background:#0f0f0f;border-radius:14px;color:#fff;min-height:200px;"><p style="margin:0;font-size:1rem;color:#aaa;">Video embed requires a web server.</p><a href="' + YT_WATCH + '" target="_blank" rel="noopener" style="color:#ff6b6b;font-weight:600;font-size:1.05rem;">Watch video on YouTube</a></div>';
+  }
+  if (typeof fbq !== 'undefined') fbq('track', 'ViewContent', { content_name: 'hero_video' });
+}
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.classList.remove('scroll-locked');
+  document.getElementById('navbar').classList.remove('scroll-locked-offset');
+  slot.innerHTML = '';
+}
+document.getElementById('watch-btn').addEventListener('click', openModal);
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── Burger menu
+const burger = document.getElementById('nav-burger');
+const drawer = document.getElementById('nav-drawer');
+
+function openDrawer(){
+  // measure scrollbar width before locking
+  const sbw = window.innerWidth - document.documentElement.clientWidth;
+  document.documentElement.style.setProperty('--scrollbar-width', sbw + 'px');
+  burger.classList.add('open');
+  drawer.classList.add('open');
+  burger.setAttribute('aria-expanded','true');
+  drawer.setAttribute('aria-hidden','false');
+  document.body.classList.add('scroll-locked');
+  document.getElementById('navbar').classList.add('scroll-locked-offset');
+}
+function closeDrawer(){
+  burger.classList.remove('open');
+  drawer.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+  drawer.setAttribute('aria-hidden','true');
+  document.body.classList.remove('scroll-locked');
+  document.getElementById('navbar').classList.remove('scroll-locked-offset');
+}
+burger.addEventListener('click',()=>{
+  drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+});
+// Close on any drawer link tap
+document.querySelectorAll('.drawer-link').forEach(a=>{
+  a.addEventListener('click', closeDrawer);
+});
+// Close on outside tap
+document.addEventListener('click', e=>{
+  if(drawer.classList.contains('open') && !drawer.contains(e.target) && !burger.contains(e.target)){
+    closeDrawer();
+  }
+});
+
+// ── FAQ Load More
+const faqMore = document.getElementById('faq-more');
+const faqLoadBtn = document.getElementById('faq-load-more-btn');
+if (faqLoadBtn) {
+  faqLoadBtn.addEventListener('click', () => {
+    const isOpen = faqMore.classList.contains('open');
+    if (!isOpen) {
+      faqMore.classList.add('open');
+      faqLoadBtn.classList.add('expanded');
+      faqLoadBtn.querySelector('svg').style.transform = 'rotate(180deg)';
+      faqLoadBtn.childNodes[0].textContent = 'Show less ';
+    } else {
+      faqMore.classList.remove('open');
+      faqLoadBtn.classList.remove('expanded');
+      faqLoadBtn.querySelector('svg').style.transform = '';
+      faqLoadBtn.childNodes[0].textContent = 'More questions ';
+    }
+  });
+}
+
+// ── FAQ accordion
+document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>

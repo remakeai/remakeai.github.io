@@ -1,0 +1,54 @@
+<svg width="28" height="28" viewBox="0 0 680 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Outer circle -->
+  <circle cx="340" cy="250" r="210" stroke="#ff4e1f" stroke-width="16"/>
+
+  <!-- Inner decorative circle -->
+  <circle cx="340" cy="250" r="175" stroke="#ff4e1f" stroke-width="4" opacity="0.35"/>
+
+  <!-- Star — 5pt, outer r=130, inner r=54, center 340,250 -->
+  <polygon
+    points="
+      340,120
+      368,166  420,166
+      381,198
+      399,248  340,215
+      281,248  299,198
+      260,166  312,166
+    "
+    fill="none" stroke="#ff4e1f" stroke-width="16" stroke-linejoin="round"/>
+
+  <!-- Small accent dots at each outer star tip -->
+  <circle cx="340" cy="120" r="7" fill="#ff4e1f"/>
+  <circle cx="420" cy="166" r="7" fill="#ff4e1f"/>
+  <circle cx="399" cy="248" r="7" fill="#ff4e1f"/>
+  <circle cx="281" cy="248" r="7" fill="#ff4e1f"/>
+  <circle cx="260" cy="166" r="7" fill="#ff4e1f"/>
+
+  <!-- Tick marks on outer circle at compass points -->
+  <line x1="340" y1="40"  x2="340" y2="58"  stroke="#ff4e1f" stroke-width="10" stroke-linecap="round"/>
+  <line x1="340" y1="442" x2="340" y2="460" stroke="#ff4e1f" stroke-width="10" stroke-linecap="round"/>
+  <line x1="130" y1="250" x2="148" y2="250" stroke="#ff4e1f" stroke-width="10" stroke-linecap="round"/>
+  <line x1="532" y1="250" x2="550" y2="250" stroke="#ff4e1f" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Diagonal ticks at 45° -->
+  <line x1="191" y1="101" x2="203" y2="113" stroke="#ff4e1f" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <line x1="477" y1="101" x2="489" y2="113" stroke="#ff4e1f" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <line x1="191" y1="399" x2="203" y2="387" stroke="#ff4e1f" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <line x1="477" y1="399" x2="489" y2="387" stroke="#ff4e1f" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Center hub -->
+  <circle cx="340" cy="250" r="14" fill="#ff4e1f"/>
+  <circle cx="340" cy="250" r="24" fill="none" stroke="#ff4e1f" stroke-width="5" opacity="0.4"/>
+
+  <!-- Radial lines from center hub -->
+  <line x1="340" y1="250" x2="368" y2="166" stroke="#ff4e1f" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+  <line x1="340" y1="250" x2="381" y2="198" stroke="#ff4e1f" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+  <line x1="340" y1="250" x2="399" y2="248" stroke="#ff4e1f" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+  <line x1="340" y1="250" x2="281" y2="248" stroke="#ff4e1f" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+  <line x1="340" y1="250" x2="299" y2="198" stroke="#ff4e1f" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+  <line x1="340" y1="250" x2="312" y2="166" stroke="#ff4e1f" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+  <line x1="340" y1="250" x2="260" y2="166" stroke="#ff4e1f" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+  <line x1="340" y1="250" x2="420" y2="166" stroke="#ff4e1f" stroke-width="3" opacity="0.3" stroke-linecap="round"/>
+
+</svg>

@@ -14,12 +14,21 @@
 <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap"/>
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap"/></noscript>
 
-<!-- Meta Pixel -->
-<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','346568425169694');fbq('track','PageView');</script>
+<!-- Meta Pixel (local /scripts — same as index.html) -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','/scripts/fbevents.js');fbq('init','346568425169694');fbq('track','PageView');</script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=346568425169694&ev=PageView&noscript=1"/></noscript>
 
-<!-- Reddit Pixel -->
-<script>!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_feojnozacoug');rdt('track','PageVisit');</script>
+<!-- Reddit Pixel (local /scripts — same as index.html) -->
+<script>!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="/scripts/reddit-pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_feojnozacoug');rdt('track','PageVisit');</script>
+
+<!-- Google Analytics — same measurement ID as index.html -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LJLTHN5B4J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-LJLTHN5B4J");
+</script>
 
 <style>
 /* ─────────────────────────────────────────────
@@ -912,14 +921,16 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
 .final-cta .t-section{color:#fff;margin:10px 0 16px}
 .final-cta .t-body-lg{color:rgba(255,255,255,.5);margin-bottom:40px}
 .final-payments{
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  margin-top:16px;flex-wrap:wrap;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;margin-top:20px;text-align:center;
 }
-.pay-tag{
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
-  border-radius:6px;padding:4px 10px;
-  font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);
+.final-pay-cards{display:block;max-width:140px;height:auto;opacity:.92}
+.final-pay-secured{margin:0;font-size:.75rem;font-weight:500;color:rgba(255,255,255,.55);line-height:1.4}
+.final-pay-powered{
+  margin:0;font-size:.75rem;color:rgba(255,255,255,.5);
+  display:flex;align-items:center;justify-content:center;gap:5px;line-height:1;
 }
+.final-pay-wordmark{height:0.875rem;width:auto;vertical-align:middle;opacity:.9}
 .final-footnote{
   margin-top:20px;
   font-size:.75rem;color:rgba(255,255,255,.28);line-height:1.7;
@@ -1072,24 +1083,26 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
 .waitlist-section{background:var(--cream);text-align:center}
 .waitlist-inner{max-width:500px;margin:0 auto}
 .waitlist-form{
-  display:flex;margin-top:28px;
+  display:flex;margin-top:28px;position:relative;
   border:1.5px solid var(--border);border-radius:100px;
   overflow:hidden;background:var(--white);
 }
-.waitlist-form input{
+.waitlist-form input[type="email"]{
   flex:1;min-width:0;padding:14px 16px;
   background:transparent;border:none;outline:none;
   font-family:var(--ff-body);font-size:.95rem;color:var(--ink);
 }
-.waitlist-form input::placeholder{color:var(--ink3)}
-.waitlist-form button{
+.waitlist-form input[type="email"]::placeholder{color:var(--ink3)}
+.waitlist-form button[type="submit"]{
   background:var(--coral);color:#fff;
   font-size:.85rem;font-weight:700;
   padding:12px 18px;border-radius:100px;margin:3px;
   transition:background .2s;white-space:nowrap;
-  flex-shrink:0;
+  flex-shrink:0;border:none;cursor:pointer;font-family:inherit;
 }
-.waitlist-form button:hover{background:var(--coral2)}
+.waitlist-form button[type="submit"]:hover{background:var(--coral2)}
+.waitlist-mc-responses{margin-top:12px;text-align:center;font-size:.85rem}
+.waitlist-mc-responses .response{color:var(--coral);min-height:1.2em}
 .waitlist-note{margin-top:10px;font-size:.75rem;color:var(--ink3)}
 
 /* ─────────────────────────────────────────────
@@ -1153,19 +1166,20 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
   .pc-cta{padding:11px 20px !important;font-size:.9rem !important;}
 }
 
-/* ── PayPal prominent badge */
+/* ── PayPal trust row (Debit_Credit_APM + copy, aligned with /reserve/games) */
 .pc-paypal{
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  margin-top:10px;font-size:.75rem;color:var(--ink3);
-  font-weight:600;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;margin-top:12px;text-align:center;
 }
-.pc-paypal-logo{
-  background:#003087;color:#fff;
-  font-size:.65rem;font-weight:800;letter-spacing:.02em;
-  padding:2px 7px;border-radius:4px;
-  font-family:Arial,sans-serif;
+.pc-paypal-cards{display:block;height:auto;max-width:140px;width:100%}
+.pc-paypal-secured{
+  margin:0;font-size:.75rem;font-weight:500;color:var(--ink3);line-height:1.4;
 }
-.pc-paypal-logo span{color:#009cde}
+.pc-paypal-powered{
+  margin:0;font-size:.75rem;color:var(--ink3);
+  display:flex;align-items:center;justify-content:center;gap:4px;line-height:1;
+}
+.pc-paypal-wordmark{height:0.875rem;width:auto;vertical-align:middle;display:inline-block}
 
 /* ── FAQ load more */
 .faq-load-more-wrap{text-align:center;margin-top:24px}
@@ -1656,12 +1670,16 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
           <li><span class="pc-spec-k">Noise</span><span class="pc-spec-v">65 dB</span></li>
         </ul>
         <p class="pc-for">Best for: Apartments, small homes</p>
-        <a href="https://www.paypal.com/ncp/payment/MKFLKQGGZQ38U" target="_blank" rel="noopener"
+        <a href="https://www.paypal.com/ncp/payment/JNZYB7M68386C" target="_blank" rel="noopener"
            class="btn-primary pc-cta"
            onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');if(typeof rdt!=='undefined')rdt('track','AddToCart')">
           Reserve for $1
         </a>
-        <div class="pc-paypal"><span class="pc-paypal-logo">Pay<span>Pal</span></span><span>Secured checkout · Fully refundable</span></div>
+        <div class="pc-paypal">
+          <img class="pc-paypal-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="" width="140" height="20" loading="lazy"/>
+          <p class="pc-paypal-secured">Secured checkout · Fully refundable</p>
+          <p class="pc-paypal-powered">Powered by <img class="pc-paypal-wordmark" src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" width="50" height="14" loading="lazy"/></p>
+        </div>
       </div>
 
       
@@ -1682,12 +1700,16 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
           <li><span class="pc-spec-k">Noise</span><span class="pc-spec-v">60 dB</span></li>
         </ul>
         <p class="pc-for">Best for: Medium homes, pet hair</p>
-        <a href="https://www.paypal.com/ncp/payment/MKFLKQGGZQ38U" target="_blank" rel="noopener"
+        <a href="https://www.paypal.com/ncp/payment/KKVFJP959WJZJ" target="_blank" rel="noopener"
            class="btn-primary pc-cta"
            onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');if(typeof rdt!=='undefined')rdt('track','AddToCart')">
           Reserve for $1
         </a>
-        <div class="pc-paypal"><span class="pc-paypal-logo">Pay<span>Pal</span></span><span>Secured checkout · Fully refundable</span></div>
+        <div class="pc-paypal">
+          <img class="pc-paypal-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="" width="140" height="20" loading="lazy"/>
+          <p class="pc-paypal-secured">Secured checkout · Fully refundable</p>
+          <p class="pc-paypal-powered">Powered by <img class="pc-paypal-wordmark" src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" width="50" height="14" loading="lazy"/></p>
+        </div>
       </div>
 
       
@@ -1707,12 +1729,16 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
           <li><span class="pc-spec-k">Noise</span><span class="pc-spec-v">55 dB</span></li>
         </ul>
         <p class="pc-for">Best for: Large homes, power users</p>
-        <a href="https://www.paypal.com/ncp/payment/MKFLKQGGZQ38U" target="_blank" rel="noopener"
+        <a href="https://www.paypal.com/ncp/payment/DD2A6L4GRJ7EJ" target="_blank" rel="noopener"
            class="btn-primary pc-cta"
            onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');if(typeof rdt!=='undefined')rdt('track','AddToCart')">
           Reserve for $1
         </a>
-        <div class="pc-paypal"><span class="pc-paypal-logo">Pay<span>Pal</span></span><span>Secured checkout · Fully refundable</span></div>
+        <div class="pc-paypal">
+          <img class="pc-paypal-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="" width="140" height="20" loading="lazy"/>
+          <p class="pc-paypal-secured">Secured checkout · Fully refundable</p>
+          <p class="pc-paypal-powered">Powered by <img class="pc-paypal-wordmark" src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" width="50" height="14" loading="lazy"/></p>
+        </div>
       </div>
 
     </div>
@@ -1850,10 +1876,39 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
       <p class="t-eyebrow">Not ready to reserve?</p>
       <h2 class="t-section" style="margin-bottom:12px">Join Launch Waitlist</h2>
       <p class="t-body-lg" style="margin-bottom:0">Be the first to know when we launch.</p>
-      
-      <div class="waitlist-form">
-        <input type="email" placeholder="Your email address" aria-label="Email for waitlist"/>
-        <button type="button" onclick="if(typeof fbq!=='undefined')fbq('track','Lead')">Get Updates</button>
+
+      <form
+        class="waitlist-form validate"
+        action="https://remake.us4.list-manage.com/subscribe/post?u=663434fd966b5f4d9c0a117ee&amp;id=697a9ef02c&amp;f_id=004805e2f0"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        target="_self"
+        novalidate
+        onsubmit="if(typeof fbq!=='undefined')fbq('track','Lead');"
+      >
+        <input
+          type="email"
+          name="EMAIL"
+          class="required email"
+          id="mce-EMAIL"
+          required
+          placeholder="Your email address"
+          aria-label="Email for waitlist"
+          autocomplete="email"
+          value=""
+        />
+        <div hidden>
+          <input type="hidden" name="tags" value="4536918"/>
+        </div>
+        <div aria-hidden="true" style="position:absolute;left:-5000px">
+          <input type="text" name="b_663434fd966b5f4d9c0a117ee_697a9ef02c" tabindex="-1" value=""/>
+        </div>
+        <button type="submit" name="subscribe" id="mc-embedded-subscribe">Get Updates</button>
+      </form>
+      <div id="mce-responses" class="waitlist-mc-responses">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
       </div>
       <p class="waitlist-note">No spam. Unsubscribe any time.</p>
     </div>
@@ -2148,17 +2203,16 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
     <p class="t-eyebrow reveal">Limited · 2,000 Units</p>
     <h2 class="t-section reveal">Ready to Reserve?</h2>
     <p class="t-body-lg reveal">Lock in Super Early Bird pricing — fully refundable any time before launch.</p>
-    <a href="https://www.paypal.com/ncp/payment/MKFLKQGGZQ38U" target="_blank" rel="noopener"
+    <a href="https://www.paypal.com/ncp/payment/KKVFJP959WJZJ" target="_blank" rel="noopener"
        class="btn-primary xl reveal"
        onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');if(typeof rdt!=='undefined')rdt('track','AddToCart')">
       Reserve for $1
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
     <div class="final-payments reveal">
-      <span class="pay-tag">PayPal</span>
-      <span class="pay-tag">VISA</span>
-      <span class="pay-tag">Mastercard</span>
-      <span class="pay-tag">+more</span>
+      <img class="final-pay-cards" src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="" width="140" height="20" loading="lazy"/>
+      <p class="final-pay-secured">Secured checkout · Fully refundable</p>
+      <p class="final-pay-powered">Powered by <img class="final-pay-wordmark" src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="PayPal" width="50" height="14" loading="lazy"/></p>
     </div>
     <p class="final-footnote reveal">
       Fully refundable · Super Early Bird pricing · Launching Fall 2026<br/>

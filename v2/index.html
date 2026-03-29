@@ -831,17 +831,21 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
 .steps-section{background:var(--cream)}
 .steps-row{
   display:grid;gap:16px;
+  position:relative;
 }
 .step-card{
   background:var(--sand);
   border-radius:16px;padding:28px 24px;
   border:1.5px solid var(--border2);
   text-align:center;
+  position:relative;
+  z-index:1;
 }
 @media(min-width:640px){
   .steps-row{
-    grid-template-columns:1fr 45px 1fr 45px 1fr;
+    grid-template-columns:1fr 1fr 1fr;
     align-items:stretch;
+    gap:82px;
   }
   .step-card{height:100%;display:flex;flex-direction:column;}
   .step-desc{flex:1;}
@@ -854,16 +858,29 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
 .step-desc{font-size:.85rem;color:var(--ink3);line-height:1.55}
 .step-arrow{
   display:none;
-  align-items:center;justify-content:center;
-  padding-top:0;
 }
-.step-arrow img{
-  display:block;
-  /* width:100%; */
-  /* height:auto;
-  max-width:none; */
+@media(min-width:640px){
+  .step-arrow{
+    display:block;
+    position:absolute;
+    top:42%;
+    transform:translateY(-50%);
+    width:120px;
+    z-index:2;
+    pointer-events:none;
+  }
+  .step-arrow:nth-of-type(2){
+    left:calc(33.333% - 70px);
+  }
+  .step-arrow:nth-of-type(4){
+    left:calc(66.666% - 35px);
+  }
+  .step-arrow img{
+    width:100px;
+    height:auto;
+    display:block;
+  }
 }
-@media(min-width:640px){.step-arrow{display:flex}}
 .steps-note{text-align:center;margin-top:24px;font-size:.75rem;color:var(--ink3)}
 
 /* ─────────────────────────────────────────────
@@ -1316,10 +1333,10 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
             Watch in Action
           </button>
-          <p class="watch-context">5 games at launch &nbsp;·&nbsp; New games added regularly</p>
+          <p class="watch-context">New games added regularly</p>
         </div>
         <div class="hero-social-proof">
-          <p class="proof-text"><strong>Early testers love it</strong> · Ages 4–12</p>
+          <p class="proof-text"><strong>Recommended for ages 4–12</strong></p>
         </div>
       </div>
     </div>
@@ -1770,7 +1787,7 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
     <div class="section-head center reveal">
       <h2 class="t-section">How Reservation Works</h2>
       <p class="t-body-lg">Fully refundable any time before launch.</p>
-      <p class="t-body" style="margin-top:8px;color:var(--ink3);font-size:.92rem">One-time purchase · Products from $199 · No subscription ever</p>
+      <p class="t-body" style="margin-top:8px;color:var(--ink3);font-size:.92rem">One-time purchase · Products from $199 · No subscription</p>
     </div>
     <div class="steps-row">
       <div class="step-card reveal">
@@ -1780,7 +1797,7 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
         <div class="step-title">Reserve for $1</div>
         <div class="step-desc">Lock in Super Early Bird pricing. Be first when we launch. Fully refundable.</div>
       </div>
-      <div class="step-arrow"><img src="./assets/Union_coral.svg" alt="" width="60" height="60" loading="lazy"/></div>
+      <div class="step-arrow"><img src="./assets/Union_coral.svg" alt="" width="120" height="60" loading="lazy"/></div>
       <div class="step-card reveal reveal-d1">
         <div class="step-icon-wrap">
           <img src="./assets/icon_choose.svg" alt="" width="64" height="64" loading="lazy" />
@@ -1788,7 +1805,7 @@ button,input{font-family:inherit;border:none;background:none;cursor:pointer}
         <div class="step-title">Choose your model</div>
         <div class="step-desc">Pick your model when we launch in Fall 2026.</div>
       </div>
-      <div class="step-arrow"><img src="./assets/Union-1_coral.svg" alt="" width="60" height="60" loading="lazy"/></div>
+      <div class="step-arrow"><img src="./assets/Union-1_coral.svg" alt="" width="120" height="60" loading="lazy"/></div>
       <div class="step-card reveal reveal-d2">
         <div class="step-icon-wrap">
           <img src="./assets/icon_delivery.svg" alt="" width="64" height="64" loading="lazy" />
